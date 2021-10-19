@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="vote.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="vote_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="vote_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="vote_tb_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1634110773" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1634110773">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1634110881" xil_pn:in_ck="-6232085357031227783" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1634110881">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="vote.v"/>
+      <outfile xil_pn:name="vote_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1634110781" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8325179014204751222" xil_pn:start_ts="1634110781">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1634110781" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1510999318754470824" xil_pn:start_ts="1634110781">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1634110781" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2038310496652248379" xil_pn:start_ts="1634110781">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1634110881" xil_pn:in_ck="-6232085357031227783" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1634110881">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="vote.v"/>
+      <outfile xil_pn:name="vote_tb.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1634110884" xil_pn:in_ck="-6232085357031227783" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8943961350097774371" xil_pn:start_ts="1634110881">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1634110787" xil_pn:in_ck="1394091544373381602" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8881883065789786330" xil_pn:start_ts="1634110786">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForced"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="vote_tb_isim_beh.wdb"/>
+    </transform>
+  </transforms>
+
+</generated_project>

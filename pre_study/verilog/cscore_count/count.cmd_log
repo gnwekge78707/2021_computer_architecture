@@ -1,0 +1,4 @@
+vhdtdtfi -lib work C:/Users/86135/Desktop/CO/self/pre_study/verilog/cscore_count/count.v -lang verilog -prj cscore_count -o count.spl -module count -template D:/PROGRAM/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 count.spl C:/Users/86135/Desktop/CO/self/pre_study/verilog/cscore_count/count.sym 
+xst -intstyle ise -ifn "C:/Users/86135/Desktop/CO/self/pre_study/verilog/cscore_count/count.xst" -ofn "C:/Users/86135/Desktop/CO/self/pre_study/verilog/cscore_count/count.syr" 
+xst -intstyle ise -ifn "C:/Users/86135/Desktop/CO/self/pre_study/verilog/cscore_count/count.xst" -ofn "C:/Users/86135/Desktop/CO/self/pre_study/verilog/cscore_count/count.syr" 

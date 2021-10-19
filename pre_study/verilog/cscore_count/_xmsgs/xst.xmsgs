@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="255" delta="old" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 33: Cannot assign to memory <arg fmt="%s" index="1">cnt</arg> directly
+</msg>
+
+<msg type="error" file="HDLCompiler" num="252" delta="old" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 33: Cannot assign <arg fmt="%s" index="1">a packed</arg> type to <arg fmt="%s" index="2">an unpacked</arg> type
+</msg>
+
+<msg type="error" file="HDLCompiler" num="255" delta="old" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 45: Cannot assign to memory <arg fmt="%s" index="1">cnt</arg> directly
+</msg>
+
+<msg type="error" file="HDLCompiler" num="251" delta="old" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 45: Cannot access memory <arg fmt="%s" index="1">cnt</arg> directly
+</msg>
+
+<msg type="error" file="HDLCompiler" num="971" delta="old" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 45: Illegal operand for operator <arg fmt="%s" index="1">+</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1373" delta="old" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 45: Unpacked value/target cannot be used in assignment
+</msg>
+
+<msg type="error" file="HDLCompiler" num="251" delta="old" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 46: Cannot access memory <arg fmt="%s" index="1">cnt</arg> directly
+</msg>
+
+<msg type="error" file="HDLCompiler" num="971" delta="old" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 46: Illegal operand for operator <arg fmt="%s" index="1">==</arg>
+</msg>
+
+<msg type="error" file="HDLCompiler" num="255" delta="old" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 48: Cannot assign to memory <arg fmt="%s" index="1">cnt</arg> directly
+</msg>
+
+<msg type="error" file="HDLCompiler" num="252" delta="old" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 48: Cannot assign <arg fmt="%s" index="1">a packed</arg> type to <arg fmt="%s" index="2">an unpacked</arg> type
+</msg>
+
+<msg type="error" file="HDLCompiler" num="598" delta="new" >"C:\Users\86135\Desktop\CO\self\pre_study\verilog\cscore_count\count.v" Line 21: Module &lt;<arg fmt="%s" index="1">count</arg>&gt; ignored due to previous errors.
+</msg>
+
+</messages>
+

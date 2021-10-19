@@ -1,0 +1,28 @@
+Command line:
+   tb_cpuchk_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  62635
+
+Tue Sep 21 14:48:58 2021
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 5469.47 Meg
+
+ Total Signals          : 21
+ Total Nets             : 45
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 18
+ Total Traceable Variables  : 29
+ Total Scalar Nets and Variables : 229
+
+ Total Simulation Time: 0.34375 sec
+
+ Current Memory Usage: 4683.03 Meg
+
+Tue Sep 21 14:52:38 2021
+
