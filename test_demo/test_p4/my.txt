@@ -1,0 +1,4 @@
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+TCL batch file "C:\Users\86135\Desktop\CO_blogs\BUAA-CO-2020-master\P4\²âÊÔ½Å±¾ÎÄ¼þ\mips.tcl" encountered an error in line 1. Simulator is exiting.
