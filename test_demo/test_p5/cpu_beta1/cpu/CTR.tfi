@@ -1,0 +1,30 @@
+
+
+
+// Instantiate the module
+CTR instance_name (
+    .Instr(Instr), 
+    .imm26(imm26), 
+    .imm16(imm16), 
+    .rs(rs), 
+    .rt(rt), 
+    .rd(rd), 
+    .shamt(shamt), 
+    .ALU_op(ALU_op), 
+    .CMP_op(CMP_op), 
+    .NPC_op(NPC_op), 
+    .EXT_op(EXT_op), 
+    .DM_op(DM_op), 
+    .ALU_B_sel(ALU_B_sel), 
+    .RF_WD_sel(RF_WD_sel), 
+    .RF_A3_sel(RF_A3_sel), 
+    .DM_wr(DM_wr), 
+    .RF_wr(RF_wr), 
+    .cali(cali), 
+    .calr(calr), 
+    .load(load), 
+    .store(store), 
+    .branch(branch)
+    );
+
+

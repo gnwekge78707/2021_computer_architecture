@@ -1,0 +1,27 @@
+ISim log file
+Running: C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\mips_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/86135/Desktop/test_demo/test_p4/cpu_beta/mips_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+WARNING:  For instance uut/RF/, width 5 of formal port A3 is not equal to width 32 of actual constant.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+@00003000: $31 <= 00000000
+@0000300c: $31 <= 00000000
+@00003010: $ 1 <= 65b80000
+@00003018: $31 <= 00000000
+@0000301c: *00000058 <= 00000000
+@00003020: $ 2 <= 00000000
+@00003024: $ 3 <= 65b80000
+@00003040: $ 3 <= 65b80000
+@00003044: $31 <= 00003048
+@00003058: $ 1 <= 9a480000
+@00003060: $ 1 <= 40000000
+@00003064: $31 <= 6f0e0000
+@00003068: $ 1 <= 76680000
+@0000306c: $31 <= 00003070
+@00003074: *00000048 <= 65b80000
+@00003078: *00000029 <= 00000000

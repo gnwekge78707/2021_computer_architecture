@@ -1,32 +1,30 @@
 subu $31,$31,$31
-label0: and $2,$3,$0
-label1: sll $31,$2,21
-label2: sw $1,12($0)
-label3: and $31,$31,$2
-label4: ori $1,$0,20052
-label5: slt $31,$2,$3
-label6: sll $1,$1,13
-label7: ori $0,$0,32455
-label8: lw $1,20($0)
-label9: lui $31,33517
-label10: subu $1,$3,$1
-label11: beq $1,$0,label14
-label12: subu $2,$3,$1
-label13: ori $1,$1,24983
-label14: sw $31,64($0)
-label15: subu $1,$1,$1
-label16: j label21
-label17: sll $3,$2,18
-label18: slt $2,$3,$2
-label19: and $1,$3,$3
-label20: jal label25
-label21: slt $2,$31,$0
-label22: beq $3,$1,label24
-label23: ori $31,$1,49231
-label24: beq $31,$3,label28
-label25: subu $1,$2,$1
-label26: sw $31,84($0)
-label27: subu $2,$3,$1
-label28: jal label30
-label29: subu $2,$1,$31
-label30: and $31,$31,$0
+label0: addiu $1,$0, 1
+label1: addiu $2,$0, 2
+label2: addiu $3,$0, 3
+label3: addiu $4,$0, 4
+label4: addiu $5,$0, 5
+label5: addiu $6,$0, 6
+label7: lw $4,4($0)
+label9: lw $6,12($0)
+label10: lw $1,124($0)
+label11: lui $31, 32768
+label12: sw $10,8($0)
+label13: sw $10,40($0)
+label14: sw $10,12($0)
+label15: subu $11,$3,$2
+label16: addu $7, $6, $t0
+label17: beq $6, $7, label20
+label18: nop
+label19: lui $0,32063
+label20: lui $0,36507
+label21: ori $20,$3,45891
+label22: jal label24
+label23: lui $2,4496
+label24: sw $31,64($0)
+label25: sb $6,65($2)
+label26: lw $22,64($0)
+label27: slt $23, $2, $3
+label28: addu $28, $0, 69
+label29: lb $24,-2($28)
+label30: jr $ra

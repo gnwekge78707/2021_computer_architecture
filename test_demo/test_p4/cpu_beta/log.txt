@@ -1,0 +1,37 @@
+Running: D:\PROGRAM\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe --nodebug --prj mips.prj -o mips.exe mips_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\ALU.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\const.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\CTR.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\DM.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\EXT.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\IFU.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\mips.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\mips_tb.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\NPC.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\RF.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\tb_ctr.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\tb_ifu.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\tb_rf.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\tn_npc.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\cpu_beta\yb_dm.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module IFU
+Compiling module NPC
+Compiling module RF
+Compiling module ALU
+Compiling module EXT
+Compiling module DM
+Compiling module CTR
+Compiling module mips
+Compiling module mips_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 9 Verilog Units
+Built simulation executable mips.exe
+Fuse Memory Usage: 30736 KB
+Fuse CPU Usage: 749 ms

@@ -1,0 +1,384 @@
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:2    source::@00003004: $ 2 <= 00000000              asm::and $v0, $v1, $0
+AC at line:3    source::@00003008: $31 <= 00000000              asm::sll $ra, $v0, 10101
+AC at line:4    source::@0000300c: *0000000c <= 00000000                asm::sw $at, 0xc($0)
+AC at line:5    source::@00003010: $31 <= 00000000              asm::and $ra, $ra, $v0
+AC at line:6    source::@00003014: $ 1 <= 00004e54              asm::ori $at, $0, 0x4e54
+AC at line:7    source::@00003018: $31 <= 00000000              asm::slt $ra, $v0, $v1
+AC at line:8    source::@0000301c: $ 1 <= 09ca8000              asm::sll $at, $at, 01101
+AC at line:10   source::@00003024: $ 1 <= 00000000              asm::lw $at, 0x14($0)
+AC at line:11   source::@00003028: $31 <= 82ed0000              asm::lui $ra, 0x82ed
+AC at line:12   source::@0000302c: $ 1 <= 00000000              asm::subu $at, $v1, $at
+AC at line:14   source::@0000303c: *00000040 <= 82ed0000                asm::sw $ra, 0x40($0)
+AC at line:15   source::@00003040: $ 1 <= 00000000              asm::subu $at, $at, $at
+AC at line:17   source::@00003058: $ 2 <= 00000001              asm::slt $v0, $ra, $0
+AC at line:20   source::@00003068: $ 1 <= 00000001              asm::subu $at, $v0, $at
+AC at line:21   source::@0000306c: *00000054 <= 82ed0000                asm::sw $ra, 0x54($0)
+AC at line:22   source::@00003070: $ 2 <= ffffffff              asm::subu $v0, $v1, $at
+WA at line:23   source::@00003074: $31 <= 00000078              std::@00003074: $31 <= 00003078         asm::jal 0x1f
+AC at line:24   source::@0000307c: $31 <= 00000000              asm::and $ra, $ra, $0
+WA at line:25   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+WA at line:26   source::@00003084: $ 2 <= 00000000              std::           asm::and $v0, $v1, $0
+WA at line:27   source::@00003088: $31 <= 00000000              std::           asm::sll $ra, $v0, 10101
+WA at line:28   source::@0000308c: *0000000c <= 00000001                std::           asm::sw $at, 0xc($0)
+WA at line:29   source::@00003090: $31 <= 00000000              std::           asm::and $ra, $ra, $v0
+WA at line:30   source::@00003094: $ 1 <= 00004e54              std::           asm::ori $at, $0, 0x4e54
+WA at line:31   source::@00003098: $31 <= 00000000              std::           asm::slt $ra, $v0, $v1
+WA at line:32   source::@0000309c: $ 1 <= 09ca8000              std::           asm::sll $at, $at, 01101
+Traceback (most recent call last):
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 277, in <module>
+    asm = dasm(l1[0:39])
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 72, in dasm
+    rs=reg[str(int(bicode[6:11],2))]
+ValueError: invalid literal for int() with base 2: ''
+
+C:\Users\86135\Desktop\test_demo\test_p3\test_mars>python auto_test.py
+test point 0 begin:::
+generating...
+test.asm done
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:2    source::@00003004: $ 3 <= 543c0000              asm::lui $v1, 0x543c
+AC at line:3    source::@00003008: $ 3 <= 00000000              asm::addu $v1, $v0, $v0
+AC at line:5    source::@00003010: $ 1 <= 00000000              asm::and $at, $at, $ra
+AC at line:6    source::@00003014: *00000038 <= 00000000                asm::sw $0, 0x38($0)
+AC at line:7    source::@00003018: $31 <= 21910000              asm::lui $ra, 0x2191
+AC at line:8    source::@0000301c: $ 2 <= 00000000              asm::and $v0, $v0, $v0
+AC at line:9    source::@00003020: $ 1 <= 58020000              asm::lui $at, 0x5802
+AC at line:10   source::@00003024: $ 2 <= 6e6a0000              asm::lui $v0, 0x6e6a
+AC at line:11   source::@00003028: $ 1 <= 80000000              asm::sll $at, $ra, 01111
+AC at line:12   source::@0000302c: $31 <= 0000e542              asm::ori $ra, $0, 0xe542
+AC at line:13   source::@00003030: $31 <= 6e691abe              asm::subu $ra, $v0, $ra
+WA at line:16   source::@0000303c: *00000058 <= 00000000                std::@0000303c: *00000059 <= 00000000          asm::sb $v1, 0x59($0)
+AC at line:18   source::@00003044: $ 1 <= 00000000              asm::subu $at, $v0, $v0
+AC at line:19   source::@00003048: $31 <= 00000000              asm::lw $ra, 0x1c($0)
+WA at line:20   source::@0000304c: $31 <= 00000050              std::@0000304c: $31 <= 00003050         asm::jal 0x17
+AC at line:22   source::@00003060: $ 3 <= 00000000              asm::subu $v1, $0, $v1
+AC at line:23   source::@00003064: $ 1 <= 00000000              asm::sll $at, $v1, 10010
+AC at line:24   source::@00003068: $ 2 <= 00000000              asm::lb $v0, 0x6b($0)
+AC at line:25   source::@0000306c: $ 2 <= 00000000              asm::subu $v0, $at, $v1
+WA at line:28   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+WA at line:29   source::@00003084: $ 3 <= 543c0000              std::           asm::lui $v1, 0x543c
+WA at line:30   source::@00003088: $ 3 <= 00000000              std::           asm::addu $v1, $v0, $v0
+WA at line:32   source::@00003090: $ 1 <= 00000000              std::           asm::and $at, $at, $ra
+Traceback (most recent call last):
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 277, in <module>
+    asm = dasm(l1[0:39])
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 72, in dasm
+    rs=reg[str(int(bicode[6:11],2))]
+ValueError: invalid literal for int() with base 2: ''
+test point 1 begin:::
+generating...
+test.asm done
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:2    source::@00003004: $31 <= 00000000              asm::slt $ra, $0, $at
+AC at line:3    source::@00003008: $ 3 <= 00000000              asm::and $v1, $at, $ra
+AC at line:4    source::@0000300c: $ 3 <= 00000000              asm::slt $v1, $at, $ra
+AC at line:5    source::@00003010: $ 1 <= 00000000              asm::lb $at, 0x27($0)
+WA at line:6    source::@00003014: *00000068 <= 00000000                std::@00003014: *0000006b <= 00000000          asm::sb $ra, 0x6b($0)
+AC at line:7    source::@00003018: $ 2 <= 00000000              asm::lb $v0, 0x39($0)
+AC at line:9    source::@00003020: $ 3 <= 00000000              asm::slt $v1, $v1, $at
+AC at line:10   source::@00003024: $ 1 <= 00000000              asm::subu $at, $0, $v0
+AC at line:11   source::@00003028: $ 3 <= 00000000              asm::lw $v1, 0x58($0)
+AC at line:13   source::@00003030: $31 <= c2e00000              asm::lui $ra, 0xc2e0
+WA at line:14   source::@00003034: *0000004c <= 00000000                std::@00003034: *0000004f <= 00000000          asm::sb $v1, 0x4f($0)
+AC at line:16   source::@0000303c: *00000060 <= c2e00000                asm::sw $ra, 0x60($0)
+AC at line:17   source::@00003040: $31 <= 3d200000              asm::subu $ra, $at, $ra
+AC at line:19   source::@0000304c: *0000004c <= 00000000                asm::sw $v1, 0x4c($0)
+AC at line:21   source::@00003064: $ 1 <= 3d200000              asm::addu $at, $ra, $v0
+AC at line:23   source::@0000306c: $ 1 <= 00000000              asm::and $at, $v1, $0
+AC at line:24   source::@00003070: $ 1 <= 00000000              asm::and $at, $v0, $v0
+AC at line:25   source::@00003074: $ 1 <= 00000000              asm::sll $at, $v0, 01011
+AC at line:26   source::@00003078: *00000030 <= 00000000                asm::sw $v0, 0x30($0)
+AC at line:27   source::@0000307c: $ 2 <= 00000000              asm::lw $v0, 0x58($0)
+WA at line:28   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+WA at line:29   source::@00003084: $31 <= 00000000              std::           asm::slt $ra, $0, $at
+WA at line:30   source::@00003088: $ 3 <= 00000000              std::           asm::and $v1, $at, $ra
+WA at line:31   source::@0000308c: $ 3 <= 00000000              std::           asm::slt $v1, $at, $ra
+WA at line:32   source::@00003090: $ 1 <= 00000000              std::           asm::lb $at, 0x27($0)
+Traceback (most recent call last):
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 277, in <module>
+    asm = dasm(l1[0:39])
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 72, in dasm
+    rs=reg[str(int(bicode[6:11],2))]
+ValueError: invalid literal for int() with base 2: ''
+test point 2 begin:::
+generating...
+test.asm done
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:2    source::@00003004: $ 1 <= 00000000              asm::subu $at, $v0, $0
+AC at line:3    source::@00003008: *0000003c <= 00000000                asm::sw $at, 0x3c($0)
+AC at line:4    source::@0000300c: $ 1 <= 00000000              asm::sll $at, $ra, 01110
+AC at line:5    source::@00003010: *0000000c <= 00000000                asm::sw $v0, 0xc($0)
+AC at line:9    source::@00003020: $ 2 <= 00004c7a              asm::ori $v0, $at, 0x4c7a
+AC at line:11   source::@00003028: $ 1 <= 00000000              asm::lw $at, 0x44($0)
+WA at line:12   source::@0000302c: $31 <= 00000030              std::@0000302c: $31 <= 00003030         asm::jal 0xd
+AC at line:14   source::@00003048: $ 1 <= 00000000              asm::and $at, $0, $at
+WA at line:15   source::@0000304c: $31 <= 00000050              std::@0000304c: $31 <= 00003050         asm::jal 0x14
+AC at line:18   source::@00003060: $ 2 <= 0000ce7a              asm::ori $v0, $v0, 0xc64a
+AC at line:19   source::@00003064: $31 <= 00000000              asm::lw $ra, 0x20($0)
+AC at line:21   source::@0000306c: $ 1 <= 00000000              asm::lb $at, 0x36($0)
+AC at line:22   source::@00003070: $ 3 <= 0000c7b3              asm::ori $v1, $v1, 0xc7b3
+WA at line:26   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+WA at line:27   source::@00003084: $ 1 <= 0000ce7a              std::           asm::subu $at, $v0, $0
+WA at line:28   source::@00003088: *0000003c <= 0000ce7a                std::           asm::sw $at, 0x3c($0)
+WA at line:29   source::@0000308c: $ 1 <= 00000000              std::           asm::sll $at, $ra, 01110
+WA at line:30   source::@00003090: *0000000c <= 0000ce7a                std::           asm::sw $v0, 0xc($0)
+Traceback (most recent call last):
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 277, in <module>
+    asm = dasm(l1[0:39])
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 72, in dasm
+    rs=reg[str(int(bicode[6:11],2))]
+ValueError: invalid literal for int() with base 2: ''
+test point 3 begin:::
+generating...
+test.asm done
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:2    source::@00003004: $31 <= 97730000              asm::lui $ra, 0x9773
+WA at line:3    source::@00003008: *00000004 <= 00000000                std::@00003008: *00000007 <= 00000000          asm::sb $at, 0x7($0)
+WA at line:4    source::@0000300c: *00000038 <= 00000000                std::@0000300c: *00000039 <= 00000000          asm::sb $ra, 0x39($0)
+AC at line:5    source::@00003010: *0000005c <= 00000000                asm::sw $at, 0x5c($0)
+AC at line:6    source::@00003014: $ 2 <= 00000000              asm::slt $v0, $0, $v0
+AC at line:8    source::@0000301c: *00000018 <= 00000000                asm::sw $v0, 0x18($0)
+AC at line:9    source::@00003020: $31 <= 5dcc0000              asm::sll $ra, $ra, 00010
+AC at line:10   source::@00003024: $ 1 <= 00000000              asm::lw $at, 0x68($0)
+AC at line:11   source::@00003028: $ 3 <= 5dcc594d              asm::ori $v1, $ra, 0x594d
+AC at line:12   source::@0000302c: $ 1 <= 5dcc0000              asm::addu $at, $ra, $at
+AC at line:13   source::@00003030: $31 <= 5dcc7777              asm::ori $ra, $at, 0x7777
+AC at line:15   source::@00003038: $ 3 <= 00000000              asm::and $v1, $v0, $ra
+AC at line:17   source::@00003040: $ 1 <= 00000000              asm::lw $at, 0x70($0)
+AC at line:18   source::@00003044: $31 <= 86580000              asm::lui $ra, 0x8658
+AC at line:21   source::@00003050: $ 2 <= 00000000              asm::lb $v0, 0x66($0)
+AC at line:22   source::@00003054: *00000064 <= 86580000                asm::sw $ra, 0x64($0)
+AC at line:23   source::@00003058: *00000008 <= 00000000                asm::sw $v1, 0x8($0)
+AC at line:25   source::@00003060: $ 1 <= 00000000              asm::sll $at, $v1, 11001
+AC at line:27   source::@00003068: $ 2 <= 00005ac5              asm::ori $v0, $v0, 0x5ac5
+AC at line:29   source::@00003070: $ 1 <= 00004559              asm::ori $at, $v1, 0x4559
+AC at line:31   source::@0000307c: $31 <= 00000001              asm::slt $ra, $v1, $v0
+WA at line:32   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+Traceback (most recent call last):
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 277, in <module>
+    asm = dasm(l1[0:39])
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 72, in dasm
+    rs=reg[str(int(bicode[6:11],2))]
+ValueError: invalid literal for int() with base 2: ''
+test point 4 begin:::
+generating...
+test.asm done
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+WA at line:2    source::@00003004: *0000003c <= 00000000                std::@00003004: *0000003d <= 00000000          asm::sb $v0, 0x3d($0)
+AC at line:3    source::@00003008: $31 <= 0000153a              asm::ori $ra, $ra, 0x153a
+AC at line:4    source::@0000300c: $ 3 <= 0000a658              asm::ori $v1, $v1, 0xa658
+AC at line:5    source::@00003010: $ 2 <= 00000000              asm::slt $v0, $v0, $0
+AC at line:6    source::@00003014: $ 2 <= 00000000              asm::slt $v0, $v1, $at
+AC at line:7    source::@00003018: $31 <= 00000000              asm::subu $ra, $at, $at
+AC at line:8    source::@0000301c: *0000005c <= 00000000                asm::sb $at, 0x5c($0)
+AC at line:9    source::@00003020: $ 3 <= 000082a1              asm::ori $v1, $0, 0x82a1
+AC at line:10   source::@00003024: $ 2 <= 000082a1              asm::subu $v0, $v1, $v0
+AC at line:13   source::@00003030: $31 <= 00008e24              asm::ori $ra, $0, 0x8e24
+AC at line:14   source::@00003034: $ 3 <= 00000000              asm::addu $v1, $at, $at
+AC at line:15   source::@00003038: *0000002c <= 00000024                asm::sb $ra, 0x2c($0)
+AC at line:17   source::@00003040: $ 3 <= 00000000              asm::lb $v1, 0x63($0)
+AC at line:18   source::@00003044: $ 1 <= bc240000              asm::lui $at, 0xbc24
+AC at line:20   source::@00003058: $ 3 <= 0000b2b2              asm::ori $v1, $v1, 0xb2b2
+AC at line:24   source::@00003068: $ 3 <= 0000b2b2              asm::addu $v1, $v1, $0
+WA at line:27   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+WA at line:28   source::@00003084: *0000003c <= 0000a100                std::           asm::sb $v0, 0x3d($0)
+WA at line:29   source::@00003088: $31 <= 0000153a              std::           asm::ori $ra, $ra, 0x153a
+WA at line:30   source::@0000308c: $ 3 <= 0000b6fa              std::           asm::ori $v1, $v1, 0xa658
+WA at line:31   source::@00003090: $ 2 <= 00000000              std::           asm::slt $v0, $v0, $0
+WA at line:32   source::@00003094: $ 2 <= 00000000              std::           asm::slt $v0, $v1, $at
+Traceback (most recent call last):
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 277, in <module>
+    asm = dasm(l1[0:39])
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 72, in dasm
+    rs=reg[str(int(bicode[6:11],2))]
+ValueError: invalid literal for int() with base 2: ''
+test point 5 begin:::
+generating...
+test.asm done
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:2    source::@00003004: $ 2 <= 00000000              asm::and $v0, $v0, $v1
+AC at line:3    source::@00003008: $ 3 <= 00000000              asm::lb $v1, 0x6d($0)
+AC at line:4    source::@0000300c: $ 3 <= 00000000              asm::addu $v1, $0, $ra
+AC at line:5    source::@00003010: $ 3 <= 00000000              asm::lb $v1, 0x6e($0)
+AC at line:6    source::@00003014: $ 3 <= 86620000              asm::lui $v1, 0x8662
+AC at line:8    source::@0000301c: $ 3 <= 0000ad02              asm::ori $v1, $0, 0xad02
+AC at line:9    source::@00003020: $31 <= 00000000              asm::lw $ra, 0x38($0)
+WA at line:12   source::@00003038: *00000064 <= 00000000                std::@00003038: *00000067 <= 00000000          asm::sb $v0, 0x67($0)
+AC at line:13   source::@0000303c: $31 <= 00000000              asm::addu $ra, $0, $v0
+AC at line:14   source::@00003040: $31 <= 00000000              asm::subu $ra, $v0, $ra
+WA at line:15   source::@00003044: $31 <= 00000048              std::@00003044: $31 <= 00003048         asm::jal 0x13
+AC at line:20   source::@0000305c: $31 <= 00000000              asm::lb $ra, 0x22($0)
+AC at line:21   source::@00003060: $31 <= 00000000              asm::lw $ra, 0x30($0)
+AC at line:23   source::@00003068: $ 1 <= 0000bfd7              asm::ori $at, $v1, 0x1ed5
+AC at line:24   source::@0000306c: $ 1 <= 00000000              asm::lb $at, 0x1d($0)
+AC at line:25   source::@00003070: $ 2 <= 00000000              asm::and $v0, $ra, $at
+AC at line:28   source::@0000307c: $ 3 <= 00000000              asm::lb $v1, 0x46($0)
+WA at line:29   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+WA at line:30   source::@00003084: $ 2 <= 00000000              std::           asm::and $v0, $v0, $v1
+WA at line:31   source::@00003088: $ 3 <= 00000000              std::           asm::lb $v1, 0x6d($0)
+WA at line:32   source::@0000308c: $ 3 <= 00000000              std::           asm::addu $v1, $0, $ra
+Traceback (most recent call last):
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 277, in <module>
+    asm = dasm(l1[0:39])
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 72, in dasm
+    rs=reg[str(int(bicode[6:11],2))]
+ValueError: invalid literal for int() with base 2: ''
+test point 6 begin:::
+generating...
+test.asm done
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:2    source::@00003004: $ 2 <= 00000000              asm::subu $v0, $0, $ra
+AC at line:3    source::@00003008: *00000034 <= 00000000                asm::sb $v1, 0x34($0)
+AC at line:4    source::@0000300c: $ 3 <= 00000000              asm::sll $v1, $v1, 11101
+WA at line:5    source::@00003010: *00000044 <= 00000000                std::@00003010: *00000047 <= 00000000          asm::sb $0, 0x47($0)
+AC at line:8    source::@0000301c: $ 3 <= 00000000              asm::and $v1, $0, $at
+AC at line:9    source::@00003020: $ 3 <= 00000000              asm::and $v1, $ra, $v1
+AC at line:10   source::@00003024: $ 1 <= 00000000              asm::slt $at, $v1, $at
+AC at line:11   source::@00003028: $ 2 <= 00000000              asm::addu $v0, $v0, $0
+AC at line:13   source::@00003030: $31 <= 00000000              asm::and $ra, $at, $v0
+AC at line:14   source::@00003034: $ 1 <= 00000000              asm::lw $at, 0x0($0)
+AC at line:17   source::@00003040: $ 3 <= 00000000              asm::sll $v1, $at, 10010
+AC at line:18   source::@00003044: $31 <= 00000000              asm::subu $ra, $ra, $v0
+WA at line:20   source::@0000305c: *00000054 <= 00000000                std::@0000305c: *00000057 <= 00000000          asm::sb $v1, 0x57($0)
+AC at line:21   source::@00003060: $ 3 <= 00000000              asm::sll $v1, $ra, 10111
+WA at line:22   source::@00003064: $31 <= 00000068              std::@00003064: $31 <= 00003068         asm::jal 0x1e
+AC at line:23   source::@00003078: $ 3 <= 00000000              asm::lw $v1, 0x44($0)
+AC at line:24   source::@0000307c: $ 3 <= 8d420000              asm::lui $v1, 0x8d42
+WA at line:25   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+WA at line:26   source::@00003084: $ 2 <= 00000000              std::           asm::subu $v0, $0, $ra
+WA at line:27   source::@00003088: *00000034 <= 00000000                std::           asm::sb $v1, 0x34($0)
+WA at line:28   source::@0000308c: $ 3 <= 00000000              std::           asm::sll $v1, $v1, 11101
+WA at line:29   source::@00003090: *00000044 <= 00000000                std::           asm::sb $0, 0x47($0)
+WA at line:32   source::@0000309c: $ 3 <= 00000000              std::           asm::and $v1, $0, $at
+Traceback (most recent call last):
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 277, in <module>
+    asm = dasm(l1[0:39])
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 72, in dasm
+    rs=reg[str(int(bicode[6:11],2))]
+ValueError: invalid literal for int() with base 2: ''
+test point 7 begin:::
+generating...
+test.asm done
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:3    source::@00003008: $ 1 <= 00000000              asm::and $at, $0, $at
+WA at line:4    source::@0000300c: *00000044 <= 00000000                std::@0000300c: *00000046 <= 00000000           asm::sb $v0, 0x46($0)
+AC at line:5    source::@00003010: $ 3 <= 00006144              asm::ori $v1, $ra, 0x6144
+WA at line:7    source::@00003018: *00000038 <= 00000000                std::@00003018: *0000003a <= 00000000           asm::sb $0, 0x3a($0)
+AC at line:8    source::@0000301c: $ 3 <= 00000000              asm::addu $v1, $0, $v0
+AC at line:9    source::@00003020: $ 1 <= ec560000              asm::lui $at, 0xec56
+AC at line:11   source::@00003028: $ 2 <= 0000bf56              asm::ori $v0, $0, 0xbf56
+AC at line:12   source::@0000302c: $ 1 <= ec5689a0              asm::ori $at, $at, 0x89a0
+AC at line:15   source::@00003038: $ 1 <= a9010000              asm::lui $at, 0xa901
+AC at line:16   source::@0000303c: *00000018 <= 00000056                asm::sb $v0, 0x18($0)
+AC at line:17   source::@00003040: *00000038 <= 00000000                asm::sb $0, 0x38($0)
+AC at line:18   source::@00003044: $31 <= 00000000              asm::lw $ra, 0x1c($0)
+AC at line:19   source::@00003048: $ 3 <= 00000001              asm::slt $v1, $at, $ra
+AC at line:22   source::@00003054: $ 3 <= 00000000              asm::lb $v1, 0x79($0)
+AC at line:27   source::@0000306c: $ 2 <= 0000239d              asm::ori $v0, $ra, 0x239d
+AC at line:28   source::@00003070: $ 1 <= 00000000              asm::lw $at, 0x38($0)
+AC at line:29   source::@00003074: $ 1 <= 00000000              asm::slt $at, $0, $ra
+AC at line:30   source::@00003078: $ 2 <= 0000e068              asm::ori $v0, $v1, 0xe068
+AC at line:31   source::@0000307c: $ 1 <= 00000000              asm::subu $at, $ra, $v1
+WA at line:32   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+Traceback (most recent call last):
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 277, in <module>
+    asm = dasm(l1[0:39])
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 72, in dasm
+    rs=reg[str(int(bicode[6:11],2))]
+ValueError: invalid literal for int() with base 2: ''
+test point 8 begin:::
+generating...
+test.asm done
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:2    source::@00003004: $ 3 <= 00000000              asm::subu $v1, $v1, $0
+AC at line:3    source::@00003008: $ 1 <= 0000619f              asm::ori $at, $ra, 0x619f
+AC at line:4    source::@0000300c: $ 3 <= 00000000              asm::and $v1, $v0, $v0
+AC at line:5    source::@00003010: $ 1 <= 00000000              asm::and $at, $ra, $ra
+AC at line:6    source::@00003014: $31 <= 00000000              asm::slt $ra, $v1, $at
+AC at line:7    source::@00003018: $31 <= 9e560000              asm::lui $ra, 0x9e56
+AC at line:8    source::@0000301c: $31 <= 9e560000              asm::addu $ra, $at, $ra
+AC at line:10   source::@00003024: $ 1 <= 00000000              asm::and $at, $v0, $at
+AC at line:11   source::@00003028: $ 1 <= 00000000              asm::slt $at, $0, $0
+AC at line:12   source::@0000302c: $ 3 <= 00000000              asm::subu $v1, $v1, $v1
+AC at line:13   source::@00003030: $ 2 <= 00000000              asm::addu $v0, $at, $at
+AC at line:17   source::@00003044: *0000001c <= 00000000                asm::sw $at, 0x1c($0)
+AC at line:19   source::@00003050: $ 1 <= 00000000              asm::sll $at, $v1, 01110
+WA at line:20   source::@00003054: *00000078 <= 00000000                std::@00003054: *0000007b <= 00000000           asm::sb $0, 0x7b($0)
+AC at line:22   source::@0000306c: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:23   source::@00003070: $ 1 <= 00000000              asm::and $at, $0, $v1
+AC at line:24   source::@00003074: $ 1 <= 39ce0000              asm::lui $at, 0x39ce
+AC at line:25   source::@00003078: $ 1 <= 00000000              asm::lw $at, 0x14($0)
+WA at line:26   source::@0000307c: *00000000 <= 00000000                std::@0000307c: *00000002 <= 00000000           asm::sb $at, 0x2($0)
+WA at line:27   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+WA at line:28   source::@00003084: $ 3 <= 00000000              std::           asm::subu $v1, $v1, $0
+WA at line:29   source::@00003088: $ 1 <= 0000619f              std::           asm::ori $at, $ra, 0x619f
+WA at line:30   source::@0000308c: $ 3 <= 00000000              std::           asm::and $v1, $v0, $v0
+WA at line:31   source::@00003090: $ 1 <= 00000000              std::           asm::and $at, $ra, $ra
+WA at line:32   source::@00003094: $31 <= 00000000              std::           asm::slt $ra, $v1, $at
+Traceback (most recent call last):
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 277, in <module>
+    asm = dasm(l1[0:39])
+  File "C:\Users\86135\Desktop\test_demo\test_p3\test_mars\run.py", line 72, in dasm
+    rs=reg[str(int(bicode[6:11],2))]
+ValueError: invalid literal for int() with base 2: ''
+test point 9 begin:::
+generating...
+test.asm done
+start running
+source done
+std done
+AC at line:1    source::@00003000: $31 <= 00000000              asm::subu $ra, $ra, $ra
+AC at line:2    source::@00003004: $ 1 <= 00000000              asm::addu $at, $at, $v1
+AC at line:3    source::@00003008: *00000024 <= 00000000                asm::sw $v1, 0x24($0)
+AC at line:4    source::@0000300c: $31 <= 00000000              asm::subu $ra, $v0, $0
+AC at line:7    source::@00003018: $ 2 <= 00000000              asm::subu $v0, $v0, $v1
+AC at line:8    source::@0000301c: $ 3 <= 00000000              asm::sll $v1, $v0, 10101
+AC at line:10   source::@00003024: $ 3 <= 00000000              asm::subu $v1, $ra, $at
+WA at line:11   source::@00003028: *00000014 <= 00000000                std::@00003028: *00000015 <= 00000000           asm::sb $v1, 0x15($0)
+AC at line:12   source::@0000302c: $31 <= 00000000              asm::subu $ra, $v1, $v0
+AC at line:13   source::@00003030: $31 <= 00000000              asm::slt $ra, $v1, $0
+WA at line:14   source::@00003034: $31 <= 00000038              std::@00003034: $31 <= 00003038         asm::jal 0x11
+WA at line:15   source::@00003044: *0000001c <= 00000000                std::@00003044: *0000001e <= 00000000           asm::sb $0, 0x1e($0)
+WA at line:19   source::@00003054: $ 3 <= 00000038              std::@00003054: $ 3 <= 00003038         asm::addu $v1, $ra, $v0
+AC at line:20   source::@00003058: $31 <= 00000000              asm::lw $ra, 0x50($0)
+AC at line:21   source::@0000305c: $ 1 <= 00000000              asm::slt $at, $at, $0
+AC at line:22   source::@00003060: $ 3 <= 000033bc              asm::ori $v1, $v1, 0x3384
+AC at line:23   source::@00003064: $ 2 <= f0000000              asm::sll $v0, $v1, 11010
+AC at line:24   source::@00003068: $ 2 <= 000033bc              asm::subu $v0, $v1, $0
+AC at line:25   source::@0000306c: $ 3 <= 00000000              asm::subu $v1, $at, $at
+AC at line:26   source::@00003070: $ 2 <= 00000000              asm::subu $v0, $v1, $v1
+AC at line:29   source::@0000307c: *00000048 <= 00000000                asm::sw $v1, 0x48($0)
+WA at line:30   source::@00003080: $31 <= 00000000              std::           asm::subu $ra, $ra, $ra
+WA at line:31   source::@00003084: $ 1 <= 00000000              std::           asm::addu $at, $at, $v1
+WA at line:32   source::@00003088: *00000024 <= 00000000                std::           asm::sw $v1, 0x24($0)
