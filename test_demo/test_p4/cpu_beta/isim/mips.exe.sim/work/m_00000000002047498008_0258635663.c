@@ -144,11 +144,14 @@ LAB5:    t2 = ((char*)((ng0)));
     t3 = (t0 + 1448);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     t2 = (t0 + 2424);
-    xsi_process_wait(t2, 100000LL);
+    xsi_process_wait(t2, 1000000LL);
     *((char **)t1) = &&LAB6;
     goto LAB1;
 
-LAB6:    goto LAB1;
+LAB6:    t2 = ((char*)((ng1)));
+    t3 = (t0 + 1448);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
+    goto LAB1;
 
 }
 

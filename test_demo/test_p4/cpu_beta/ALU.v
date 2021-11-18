@@ -10,6 +10,8 @@ module ALU(
 	output reg [31:0] C,
 	output reg cmp
 	);
+	
+	
 	always @(*) begin
 		case(ALU_op)
 			`ALU_add:	C = A + B;
@@ -19,15 +21,15 @@ module ALU(
 			`ALU_sll:	C = B<<shamt;
 			`ALU_srl:	C = B>>shamt;
 			`ALU_eq: begin
-					cmp = (A==B)?1:0;
+					cmp = (A==B)? 1:0;
 					C = {{31{1'b0}},{cmp}};
 				end
 			`ALU_lt: begin
-					cmp = (A<B)?1:0;
+					cmp = ($signed(A) < $signed(B))? 1:0;
 					C = {{31{1'b0}},{cmp}};
 				end
 			`ALU_lez: begin
-					cmp = (A<=0)?1:0;
+					cmp = (A[31] || A==0)? 1:0;
 					C = {{31{1'b0}},{cmp}};
 				end
 			default: C = 0;

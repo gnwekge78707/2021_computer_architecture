@@ -43,8 +43,8 @@ module mips_tb;
 		#2;
 		reset = 0;
 		// Wait 100 ns for global reset to finish
-		#100;
-        
+		#1000;
+      reset=1;
 		// Add stimulus here
 
 	end

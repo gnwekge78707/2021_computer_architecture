@@ -65,11 +65,11 @@ module CTR(
 	wire subu	= (op==`op_sp&&func==`func_subu);
 	wire _xor	= (op==`op_sp&&func==`func_xor);
 
-	assign load = lw|lb|lbu|lh|lhu|lui;
+	assign load = lw|lb|lbu|lh|lhu;
 	assign store = sw|sb|sh;
 	assign branch = beq|blez;
-	assign cali = addiu|ori;
-	assign calr = addu|_and|subu|slt|sll;
+	assign cali = addi|addiu|ori;
+	assign calr = add|addu|_and|sub|subu|slt|sll;
 	
 	assign ALU_op = (sub|subu)? `ALU_sub:
 						 (sll)? `ALU_sll:
@@ -84,7 +84,7 @@ module CTR(
 						 (j|jal)? `NPC_j:
 						 (jr)? `NPC_jr: `NPC_default;
 						 
-	assign EXT_op = (lw|sw|lb|sb|addiu)? `EXT_signed:
+	assign EXT_op = (load|store|addi|addiu)? `EXT_signed:
 						 (lui)? `EXT_lui: `EXT_unsigned;
 						 
 	assign DM_op = (lw|sw)? `DM_w:
@@ -94,12 +94,12 @@ module CTR(
 						(lbu)? `DM_bu: `DM_err;
 						
 	assign RF_A3_sel = (jal)? `RF_A3_31: 
-							 (lb|lw|lui|addiu|ori)? `RF_A3_rt: `RF_A3_rd;
+							 (load|lui|cali)? `RF_A3_rt: `RF_A3_rd;
 	assign RF_WD_sel = (jal)? `RF_WD_PC4:
-							 (lb|lw)? `RF_WD_DM:
+							 (load)? `RF_WD_DM:
 							 (lui)? `RF_WD_EXT: `RF_WD_ALU;
-	assign ALU_B_sel = (lw|sw|lb|sb|addiu|ori)? `ALU_EXT: `ALU_RD2;
+	assign ALU_B_sel = (load|store|cali)? `ALU_EXT: `ALU_RD2;
 	
 	assign DM_wr = store;
-	assign RF_wr = (load|calr|cali|jal)? 1:0;
+	assign RF_wr = (lui|load|calr|cali|jal)? 1:0;
 endmodule

@@ -43,6 +43,7 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mips.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mips.stx"/>
     <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="mips.tfi"/>
@@ -60,9 +61,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1636901436" xil_pn:in_ck="3180877282500997343" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1636901436">
+    <transform xil_pn:end_ts="1636980232" xil_pn:in_ck="3180877282500997343" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1636980232">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../CTR.v"/>
       <outfile xil_pn:name="../D2E.v"/>
       <outfile xil_pn:name="../D_CMP.v"/>
@@ -93,9 +98,14 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1636901440" xil_pn:in_ck="3180877282500997343" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1636901440">
+    <transform xil_pn:end_ts="1636980271" xil_pn:in_ck="3180877282500997343" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1636980271">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="../CTR.v"/>
       <outfile xil_pn:name="../D2E.v"/>
       <outfile xil_pn:name="../D_CMP.v"/>
@@ -114,19 +124,31 @@
       <outfile xil_pn:name="../mips_tb.v"/>
       <outfile xil_pn:name="mips_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1636901444" xil_pn:in_ck="3180877282500997343" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1224921198226451161" xil_pn:start_ts="1636901440">
+    <transform xil_pn:end_ts="1636980275" xil_pn:in_ck="3180877282500997343" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1224921198226451161" xil_pn:start_ts="1636980271">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="mips_tb_beh.prj"/>
       <outfile xil_pn:name="mips_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1636901445" xil_pn:in_ck="5516639572954650237" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2047243927697981372" xil_pn:start_ts="1636901444">
+    <transform xil_pn:end_ts="1636980275" xil_pn:in_ck="5516639572954650237" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2047243927697981372" xil_pn:start_ts="1636980275">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="mips_tb_isim_beh.wdb"/>
     </transform>
   </transforms>

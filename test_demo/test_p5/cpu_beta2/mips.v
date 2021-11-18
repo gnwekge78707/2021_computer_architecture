@@ -12,7 +12,7 @@ module mips(
 	wire [31:0] D_Instr, E_Instr, M_Instr, W_Instr;
 	wire [31:0] E_RF_WD, M_RF_WD, W_RF_WD;
 	wire [4:0] E_RF_A3, M_RF_A3, W_RF_A3;
-	wire [31:0] D_FWD_RS, D_TWD_RT, E_FWD_RS, E_FWD_RT, M_FWD_RS, M_FWD_RT;
+	wire [31:0] D_FWD_RS, D_FWD_RT, E_FWD_RS, E_FWD_RT, M_FWD_RS, M_FWD_RT;
 	
 	wire IFU_en, F2D_en, D2E_en, D2E_flush, E2M_en, M2W_en, stall;
 	
@@ -98,8 +98,8 @@ module mips(
 	);
 	
 	CMP D_CMP (
-    .A(D_RS), 
-    .B(D_RT), 
+    .A(D_FWD_RS), 
+    .B(D_FWD_RT), 
     .CMP_op(CMP_op), 
     .cmp(D_cmp)
    );
@@ -113,7 +113,7 @@ module mips(
 	NPC D_NPC (
     .F_PC(F_PC), 
     .D_PC(D_PC), 
-    .JR(D_RS), 
+    .JR(D_FWD_RS), 
     .imm26(imm26), 
     .NPC_op(NPC_op), 
     .cmp(D_cmp), 
@@ -133,8 +133,8 @@ module mips(
     .D_Instr(D_Instr), 
     .D_PC(D_PC), 
     .D_PC8(D_PC8), 
-    .D_RS(D_RS), 
-    .D_RT(D_RT), 
+    .D_RS(D_FWD_RS), 
+    .D_RT(D_FWD_RT), 
     .D_EXT_OUT(D_EXT_OUT), 
     .D_cmp(D_cmp), 
     .D2E_en(D2E_en), 
@@ -170,9 +170,9 @@ module mips(
 							(E_rt==W_RF_A3)? W_RF_WD: E_RT;
 	
 	ALU E_ALU (
-    .A(E_RS), 
+    .A(E_FWD_RS), 
     .B((ALU_B_sel==`ALU_EXT)? E_EXT_OUT:
-		 (ALU_B_sel==`ALU_RD2)? E_RT:
+		 (ALU_B_sel==`ALU_RD2)? E_FWD_RT:
 		 0), 
     .shamt(shamt), 
     .ALU_op(ALU_op), 
@@ -190,8 +190,8 @@ module mips(
     .E_Instr(E_Instr), 
     .E_PC(E_PC), 
     .E_PC8(E_PC8), 
-    .E_RS(E_RS), 
-    .E_RT(E_RT), 
+    .E_RS(E_FWD_RS), 
+    .E_RT(E_FWD_RT), 
     .E_ALU_C(E_ALU_C), 
     .E_EXT_OUT(E_EXT_OUT), 
     .E_cmp(E_cmp), 
@@ -226,7 +226,7 @@ module mips(
 
 	DM M_DM (
     .A(M_ALU_C), 
-    .WD(M_RT),
+    .WD(M_FWD_RT),
 	 .PC(M_PC),
     .DM_op(DM_op), 
 	 .Instr(M_Instr),
@@ -248,7 +248,7 @@ module mips(
     .M_PC(M_PC), 
     .M_PC8(M_PC8), 
     .M_RS(M_RS), 
-    .M_RT(M_RT), 
+    .M_RT(M_FWD_RT), 
     .M_ALU_C(M_ALU_C), 
     .M_EXT_OUT(M_EXT_OUT), 
     .M_DM_OUT(M_DM_OUT), 

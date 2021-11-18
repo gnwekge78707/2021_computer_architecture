@@ -1,0 +1,19 @@
+
+
+
+// Instantiate the module
+STL instance_name (
+    .D_Instr(D_Instr), 
+    .E_Instr(E_Instr), 
+    .M_Instr(M_Instr), 
+    .W_Instr(W_Instr), 
+    .IFU_en(IFU_en), 
+    .F2D_en(F2D_en), 
+    .D2E_en(D2E_en), 
+    .D2E_flush(D2E_flush), 
+    .E2M_en(E2M_en), 
+    .M2W_en(M2W_en), 
+    .stall(stall)
+    );
+
+

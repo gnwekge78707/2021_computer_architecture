@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+F2D instance_name (
+    .F_Instr(F_Instr), 
+    .F_PC(F_PC), 
+    .F2D_en(F2D_en), 
+    .clk(clk), 
+    .reset(reset), 
+    .D_Instr(D_Instr), 
+    .D_PC(D_PC)
+    );
+
+

@@ -26,7 +26,6 @@ module STL(
     .Instr(D_Instr),
     .rs(D_rs), 
     .rt(D_rt), 
-    .RF_A3(D_RF_A3), 
     .jreg(D_jreg), 
     .lui(D_lui), 
     .cali(D_cali), 
