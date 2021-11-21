@@ -1,0 +1,54 @@
+`timescale 1ns / 1ps
+`include "const.v"
+`default_nettype wire
+
+module M2W(
+	input [31:0] M_Instr,
+	input [31:0] M_PC,
+	input [31:0] M_PC8,
+	input [31:0] M_RS,
+	input [31:0] M_RT,
+	input [31:0] M_ALU_C,
+	input [31:0] M_EXT_OUT,
+	input [31:0] M_DM_OUT,
+	input M_cmp,
+	input M2W_en,
+	input clk,
+	input reset,
+	output reg [31:0] W_Instr,
+	output reg [31:0] W_PC,
+	output reg [31:0] W_PC8,
+	output reg [31:0] W_RS,
+	output reg [31:0] W_RT,
+	output reg [31:0] W_ALU_C,
+	output reg [31:0] W_EXT_OUT,
+	output reg [31:0] W_DM_OUT,
+	output reg W_cmp
+	);
+
+	always @(posedge clk) begin
+		if(reset) begin
+			W_Instr	<= 0;
+			W_PC		<= 0;
+			W_PC8		<= 0;
+			W_RS		<= 0;
+			W_RT		<= 0;
+			W_ALU_C	<= 0;
+			W_EXT_OUT <= 0;
+			W_DM_OUT	<= 0;
+			W_cmp		<= 0;
+		end
+		else if(M2W_en) begin
+			W_Instr	<= M_Instr;
+			W_PC		<= M_PC;
+			W_PC8		<= M_PC8;
+			W_RS 		<= M_RS;
+			W_RT		<= M_RT;
+			W_ALU_C	<= M_ALU_C;
+			W_EXT_OUT <= M_EXT_OUT;
+			W_DM_OUT	<= M_DM_OUT;
+			W_cmp		<= M_cmp;
+		end
+	end
+
+endmodule

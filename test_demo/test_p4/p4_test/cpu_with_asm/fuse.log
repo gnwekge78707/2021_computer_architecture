@@ -1,0 +1,33 @@
+Running: D:\PROGRAM\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe --nodebug --prj mips.prj -o mips.exe mips_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\ALU.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\const.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\CTR.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\DM.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\EXT.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\IFU.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\mips.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\mips_tb.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\NPC.v" into library work
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\RF.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\mips.v" Line 110: Port cali is not connected to this instance
+WARNING:HDLCompiler:189 - "C:\Users\86135\Desktop\test_demo\test_p4\p4_test\cpu_with_asm\src\mips.v" Line 63: Size mismatch in connection of port <A3>. Formal port size is 5-bit while actual signal size is 32-bit.
+Completed static elaboration
+Compiling module IFU
+Compiling module NPC
+Compiling module RF
+Compiling module ALU
+Compiling module EXT
+Compiling module DM
+Compiling module CTR
+Compiling module mips
+Compiling module mips_tb
+Time Resolution for simulation is 1ps.
+Compiled 9 Verilog Units
+Built simulation executable mips.exe
+Fuse Memory Usage: 30648 KB
+Fuse CPU Usage: 484 ms

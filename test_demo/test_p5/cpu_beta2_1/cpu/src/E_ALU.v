@@ -17,6 +17,7 @@ module ALU(
 			`ALU_or:		C = A|B;
 			`ALU_sll:	C = B<<shamt;
 			`ALU_srl:	C = B>>shamt;
+			`ALU_sra:	C = $signed($signed(B)>>>shamt);
 			`ALU_slt:	C = ($signed(A) < $signed(B))? 1:0;
 			default: C = 0;
 		endcase

@@ -1,0 +1,27 @@
+
+
+
+// Instantiate the module
+E2M instance_name (
+    .E_Instr(E_Instr), 
+    .E_PC(E_PC), 
+    .E_PC8(E_PC8), 
+    .E_RS(E_RS), 
+    .E_RT(E_RT), 
+    .E_ALU_C(E_ALU_C), 
+    .E_EXT_OUT(E_EXT_OUT), 
+    .E_cmp(E_cmp), 
+    .E2M_en(E2M_en), 
+    .clk(clk), 
+    .reset(reset), 
+    .M_Instr(M_Instr), 
+    .M_PC(M_PC), 
+    .M_PC8(M_PC8), 
+    .M_RS(M_RS), 
+    .M_RT(M_RT), 
+    .M_ALU_C(M_ALU_C), 
+    .M_EXT_OUT(M_EXT_OUT), 
+    .M_cmp(M_cmp)
+    );
+
+
