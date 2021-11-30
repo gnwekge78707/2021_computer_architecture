@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj cpu -o C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta1/cpu/D2E.tfi -lib work C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta1//D2E.v -module D2E -template D:/PROGRAM/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

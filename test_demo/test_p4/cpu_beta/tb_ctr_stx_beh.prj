@@ -1,0 +1,3 @@
+verilog isim_temp "CTR.v"
+verilog isim_temp "tb_ctr.v"
+verilog isim_temp "D:/PROGRAM/14.7/ISE_DS/ISE//verilog/src/glbl.v"

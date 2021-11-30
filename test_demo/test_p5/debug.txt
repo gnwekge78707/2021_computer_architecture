@@ -1,0 +1,5 @@
++ signed and unsigned:: comparision unit, ALU(both p4, p5)
++ control unit lui
++ CMP CMP_op bitwide [3:0] [2:0]
++ NPC branch  npc=D_pc+4+offset
++ E/M_RF_WD_sel define bitwide err

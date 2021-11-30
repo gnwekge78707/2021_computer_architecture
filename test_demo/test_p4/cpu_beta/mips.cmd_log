@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/86135/Desktop/CO/self/p4/cpu/mips.xst" -ofn "C:/Users/86135/Desktop/CO/self/p4/cpu/mips.syr" 

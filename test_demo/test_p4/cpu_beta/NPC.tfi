@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+NPC instance_name (
+    .PC(PC), 
+    .jr(jr), 
+    .imm26(imm26), 
+    .sel(sel), 
+    .cmp(cmp), 
+    .NPC(NPC), 
+    .PC4(PC4)
+    );
+
+

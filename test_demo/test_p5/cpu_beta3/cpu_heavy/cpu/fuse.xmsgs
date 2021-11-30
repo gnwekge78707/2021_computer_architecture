@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu_heavy\cpu\src\mips.v" Line 70: Port <arg fmt="%s" index="1">rd</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu_heavy\cpu\src\mips.v" Line 161: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu_heavy\cpu\src\mips.v" Line 225: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu_heavy\cpu\src\mips.v" Line 302: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu_heavy\cpu\src\STL.v" Line 29: Port <arg fmt="%s" index="1">chk</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu_heavy\cpu\src\STL.v" Line 59: Port <arg fmt="%s" index="1">chk</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu_heavy\cpu\src\STL.v" Line 75: Port <arg fmt="%s" index="1">chk</arg> is not connected to this instance
+</msg>
+
+</messages>
+

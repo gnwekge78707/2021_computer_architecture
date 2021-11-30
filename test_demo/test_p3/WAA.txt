@@ -1,0 +1,27 @@
+AC at line:1            ams::subu $ra, $ra, $ra
+AC at line:2            ams::ori $v1, $at, 0x5060
+AC at line:3            ams::slt $0, $v1, $at
+AC at line:4            ams::sll $at, $ra, 01010
+AC at line:5            ams::sll $v0, $at, 10111
+AC at line:6            ams::nop
+AC at line:7            ams::subu $v0, $ra, $v1
+AC at line:8            ams::lui $v1, 0x84ae
+AC at line:9            ams::sll $v0, $0, 00100
+AC at line:10           ams::nop
+AC at line:11           ams::lw $ra, 0x30($0)
+WA at line:12 source::@0x2c: $0x0 <= 0x1 std::@0x2c: $0x0 <= 0x0                ams::slt $0, $v1, $0
+AC at line:14           ams::nop
+AC at line:15           ams::ori $v0, $v1, 0x1d5c
+AC at line:16           ams::and $0, $ra, $at
+AC at line:17           ams::nop
+AC at line:19           ams::lui $v1, 0x9498
+AC at line:20           ams::ori $at, $ra, 0xaa50
+AC at line:22           ams::slt $v1, $v0, $v0
+AC at line:24           ams::ori $0, $at, 0x2713
+AC at line:26           ams::slt $ra, $ra, $ra
+AC at line:27           ams::nop
+AC at line:28           ams::addu $0, $at, $at
+AC at line:29           ams::subu $ra, $ra, $ra
+AC at line:30           ams::ori $v1, $at, 0x5060
+AC at line:31           ams::slt $0, $v1, $at
+AC at line:32           ams::sll $at, $ra, 01010

@@ -1,0 +1,7 @@
+# top module wire: module name + ouput port
+# A or a: 变量名include module, Bus，大写；else 小写
+# 模块内变量 小写
+# 模块名 大写
+# Portal：总线大写，含模块名的信号模块名大写，EN WE大写
+# 顶层线路 总线-大写(RF_RD1, Instr...) 否则小写(cmp, imm26)
+# 控制信号 模块名+小写操作 (EXT_op, RF_WD_sel，RF_wr)

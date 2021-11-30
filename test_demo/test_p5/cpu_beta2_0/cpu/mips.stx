@@ -1,0 +1,95 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2/cpu/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2/cpu/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: mips.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\CTR.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <CTR>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\STL.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <STL>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\M_DM.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <DM>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\M2W.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <M2W>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\F_IFU.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <IFU>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\F2D.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <F2D>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\E_ALU.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <ALU>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\E2M.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <E2M>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\D_RF.v" into library work
+Parsing module <RF>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\D_NPC.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <NPC>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\D_EXT.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <EXT>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\D_CMP.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <CMP>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\D2E.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <D2E>.
+Analyzing Verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\mips.v" into library work
+Parsing verilog file "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta2\/const.v" included at line 2.
+Parsing module <mips>.
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.15 secs
+ 
+--> 
+
+Total memory usage is 4495208 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

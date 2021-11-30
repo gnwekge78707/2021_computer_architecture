@@ -1,0 +1,29 @@
+
+
+
+// Instantiate the module
+M2W instance_name (
+    .M_Instr(M_Instr), 
+    .M_PC(M_PC), 
+    .M_PC8(M_PC8), 
+    .M_RS(M_RS), 
+    .M_RT(M_RT), 
+    .M_ALU_C(M_ALU_C), 
+    .M_EXT_OUT(M_EXT_OUT), 
+    .M_DM_OUT(M_DM_OUT), 
+    .M_cmp(M_cmp), 
+    .M2W_en(M2W_en), 
+    .clk(clk), 
+    .reset(reset), 
+    .W_Instr(W_Instr), 
+    .W_PC(W_PC), 
+    .W_PC8(W_PC8), 
+    .W_RS(W_RS), 
+    .W_RT(W_RT), 
+    .W_ALU_C(W_ALU_C), 
+    .W_EXT_OUT(W_EXT_OUT), 
+    .W_DM_OUT(W_DM_OUT), 
+    .W_cmp(W_cmp)
+    );
+
+

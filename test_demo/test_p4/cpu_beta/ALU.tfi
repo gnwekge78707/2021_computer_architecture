@@ -1,0 +1,14 @@
+
+
+
+// Instantiate the module
+ALU instance_name (
+    .A(A), 
+    .B(B), 
+    .Shamt(Shamt), 
+    .ALU_op(ALU_op), 
+    .C(C), 
+    .cmp(cmp)
+    );
+
+

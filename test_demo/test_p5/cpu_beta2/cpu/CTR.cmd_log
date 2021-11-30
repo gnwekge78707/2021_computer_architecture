@@ -1,0 +1,8 @@
+vhdtdtfi -lang verilog -prj cpu -o C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta1/cpu/CTR.tfi -lib work C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta1//CTR.v -module CTR -template D:/PROGRAM/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj cpu -o C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta1/cpu/CTR.tfi -lib work C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta1//CTR.v -module CTR -template D:/PROGRAM/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj cpu -o C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2/cpu/CTR.tfi -lib work C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2//CTR.v -module CTR -template D:/PROGRAM/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj cpu -o C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2/cpu/CTR.tfi -lib work C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2//CTR.v -module CTR -template D:/PROGRAM/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj cpu -o C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2/cpu/CTR.tfi -lib work C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2//CTR.v -module CTR -template D:/PROGRAM/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2/CTR.v -lang verilog -prj cpu -o CTR.spl -module CTR -template D:/PROGRAM/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+vhdtdtfi -lang verilog -prj cpu -o C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2/cpu/CTR.tfi -lib work C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2//CTR.v -module CTR -template D:/PROGRAM/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 CTR.spl C:/Users/86135/Desktop/test_demo/test_p5/cpu_beta2/cpu/CTR.sym 

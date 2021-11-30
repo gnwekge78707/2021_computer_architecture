@@ -1,0 +1,8 @@
+1. in M2W, add W_chk <= M_chk
+2. inside stall:: you dont have chk, so E_RF_A3=M_RF_A3=xxxxx. judging, change format.
+
+	wire rs_stall_E = (rs_tuse<E_tnew && D_rs && ((E_bmlr)? (D_rs==5'd31): E_RF_A3==D_rs));
+	wire rs_stall_M = (rs_tuse<M_tnew && D_rs && ((M_bmlr)? (D_rs==5'd31): M_RF_A3==D_rs));
+	wire rt_stall_E = (rt_tuse<E_tnew && D_rt && ((E_bmlr)? (D_rt==5'd31): E_RF_A3==D_rt));
+	wire rt_stall_M = (rt_tuse<M_tnew && D_rt && ((M_bmlr)? (D_rt==5'd31): M_RF_A3==D_rt));
+	assign stall = rs_stall_E|rs_stall_M|rt_stall_E|rt_stall_M;

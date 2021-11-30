@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="roife 的魔法科见闻">
+    <meta name="keywords" content="roife, roifewu, @roife, ROIFE BLOG, 博客, 个人网站">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+        content="「BUAA-CO-Lab」 P5 流水线 CPU-lite - roife 的博客 | ROIFE BLOG">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="上机总结 1
+
+">
+    
+    <meta property="article:published_time" content="2020-11-23T00:00:00Z">
+    
+    
+    <meta property="article:author" content="roife">
+    
+    
+    <meta property="article:tag" content="BUAA - 计算机组成实验@Courses@Series">
+    
+    <meta property="article:tag" content="北航@Tags@Tags">
+    
+    <meta property="article:tag" content="计算机组成@Tags@Tags">
+    
+    <meta property="article:tag" content="Verilog-HDL@Languages@Tags">
+    
+    <meta property="article:tag" content="数字电路@Tags@Tags">
+    
+    
+    <meta property="og:image" content="https://roife.github.io/img/avatar-roife-ny.png">
+    <meta property="og:url" content="https://roife.github.io/2020/11/23/buaa-co-lab-p5/">
+    <meta property="og:site_name" content="roife 的博客 | ROIFE BLOG">
+
+    <title>「BUAA-CO-Lab」 P5 流水线 CPU-lite - roife 的博客 | ROIFE BLOG</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://roife.github.io/2020/11/23/buaa-co-lab-p5/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
+    
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">ROIFE BLOG</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="huxblog_navbar">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li class="search-icon">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <script>
+        // Drop Bootstarp low-performance Navbar
+        // Use customize navbar with high-quality material design animation
+        // in high-perf jank-free CSS3 implementation
+        var $body = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+
+        var __HuxNav__ = {
+            close: function () {
+                $navbar.className = " ";
+                // wait until animation end.
+                setTimeout(function () {
+                    // prevent frequently toggle
+                    if ($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                }, 400)
+            },
+            open: function () {
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
+        }
+
+        // Bind Event
+        $toggle.addEventListener('click', function (e) {
+            if ($navbar.className.indexOf('in') > 0) {
+                __HuxNav__.close()
+            } else {
+                __HuxNav__.open()
+            }
+        })
+
+        /**
+         * Since Fastclick is used to delegate 'touchstart' globally
+         * to hack 300ms delay in iOS by performing a fake 'click',
+         * Using 'e.stopPropagation' to stop 'touchstart' event from
+         * $toggle/$collapse will break global delegation.
+         *
+         * Instead, we use a 'e.target' filter to prevent handler
+         * added to document close HuxNav.
+         *
+         * Also, we use 'click' instead of 'touchstart' as compromise
+         */
+        document.addEventListener('click', function (e) {
+            if (e.target == $toggle) return;
+            if (e.target.className == 'icon-bar') return;
+            __HuxNav__.close();
+        })
+    </script>
+    <!-- Search -->
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="/img/home-bg.jpg" width="0" height="0"> -->
+
+<!-- Post Header -->
+
+
+
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('/img/home-bg.jpg');
+        background: ;
+    }
+
+    
+</style>
+
+<header class="intro-header style-text" >
+
+    <div class="header-mask"></div>
+    
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-lg-offset-0 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+                <div class="tags">
+                    <a class="tag"
+                           href="/archive/?order=series&tag=BUAA+-+%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%AE%9E%E9%AA%8C%40Courses%40Series"
+                           title="BUAA - 计算机组成实验">BUAA - 计算机组成实验</a>
+                    <a class="tag"
+                           href="/archive/?order=tags&tag=%E5%8C%97%E8%88%AA%40Tags%40Tags"
+                           title="北航">北航</a>
+                    <a class="tag"
+                           href="/archive/?order=tags&tag=%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%40Tags%40Tags"
+                           title="计算机组成">计算机组成</a>
+                    <a class="tag"
+                           href="/archive/?order=tags&tag=Verilog-HDL%40Languages%40Tags"
+                           title="Verilog-HDL">Verilog-HDL</a>
+                    <a class="tag"
+                           href="/archive/?order=tags&tag=%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%40Tags%40Tags"
+                           title="数字电路">数字电路</a>
+                    
+                </div>
+
+                
+                
+                
+                    
+                    <h3 class="leading-heading">「BUAA-CO-Lab」 P5</h3>
+                    
+                
+                <h1>流水线 CPU-lite</h1>
+                
+                <h2 class="subheading">简单流水线 CPU</h2>
+                <span class="meta">Posted by roife on November 23, 2020</span>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+
+
+
+
+
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-10 col-lg-offset-0 col-md-10 col-md-offset-1 post-container">
+                <!-- Multi-Lingual -->
+                
+
+                <span id="article-top-anchor"></span>
+                <h1 id="上机总结-1">上机总结 1</h1>
+
+<blockquote>
+  <p>失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了失败了</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>第一题：cco</p>
+
+\[\begin{aligned}
+  &amp; temp \leftarrow 0 \\
+  &amp; \operatorname{for}\ i\ \operatorname{in}\ 31 \cdots 0 \\
+  &amp; \qquad \operatorname{if}\ GPR[rs]_i == 1\ \operatorname{and}\ GPR[rt]_i == 1\  \operatorname{then} \\
+  &amp; \qquad \qquad temp \leftarrow temp + 1 \\
+  &amp; GPR[rd] \leftarrow temp
+  \end{aligned}\]
+
+    <p>改一下 ALU 就好了。注意如果在 ALU 里面用的是 <code class="language-plaintext highlighter-rouge">assign</code>，那么建议使用 <code class="language-plaintext highlighter-rouge">function</code>。</p>
+  </li>
+  <li>
+    <p>第二题：bgezall</p>
+
+\[\begin{aligned}
+  \operatorname{I}:
+  &amp; target\_offset \leftarrow \operatorname{signed\_ext}(offset || 0^2) \\
+  &amp; condition \leftarrow GPR[rs] \ge 0 \\
+  &amp; GPR[31] \leftarrow PC + 8  \\
+  \operatorname{I+1}:
+  &amp; \operatorname{if}\ condition\  \operatorname{then} \\
+  &amp; \qquad PC \leftarrow PC + 4 + target\_offset \\
+  &amp; \operatorname{else} \\
+  &amp; \qquad \operatorname{NullifyCurrentInstruction()} \\
+  \end{aligned}\]
+
+    <p>$\operatorname{NullifyCurrentInstruction()}$ 的意思是清空延迟槽。</p>
+
+    <p>也就是说仅当跳转时延迟槽生效。</p>
+
+    <p>要考虑当 CPU stall 的时候不能清空延迟槽。</p>
+
+    <p>还有一种方法是监测到 <code class="language-plaintext highlighter-rouge">D_b_jump</code> 时，F 级的指令插入 <code class="language-plaintext highlighter-rouge">nop</code>（这个在 P7 很常用）。</p>
+
+    <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">F_instr</span> <span class="o">=</span> <span class="p">(</span><span class="n">D_b_jump</span> <span class="o">&amp;&amp;</span> <span class="n">D_bgezall</span><span class="p">)</span> <span class="o">?</span> <span class="mi">32'd0</span> <span class="o">:</span> <span class="n">im</span><span class="p">[</span><span class="n">pc</span><span class="p">[</span><span class="mi">13</span><span class="o">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="mh">12'hc00</span><span class="p">];</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>第三题：lwso</p>
+
+\[\begin{aligned}
+  &amp; mem\_data \leftarrow mem[GPR[rs] + offset] \\
+  &amp; temp \leftarrow (GPR[rt]_{31} || GPR[rt]) + (mem\_data_{31} || mem\_data) \\
+  &amp; \operatorname{if}\ temp_{32} == temp_{31}\  \operatorname{then} \\
+  &amp; \qquad GPR[rt] \leftarrow GPR[rt] + mem\_data
+  \end{aligned}\]
+
+    <p>实际上就是：如果第二步相加没有溢出就赋值，否则不赋值。</p>
+  </li>
+</ul>
+
+<h1 id="上机总结-2">上机总结 2</h1>
+
+<p>爬了，又没过。</p>
+
+<ul>
+  <li>
+    <p>第一题：cmco</p>
+
+\[\begin{aligned}
+  &amp; temp \leftarrow 0 \\
+  &amp; count \leftarrow 0 \\
+  &amp; \operatorname{for}\ i\ \operatorname{in}\ 0 \cdots 31 \\
+  &amp; \qquad \operatorname{if}\ GPR[rs]_i == 1\ \operatorname{then} \\
+  &amp; \qquad \qquad count \leftarrow count + 1 \\
+  &amp; \qquad \qquad \operatorname{if}\ count &gt; temp\ \operatorname{then} \\
+  &amp; \qquad \qquad \qquad temp \leftarrow count \\
+  &amp; \qquad \operatorname{else} \\
+  &amp; \qquad \qquad count \leftarrow 0 \\
+  &amp; GPR[rd] \leftarrow temp
+  \end{aligned}\]
+
+    <p>同样改一下 ALU 就好了。就是统计二进制最长有几个连续的 $1$。</p>
+  </li>
+  <li>
+    <p>第二题：blezalc</p>
+
+\[\begin{aligned}
+  &amp; target\_offset \leftarrow \operatorname{signed\_ext}(offset || 0^2) \\
+  &amp; condition \leftarrow GPR[rs] \le 0 \\
+  &amp; \operatorname{if}\ condition\  \operatorname{then} \\
+  &amp; \qquad PC \leftarrow PC + 4 + target\_offset \\
+  &amp; \qquad GPR[31] \leftarrow PC + 8  \\
+  \end{aligned}\]
+
+    <p>这个题目课上的 RTL 表述其实有问题……更正后应该是这样的，即如果跳转则链接寄存器。</p>
+  </li>
+  <li>
+    <p>第三题：lrm</p>
+
+\[\begin{aligned}
+  &amp; vAddr \leftarrow GPR[base] + \operatorname{sign\_extend}(offset) \\
+  &amp; mem\_reg \leftarrow Memory[vAddr]_{4..0} \\
+  &amp; GPR[mem\_reg] \leftarrow GPR[rt]
+  \end{aligned}\]
+
+    <p>存储地址为 DM 输出的低位。</p>
+  </li>
+</ul>
+
+<h1 id="上机总结-3--分析">上机总结 3 &amp; 分析</h1>
+
+<p>终于过了……这次的指令是前两次的混合体，所以就不展开说了。</p>
+
+<p>这里就简单讲讲 P5 的套路吧。</p>
+
+<p>首先课上的三条指令：计算 + 跳转 + 存储。</p>
+
+<ol>
+  <li>计算绝对是最简单的，重点在于你的写法。如果你用 <code class="language-plaintext highlighter-rouge">always@(*)</code> 那么问题不大。但是如果你用的是 <code class="language-plaintext highlighter-rouge">assign</code> 那么最好使用 <code class="language-plaintext highlighter-rouge">function</code> 来实现计算指令。</li>
+  <li>
+    <p>跳转一般也不难，一般是条件跳转 + 条件写。
+跳转指令一个好处在于它是在 D 级决定是否跳转的，也就是说在 D 级你可以获得全部的正确信息（相反如果是类似于 <code class="language-plaintext highlighter-rouge">lwso</code> 这种，你必须要读出 DM 的值才能决定怎么做）。所以我们的方案是 D 级生成一个 <code class="language-plaintext highlighter-rouge">D_check</code> 信号然后流水它。然后每一级根据这个信号判断写入地址/写入值之类的。</p>
+
+    <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre> <span class="c1">// 检测信号</span>
+ <span class="n">D_check</span> <span class="o">=</span> <span class="n">D_bgezalc</span> <span class="o">&amp;</span> <span class="n">D_b_jump</span><span class="p">;</span>
+ <span class="c1">// CU</span>
+ <span class="k">assign</span> <span class="n">RFDst</span> <span class="o">=</span> <span class="c1">// ...</span>
+               <span class="n">bgezalc</span> <span class="o">?</span> <span class="p">(</span><span class="n">check</span> <span class="o">?</span> <span class="mi">5'd31</span> <span class="o">:</span> <span class="mi">5'd0</span><span class="p">)</span> <span class="o">:</span>
+               <span class="mi">5'd0</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>条件存储一般是最难的。
+但是掌握了套路之后也还好。条件存储的特点是必须要到 M 级才知道要写啥，这就给转发之类的造成了困难，所以我们的策略是如果 D 级要读寄存器，而且新指令<strong>可能</strong>要写这个寄存器，那么就 stall。具体来说是这样的：
+    <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre> <span class="c1">// lwso</span>
+ <span class="kt">wire</span> <span class="n">stall_rs_e</span> <span class="o">=</span> <span class="p">(</span><span class="n">TuseRS</span> <span class="o">&lt;</span> <span class="n">TnewE</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">D_rs_addr</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">D_lwso</span> <span class="o">?</span> <span class="n">D_rs_addr</span> <span class="o">==</span> <span class="mi">5'd31</span> <span class="o">:</span> <span class="n">D_rs_addr</span> <span class="o">==</span> <span class="n">E_RFDst</span><span class="p">);</span>
+ <span class="c1">// lrm</span>
+ <span class="kt">wire</span> <span class="n">stall_rs_e</span> <span class="o">=</span> <span class="p">(</span><span class="n">TuseRS</span> <span class="o">&lt;</span> <span class="n">TnewE</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">D_rs_addr</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">D_lrm</span> <span class="o">?</span> <span class="n">D_rs_addr</span> <span class="o">:</span> <span class="n">D_rs_addr</span> <span class="o">==</span> <span class="n">E_RFDst</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>在 CU 中的写法则与条件跳转类似。</p>
+
+    <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre> <span class="c1">// lwso</span>
+ <span class="n">M_check</span> <span class="o">=</span> <span class="n">D_lwso</span> <span class="o">&amp;&amp;</span> <span class="n">condition</span><span class="p">;</span>
+ <span class="c1">// CU</span>
+ <span class="k">assign</span> <span class="n">RFDst</span> <span class="o">=</span> <span class="c1">// ...</span>
+               <span class="n">lwso</span> <span class="o">?</span> <span class="p">(</span><span class="n">check</span><span class="o">===</span><span class="mi">1'd1</span> <span class="o">?</span> <span class="mi">5'd31</span> <span class="o">:</span> <span class="mi">5'd0</span><span class="p">)</span> <span class="o">:</span> <span class="c1">// 注意不是直接一个 check</span>
+               <span class="mi">5'd0</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+
+    <p>这里要注意的一点是，如果你用的是统一 CU 的写法，那么会出现一个问题：<code class="language-plaintext highlighter-rouge">check</code> 信号只有在 M 级传入。这个时候在 E 级的 CU 里面这个信号是不定态 x，这样会导致 RFDst 信号出锅。所以我们这里的写法是 <code class="language-plaintext highlighter-rouge">check===1'd1</code>，这样可以排除 <code class="language-plaintext highlighter-rouge">x</code> 的情况。</p>
+  </li>
+</ol>
+
+<h1 id="课下总结">课下总结</h1>
+
+<p>P5 做得真是艰难，一方面是流水线这个东西本身比较复杂，包括转发/暂停等一系列机制；另一方面是数据通路由于流水线寄存器的加入，代码量大大上升，个人经验大概比 P4 增加了 1/2 到 1 倍左右。而且 P5 时流水起迭代开发的起点，所以一个好的架构非常重要，所以做的时候会非常想要不停地重构，这又浪费了很多时间。所以建议在做之前先做好设计工作，然后做的过程中不要临时起意去修改。</p>
+
+<p>总的来说流水线的难点在于三方面：</p>
+<ol>
+  <li>数据通路和控制器架构</li>
+  <li>转发</li>
+  <li>暂停</li>
+</ol>
+
+<p>下面我会分别介绍这三方面的内容（主要是教程内容，我会做一些个人理解和细节补充）。</p>
+
+<p>注意：做 P5 前请确保自己熟悉 Verilog 和 P4，并且看完了教程内容和高老板的课件。</p>
+
+<h1 id="流水线要点">流水线要点</h1>
+
+<p>开发时你需要注意以下几个方面：</p>
+<ol>
+  <li>命名风格：建议使用 <code class="language-plaintext highlighter-rouge">流水级_名称</code>，如 <code class="language-plaintext highlighter-rouge">D_instr</code></li>
+  <li>代码排布：建议同一级放在一起，同样的功能放在一起，独立的部分可以适当抽出独立成模块，即遵循“低耦合，高内聚”的原则</li>
+  <li>多使用宏和常量来简化代码，如推荐使用 <code class="language-plaintext highlighter-rouge">ALU_add</code> 代替 <code class="language-plaintext highlighter-rouge">3'b001</code></li>
+</ol>
+
+<h2 id="数据通路及控制架构">数据通路及控制架构</h2>
+
+<h3 id="架构方案选择">架构方案选择</h3>
+
+<p>数据通路架构即 FDEMW 五个部分的数据通路，以及数据通路中的流水线寄存器。</p>
+
+<p>P5 是 CPU 迭代开发的起点，因此一个好的架构是很好的起点。总的来说架构包括这几部分：</p>
+
+<ol>
+  <li>
+    <p>译码方式：分为集中式译码和分布式译码。</p>
+
+    <p>集中式译码即在 <code class="language-plaintext highlighter-rouge">F</code> 或 <code class="language-plaintext highlighter-rouge">D</code> 级进行译码，然后将控制信号流水传递，即 P3/P4 采用的译码方式；分布式译码则只流水传递指令，控制信号在每一级单独译码。</p>
+
+    <p>集中式译码的好处在于速度更快，关键路径更短；分布式译码关键路径更长，速度较慢（差不了很多）但是译码信息模块化，不需要流水传递控制信号，更适合应试和学习。</p>
+
+    <p>这里我们采用分布式译码。</p>
+  </li>
+  <li>
+    <p>译码语句：</p>
+
+    <p>可以用 <code class="language-plaintext highlighter-rouge">always @(*) + case</code> 或者 <code class="language-plaintext highlighter-rouge">assign</code> 进行译码。这里使用后者（因为后者代码更短）。</p>
+  </li>
+  <li>
+    <p>控制器设计：</p>
+
+    <p>为每一级单独写一个 CU, 或者写一个大的 CU 每一级实例化一次，取不同的信号使用。</p>
+
+    <p>前者可以节省晶体管，但是实际操作会遇到很多问题：比如指令一多（P6）那样译码信息写起来很麻烦。如果你像我一样，写了一个 <code class="language-plaintext highlighter-rouge">interpreter.v</code> 来复用解码代码，那样会发现还不如直接单写一个 CU，而且一些信号会重复使用，如寄存器写使能信号在阻塞模块中会重复使用。出于面向对象的工程思想，我们倾向于把信号集中在一起。</p>
+
+    <p>后者写起来简单，但是要使用更多的晶体管。</p>
+
+    <p>这里使用后者。（我们要对编译器抱有信心，相信他会帮我们优化代码的 (｡･ω･｡)）</p>
+  </li>
+</ol>
+
+<p>总而言之，我们采用的是更工程化，更符合“低耦合高内聚”原则的方案，效率和成本不是我们考虑的首要因素。</p>
+
+<h3 id="数据通路架构">数据通路架构</h3>
+
+<p>数据通路部分的元件基本上和 P4 一样，我们将它们分在不同的层级。</p>
+<ol>
+  <li>F 级：PC，IM</li>
+  <li>D 级：GRF，EXT，CMP，NPC</li>
+  <li>E 级：ALU</li>
+  <li>M 级：DM</li>
+  <li>W 级：无</li>
+</ol>
+
+<p>连线参考教程和 P4。需要注意的有两点：</p>
+<ol>
+  <li>新元件 CMP 用于 b 类指令</li>
+  <li>NPC 位于 D 级，他的输入中既需要 <code class="language-plaintext highlighter-rouge">D_pc</code> （b 类，j 类），又需要 <code class="language-plaintext highlighter-rouge">F_pc</code> （PC+4）。</li>
+</ol>
+
+<h3 id="控制器架构">控制器架构</h3>
+
+<p>控制器我分为三部分。第一部分分割指令（取出 rs，imm 等），第二部分解析指令（<code class="language-plaintext highlighter-rouge">wire add = (opcode == `OP_add) &amp;&amp; (func == `FU_add)</code>），第三部分分类指令（<code class="language-plaintext highlighter-rouge">load</code>，<code class="language-plaintext highlighter-rouge">calc_r</code>，<code class="language-plaintext highlighter-rouge">calc_i</code> 之类），第四部分建模控制信号。</p>
+
+<p>采用统一控制器的好处是，在数据通路、转发、阻塞中你都可以复用这些代码。</p>
+
+<h2 id="转发">转发</h2>
+
+<p>只有 RS 和 RT 会被转发。有四个位点是转发的接受端：</p>
+<ol>
+  <li>NPC 的 RS 输入端</li>
+  <li>CMP 的两个输入端</li>
+  <li>ALU 的输入端</li>
+  <li>DM 的输入端</li>
+</ol>
+
+<p>可以的话最好实先画一个图。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>转发接受</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NPC</td>
+    </tr>
+    <tr>
+      <td>D_CMP_A/B</td>
+    </tr>
+    <tr>
+      <td>ALU_A/B</td>
+    </tr>
+    <tr>
+      <td>DM_in</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>转发输出</th>
+      <th>（就近优先）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>E_reg</td>
+      <td>j_l / lui</td>
+    </tr>
+    <tr>
+      <td>M_reg</td>
+      <td>calc_r/calc_i</td>
+    </tr>
+    <tr>
+      <td>W_reg</td>
+      <td>load</td>
+    </tr>
+    <tr>
+      <td>寄存器内部转发</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>注意这里我把 <code class="language-plaintext highlighter-rouge">lui</code> 特殊处理了，并没有归入到 <code class="language-plaintext highlighter-rouge">calc_i</code> 里面去。</p>
+
+<p>然后是接受端选择数据，选择的顺序按照<strong>就近原则</strong>，优先选择下一级的数据，不行就下两级，如果都不行就采用本级寄存器的数据。接受端可以接受数据的条件为：</p>
+<ol>
+  <li>供给端的寄存器地址与当前的相同</li>
+  <li>当前需要的地址不为 0</li>
+  <li>供给端可以转发（我们使用无脑转发，所以不需要考虑）</li>
+  <li>供给端的指令会写数据（如果不写数据我们令写入地址为 0，所以不需要考虑）</li>
+</ol>
+
+<p>即：</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">FWD_E_RS</span> <span class="o">=</span>  <span class="p">(</span><span class="n">E_rs_addr</span> <span class="o">==</span> <span class="mb">5'b0</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span>
+                        <span class="p">(</span><span class="n">E_rs_addr</span> <span class="o">==</span> <span class="n">M_RFDst</span><span class="p">)</span> <span class="o">?</span> <span class="n">M_RFWD</span> <span class="o">:</span>
+                        <span class="c1">// ...</span>
+                        <span class="n">E_rs</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>这里的 A-T 法有一个很妙的地方。注意到我们的判断条件仅仅是 <code class="language-plaintext highlighter-rouge">E_rs_addr == M_RFDst</code> 而不用加其他信号，相当于暴力转发。假如 D 级可以用 E/M/W 级的数据，但是 E 级还没算好，为什么不需要判断 <code class="language-plaintext highlighter-rouge">E</code> 的指令能否被转发呢？我们考虑两种情况：</p>
+<ol>
+  <li>需要暂停
+比如 <code class="language-plaintext highlighter-rouge">beq-add-add-add</code>，那么直接 stall，下一个周期 <code class="language-plaintext highlighter-rouge">E</code> 变成 <code class="language-plaintext highlighter-rouge">nop</code> 了，那么 <code class="language-plaintext highlighter-rouge">E_RFDst</code> 不符合 <code class="language-plaintext highlighter-rouge">E_rs_addr == M_RFDst</code>，自然就使用 <code class="language-plaintext highlighter-rouge">M</code> 了。</li>
+  <li>不需要暂停
+比如 <code class="language-plaintext highlighter-rouge">add-add-add-add</code>，那么这个时候 <code class="language-plaintext highlighter-rouge">D</code> 的 <code class="language-plaintext highlighter-rouge">add</code> 会从 <code class="language-plaintext highlighter-rouge">E</code> 得到一个错误的数据，但是没关系，现在还不用。下一个周期要用到这个数据的时候，我们进行了第二次转发，即 <code class="language-plaintext highlighter-rouge">M</code>（原先的 <code class="language-plaintext highlighter-rouge">E</code>）转发过来的数据，此时这个数据经过 <code class="language-plaintext highlighter-rouge">ALU</code> 已经算完了，所以我们可以直接利用。</li>
+</ol>
+
+<p>需要注意的有以下几点：</p>
+<ol>
+  <li>
+    <p>本级的寄存器接受了转发后，一律使用转发后的值。我们可以把使用原值也看成一种转发，即我们必须使用最新的值，包括给下一级寄存器传递信息时也要用转发后的数据。</p>
+
+    <p>如 <code class="language-plaintext highlighter-rouge">FWD_E_RS</code> 是转发后的值，那么在 <code class="language-plaintext highlighter-rouge">M_reg</code> 的 <code class="language-plaintext highlighter-rouge">rs_in</code> 信号就要用 <code class="language-plaintext highlighter-rouge">FWD_E_RS</code> 而不是 <code class="language-plaintext highlighter-rouge">E_rs</code>。</p>
+  </li>
+  <li>
+    <p>寄存器内部转发</p>
+
+    <p>其实就是 D 级接受 W 级的转发电路放在了寄存器内部</p>
+
+    <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> <span class="k">assign</span> <span class="n">RD1</span> <span class="o">=</span> <span class="p">(</span><span class="n">A3</span> <span class="o">==</span> <span class="n">A1</span> <span class="o">&amp;&amp;</span> <span class="n">A3</span> <span class="o">&amp;&amp;</span> <span class="n">WE</span><span class="p">)</span> <span class="o">?</span> <span class="n">WD</span> <span class="o">:</span> <span class="n">grf</span><span class="p">[</span><span class="n">A1</span><span class="p">];</span> <span class="c1">// 内部转发</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+  <li>
+    <p>为什么转发不需要判断 <code class="language-plaintext highlighter-rouge">M_RFWE</code>？因为在 <code class="language-plaintext highlighter-rouge">M_RFDst</code> 中我们令不写寄存器的部件的写入地址为 <code class="language-plaintext highlighter-rouge">$0</code>，所以不会对结果造成影响。</p>
+  </li>
+</ol>
+
+<h2 id="阻塞">阻塞</h2>
+
+<p>建议通读教程，看一遍高老板的 PPT，尤其要搞清楚 Tuse 和 Tnew 两个东西。</p>
+
+<ul>
+  <li>Tuse：指令进入 D 级后，其后的某个功能部件再经过多少时钟周期就必须要使用寄存器值。对于有两个操作数的指令，其每个操作数的 Tuse 值可能不等（如 store 型指令 rs、rt 的 Tuse 分别为 1 和 2）。</li>
+  <li>Tnew：位于 E 级及其后各级的指令，再经过多少周期就能够产生要写入寄存器的结果。在我们目前的 CPU 中，W 级的指令 Tnew 恒为 0；对于同一条指令，Tnew@M = max(Tnew@E - 1, 0)。</li>
+</ul>
+
+<p>然后直接遵循 <code class="language-plaintext highlighter-rouge">Tuse &lt; Tnew</code> 则阻塞的规则就可以了。建议先画一个表格分类 Tuse 和 Tnew。可以按照高老板的 PPT，用“产生输出的部件”来分类 Tnew。如 ALU 产生输出的有 R 型、I 型、sw 的地址，把他们归为一类。</p>
+
+<p>阻塞时只需要判断 RS 和 RT。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tuse</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>calc_r(rs)\shiftS</td>
+      <td>1</td>
+      <td>calc_r(rt)</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>calc_i(rs)</td>
+      <td>1</td>
+      <td>shiftS(rt)</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>load(rs)</td>
+      <td>1</td>
+      <td>store(rt)</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>store(rs)</td>
+      <td>1</td>
+      <td>branch(rt)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>branch(rs)</td>
+      <td>0</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>jr/jalr(rs)</td>
+      <td>0</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>判断的时候要注意条件：</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">Tuse &lt; Tnew</code></li>
+  <li>写入地址不为 0</li>
+  <li>写入地址和后面级写入地址相同</li>
+  <li>后面级可写寄存器</li>
+</ol>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="kt">wire</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">TuseRS</span> <span class="o">=</span>     <span class="p">(</span><span class="n">D_branch</span> <span class="o">|</span> <span class="n">D_j_r</span><span class="p">)</span> <span class="o">?</span> <span class="mi">3'd0</span> <span class="o">:</span>
+                        <span class="c1">// ...</span>
+                        <span class="mi">3'd3</span><span class="p">;</span> <span class="c1">// 如果用不到就令其为无穷大，防止多余的 stall</span>
+
+<span class="kt">wire</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">TnewE</span> <span class="o">=</span>  <span class="n">E_calc_r</span> <span class="o">|</span> <span class="n">E_calc_i</span> <span class="o">?</span> <span class="mi">3'd1</span> <span class="o">:</span>
+                    <span class="c1">// ...</span>
+                    <span class="mi">3'd3</span><span class="p">;</span>
+
+<span class="kt">wire</span> <span class="n">stall_rs_e</span> <span class="o">=</span> <span class="p">(</span><span class="n">TuseRS</span> <span class="o">&lt;</span> <span class="n">TnewE</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">D_rs_addr</span> <span class="o">&amp;&amp;</span> <span class="n">D_rs_addr</span> <span class="o">==</span> <span class="n">E_RFDst</span><span class="p">);</span>
+<span class="c1">// ...</span>
+<span class="kt">wire</span> <span class="n">stall_rs</span> <span class="o">=</span> <span class="n">stall_rs_e</span> <span class="o">|</span> <span class="n">stall_rs_m</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+
+<span class="k">assign</span> <span class="n">stall</span> <span class="o">=</span> <span class="n">stall_rs</span> <span class="o">|</span> <span class="n">stall_rt</span><span class="p">;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>为什么这里写 <code class="language-plaintext highlighter-rouge">stall</code> 不用判断 <code class="language-plaintext highlighter-rouge">Wr</code> 信号？理由如上。</p>
+
+                <span id="article-end-anchor"></span>
+
+                <hr style="visibility: hidden"/>
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2020/11/19/buaa-co-lab-p4/" data-toggle="tooltip" data-placement="top" title="「BUAA-CO-Lab」 P4 单周期 CPU - 2">
+                                Previous<br/>
+                                <span>「BUAA-CO-Lab」 P4 单周期 CPU - 2</span>
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2020/12/02/buaa-co-lab-p6/" data-toggle="tooltip" data-placement="top" title="「BUAA-CO-Lab」 P6 流水线 CPU-lite2">
+                                Next<br/>
+                                <span>「BUAA-CO-Lab」 P6 流水线 CPU-lite2</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+                <hr style="visibility: hidden"/>
+
+                <!-- Comments -->
+                <div class="comment">
+    
+        <!-- Utterances -->
+        <script src="https://utteranc.es/client.js"
+                repo="roife/roife.github.io"
+                issue-term="pathname"
+                label="Comment"
+                theme="boxy-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+    
+
+    
+</div>
+            </div>
+
+            <!-- Side Catalog Container -->
+            
+                <div class="col-lg-2 col-lg-offset-0 visible-lg-block sidebar-container catalog-container">
+                    <div class="side-catalog">
+                        <hr class="hidden-sm hidden-xs"/>
+                        <h5><a class="catalog-toggle" href="#">CATALOG</a></h5>
+                        <ul class="catalog-body"></ul>
+                        <hr class="hidden-sm hidden-xs"/>
+                        <a href="#top" style="text-decoration: none;">▲ TOP</a>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+<!-- add support for mathjax-->
+
+
+<!-- add support for katex-->
+
+    <link href="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.css" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/katex.min.js"></script>
+<script defer>
+    KaTeX = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    }
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, KaTeX)"></script>
+
+
+
+<!-- add support for anchorjs -->
+
+  <!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1')
+                     .remove('.subheading')
+                     .remove('.leading-heading')
+                     .remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+<!-- Clickable Images -->
+<div id="image-cover-modal" class="image-cover-modal">
+    <div id="image-cover-modal-container" class="image-cover-modal-container">
+        <img id="image-cover-image" class="image-cover-modal-content img-unzoomable">
+    </div>
+</div>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+  
+
+    
+    <li>
+      <a href="/feed.xml">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    <li>
+      <a target="_blank" href="https://github.com/roife">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a target="_blank" href="mailto:roifewu@gmail.com">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    </li>
+    
+  </ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; ROIFE BLOG 2021 |
+                    Powered by <a href="https://github.com/roife/roife.github.io">ROIFE BLOG</a> |
+                    Based on <a href="https://huangxuan.me">Hux</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Simple Jekyll Search -->
+<script src="/js/simple-jekyll-search.min.js"></script>
+
+<!-- Service Worker -->
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        // interop with multilangual
+        if ('' == 'true') {
+            _containerSelector = 'div.post-container.active'
+        } else {
+            _containerSelector = 'div.post-container'
+        }
+
+        // init
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        // clean
+        $(selector).html('')
+
+        // appending
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.min.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: -20,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80,
+            endSelector: '#article-end-anchor',
+        });
+    });
+</script>
+
+
+
+<!-- Multi-Lingual -->
+
+
+<!-- Simple Jekyll Search -->
+<script>
+    // https://stackoverflow.com/questions/1912501/unescape-html-entities-in-javascript
+    function htmlDecode(input) {
+        var e = document.createElement('textarea');
+        e.innerHTML = input;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('search-results'),
+        json: '/search.json',
+        searchResultTemplate: '<div class="post-preview item"><a href="{url}"><h2 class="post-title">{title}</h2><h3 class="post-subtitle">{subtitle}</h3><hr></a></div>',
+        noResultsText: 'No results',
+        limit: 50,
+        fuzzy: false,
+        // a hack to get escaped subtitle unescaped. for some reason,
+        // post.subtitle w/o escape filter nuke entire search.
+        templateMiddleware: function (prop, value, template) {
+            if (prop === 'subtitle' || prop === 'title') {
+                if (value.indexOf("code")) {
+                    return htmlDecode(value);
+                } else {
+                    return value;
+                }
+            }
+        }
+    });
+
+    $(document).ready(function () {
+        var $searchPage = $('.search-page');
+        var $searchOpen = $('.search-icon');
+        var $searchClose = $('.search-icon-close');
+        var $searchInput = $('#search-input');
+        var $body = $('body');
+
+        $searchOpen.on('click', function (e) {
+            e.preventDefault();
+            $searchPage.toggleClass('search-active');
+            var prevClasses = $body.attr('class') || '';
+            setTimeout(function () {
+                $body.addClass('no-scroll');
+            }, 400)
+
+            if ($searchPage.hasClass('search-active')) {
+                $searchClose.on('click', function (e) {
+                    e.preventDefault();
+                    $searchPage.removeClass('search-active');
+                    $body.attr('class', prevClasses);  // from closure
+                });
+                $searchInput.focus();
+            }
+        });
+    });
+</script>
+
+<!-- Clickable Image -->
+<script>
+$(document).ready(function(){
+    var modal = $("#image-cover-modal");
+    if(!modal) return;
+    var modalImg = $("#image-cover-image");
+    var imgs = $("img").not(".img-unzoomable");
+
+    modal.click(function () {
+        modal.toggleClass("model-shown");
+        $("body").css("overflow", "auto");
+        modal.scrollTop(0);
+    });
+
+    modalImg.click(function() {
+        if(modalImg.css("maxWidth") === "95%") modalImg.css({
+            "maxWidth": "",
+            "cursor": "zoom-out"
+        });
+        else modalImg.css({
+            "maxWidth": "95%",
+            "cursor": "zoom-in"
+        });
+        event.stopPropagation();
+    });
+
+    imgs.click(function () {
+        modalImg.attr("src", $(this).attr("src"));
+        modalImg.css({
+            "maxWidth": "95%",
+            "cursor": "zoom-in"
+        });
+
+        modal.toggleClass("model-shown");
+        $("body").css("overflow", "hidden");
+    });
+    imgs.css("cursor", "zoom-in")
+});
+</script>
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
