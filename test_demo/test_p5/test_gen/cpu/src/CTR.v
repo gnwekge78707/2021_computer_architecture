@@ -34,6 +34,7 @@ module CTR(
 	output calr,
 	output load,
 	output store,
+	output shifts,
 	output branch
 	);
 
@@ -96,6 +97,7 @@ module CTR(
 	assign branch	= beq|blez|bltz;
 	assign cali		= addi|addiu|ori|slti;
 	assign calr		= add|addu|_and|sub|subu|slt|sll|srl|sra;
+	assign shifts	= sll|srl|sra;
 	assign jimm		= j|jal;
 	assign jreg		= jr|jalr;
 	assign jlink	= jal|jalr;

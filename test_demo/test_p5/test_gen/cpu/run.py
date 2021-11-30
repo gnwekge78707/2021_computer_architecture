@@ -172,7 +172,7 @@ def dasm(hexcode):
     mipscount += 1
     return out[0]
 
-for testflie in range(500,1000):
+for testflie in range(900,1300):
     #asmfilename=("test1.asm")
     asmfilename=("testpoint%d.asm"%(testflie))
     xlinx="D:\\PROGRAM\\14.7\\ISE_DS\\ISE" 

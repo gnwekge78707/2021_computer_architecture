@@ -5,8 +5,11 @@
 `define op_regimm	6'b000001
 `define op_addi	6'b001000
 `define op_addiu	6'b001001
+`define op_andi	6'b001100
 `define op_beq		6'b000100
+`define op_bgtz	6'b000111
 `define op_blez	6'b000110
+`define op_bne		6'b000101
 `define op_j		6'b000010	
 `define op_jal		6'b000011
 `define op_lb		6'b100000
@@ -18,10 +21,13 @@
 `define op_lb		6'b100000
 `define op_ori		6'b001101
 `define op_slti	6'b001010
+`define op_sltiu	6'b001011
 `define op_sw		6'b101011
 `define op_sh		6'b101001
 `define op_sb		6'b101000
+`define op_xori	6'b001110
 
+`define rt_bgez		5'b00001
 `define rt_bltz		5'b00000
 `define rt_bltzal		5'b10000
 `define rt_bltzall	5'b10010
@@ -55,17 +61,20 @@
 `define func_xor   6'b100110
 
 // ALU
-`define ALU_add	4'd0
-`define ALU_sub	4'd1
-`define ALU_sll	4'd2
-`define ALU_srl	4'd3
-`define ALU_or		4'd4
-`define ALU_and	4'd5
-`define ALU_xor	4'd6
-`define ALU_nor	4'd7
-`define ALU_slt	4'd8
-`define ALU_sltu	4'd9
-`define ALU_sra	4'd10
+`define ALU_add	5'd0
+`define ALU_sub	5'd1
+`define ALU_sll	5'd2
+`define ALU_srl	5'd3
+`define ALU_or		5'd4
+`define ALU_and	5'd5
+`define ALU_xor	5'd6
+`define ALU_nor	5'd7
+`define ALU_slt	5'd8
+`define ALU_sltu	5'd9
+`define ALU_sra	5'd10
+`define ALU_sllv	5'd11
+`define ALU_srlv	5'd12
+`define ALU_srav	5'd13
 //NPC
 `define NPC_default	3'd0
 `define NPC_branch	3'd1
@@ -100,4 +109,7 @@
 `define CMP_eq		3'd0
 `define CMP_ltz	3'd1
 `define CMP_lez	3'd2
+`define CMP_gtz	3'd3
+`define CMP_gez	3'd4
+`define CMP_ne		3'd5
 `define CMP_err	3'd7

@@ -1,65 +1,53 @@
-addi	$s0,$0,104
-sw		$s0,4($0)
-addi	$s0,$0,12
-sw		$s0,8($0)
-addi	$s0,$0,92
-sw		$s0,12($0)
-addi	$s0,$0,80
-sw		$s0,16($0)
-addi	$s0,$0,76
-sw		$s0,20($0)
-addi	$s0,$0,68
-sw		$s0,24($0)
-addi	$s0,$0,56
-sw		$s0,28($0)
-addi	$s0,$0,108
-sw		$s0,32($0)
-addi	$s0,$0,64
-sw		$s0,36($0)
-addi	$s0,$0,4
-sw		$s0,40($0)
-addi	$s0,$0,16
-sw		$s0,44($0)
-addi	$s0,$0,116
-sw		$s0,48($0)
-addi	$s0,$0,28
-sw		$s0,52($0)
-addi	$s0,$0,96
-sw		$s0,56($0)
-addi	$s0,$0,44
-sw		$s0,60($0)
-addi	$s0,$0,8
-sw		$s0,64($0)
-addi	$s0,$0,20
-sw		$s0,68($0)
-addi	$s0,$0,40
-sw		$s0,72($0)
-addi	$s0,$0,88
-sw		$s0,76($0)
-addi	$s0,$0,72
-sw		$s0,80($0)
-addi	$s0,$0,32
-sw		$s0,84($0)
-addi	$s0,$0,100
-sw		$s0,88($0)
-addi	$s0,$0,52
-sw		$s0,92($0)
-addi	$s0,$0,120
-sw		$s0,96($0)
-addi	$s0,$0,24
-sw		$s0,100($0)
-addi	$s0,$0,60
-sw		$s0,104($0)
-addi	$s0,$0,84
-sw		$s0,108($0)
-addi	$s0,$0,112
-sw		$s0,112($0)
-addi	$s0,$0,48
-sw		$s0,116($0)
-addi	$s0,$0,36
-sw		$s0,120($0)
+li		$t2,80
+sw		$t2,0($0)
+li		$t2,-10
+sw		$t2,4($0)
+li		$t2,-9
+sw		$t2,8($0)
+li		$t2,-8
+sw		$t2,12($0)
+li		$t2,-7
+sw		$t2,16($0)
+li		$t2,-6
+sw		$t2,20($0)
+li		$t2,-5
+sw		$t2,24($0)
+li		$t2,-4
+sw		$t2,28($0)
+li		$t2,-3
+sw		$t2,32($0)
+li		$t2,-2
+sw		$t2,36($0)
+li		$t2,-1
+sw		$t2,40($0)
+li		$t2,0
+sw		$t2,44($0)
+li		$t2,1
+sw		$t2,48($0)
+li		$t2,2
+sw		$t2,52($0)
+li		$t2,3
+sw		$t2,56($0)
+li		$t2,4
+sw		$t2,60($0)
+li		$t2,5
+sw		$t2,64($0)
+li		$t2,6
+sw		$t2,68($0)
+li		$t2,7
+sw		$t2,72($0)
+li		$t2,8
+sw		$t2,76($0)
+li		$t2,9
+sw		$t2,80($0)
+li		$t2,10
+sw		$t2,84($0)
+li		$t2,2147483647
+sw		$t2,88($0)
+li		$t2,-2147483648
+sw		$t2,92($0)
 
-#--------------
+#-----------------------------------------
 
 addi	$1,$0,23333
 addi	$2,$0,23333
@@ -93,971 +81,300 @@ addi	$29,$0,23333
 addi	$30,$0,23333
 addi	$31,$0,23333
 
-addi	$t0,$0,8
-addi	$t2,$0,-12288
+addi	$s0,$0,100
+addi	$s2,$0,0
+addi	$s1,$0,96
 
-#--------------
+LOOP_BEGIN1:
+	beq 	$s2,$s1,END_LOOP1
+	nop
+	lw		$t0,0($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,4
+	j		LOOP_BEGIN1
+	nop
+END_LOOP1:
 
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-addi	$31,$31,4
+addi	$s2,$0,0
+addi	$s1,$0,96
+
+LOOP_BEGIN2:
+	beq 	$s2,$s1,END_LOOP2
+	nop
+	lh		$t0,0($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,2
+	j		LOOP_BEGIN2
+	nop
+END_LOOP2:
+
+addi	$s2,$0,0
+addi	$s1,$0,96
+
+LOOP_BEGIN3:
+	beq 	$s2,$s1,END_LOOP3
+	nop
+	lhu		$t0,0($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,2
+	j		LOOP_BEGIN3
+	nop
+END_LOOP3:
+
+addi	$s2,$0,0
+addi	$s1,$0,96
+
+LOOP_BEGIN4:
+	beq 	$s2,$s1,END_LOOP4
+	nop
+	lb		$t0,0($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,1
+	j		LOOP_BEGIN4
+	nop
+END_LOOP4:
+
+addi	$s2,$0,0
+addi	$s1,$0,96
+
+LOOP_BEGIN5:
+	beq 	$s2,$s1,END_LOOP5
+	nop
+	lbu		$t0,0($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,1
+	j		LOOP_BEGIN5
+	nop
+END_LOOP5:
+
+addi	$s2,$0,4
+addi	$s1,$0,96
+
+LOOP_BEGINA1:
+	beq 	$s2,$s1,END_LOOPA1
+	nop
+	lw		$t0,-4($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,4
+	j		LOOP_BEGINA1
+	nop
+END_LOOPA1:
+
+addi	$s2,$0,6
+addi	$s1,$0,96
+
+LOOP_BEGINA2:
+	beq 	$s2,$s1,END_LOOPA2
+	nop
+	lh		$t0,-6($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,2
+	j		LOOP_BEGINA2
+	nop
+END_LOOPA2:
+
+addi	$s2,$0,2
+addi	$s1,$0,96
+
+LOOP_BEGINA3:
+	beq 	$s2,$s1,END_LOOPA3
+	nop
+	lhu		$t0,-2($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,2
+	j		LOOP_BEGINA3
+	nop
+END_LOOPA3:
+
+addi	$s2,$0,5
+addi	$s1,$0,96
+
+LOOP_BEGINA4:
+	beq 	$s2,$s1,END_LOOPA4
+	nop
+	lb		$t0,-5($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,1
+	j		LOOP_BEGINA4
+	nop
+END_LOOPA4:
+
+addi	$s2,$0,3
+addi	$s1,$0,96
+
+LOOP_BEGINA5:
+	beq 	$s2,$s1,END_LOOPA5
+	nop
+	lbu		$t0,-3($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,1
+	j		LOOP_BEGINA5
+	nop
+END_LOOPA5:
+
+addi	$s2,$0,-4
+addi	$s1,$0,96
+
+LOOP_BEGINS1:
+	beq 	$s2,$s1,END_LOOPS1
+	nop
+	lw		$t0,4($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,4
+	j		LOOP_BEGINS1
+	nop
+END_LOOPS1:
+
+addi	$s2,$0,-6
+addi	$s1,$0,96
+
+LOOP_BEGINS2:
+	beq 	$s2,$s1,END_LOOPS2
+	nop
+	lh		$t0,6($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,2
+	j		LOOP_BEGINS2
+	nop
+END_LOOPS2:
+
+addi	$s2,$0,-2
+addi	$s1,$0,96
+
+LOOP_BEGINS3:
+	beq 	$s2,$s1,END_LOOPS3
+	nop
+	lhu		$t0,2($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,2
+	j		LOOP_BEGINS3
+	nop
+END_LOOPS3:
+
+addi	$s2,$0,-5
+addi	$s1,$0,96
+
+LOOP_BEGINS4:
+	beq 	$s2,$s1,END_LOOPS4
+	nop
+	lb		$t0,5($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,1
+	j		LOOP_BEGINS4
+	nop
+END_LOOPS4:
+
+addi	$s2,$0,-3
+addi	$s1,$0,96
+
+LOOP_BEGINS5:
+	beq 	$s2,$s1,END_LOOPS5
+	nop
+	lbu		$t0,3($s2)
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,1
+	j		LOOP_BEGINS5
+	nop
+END_LOOPS5:
+
+#-----------------------------------------
+
+addi	$s2,$0,0
+addi	$s1,$0,96
+addi	$s0,$s0,8
+
+LOOP_BEGIN6:
+	beq 	$s2,$s1,END_LOOP6
+	nop
+	lw		$t0,0($s2)
+	sw		$t0,-4($s0)
+	addi	$s0,$s0,4
+	sw		$t0,0($s0)
+	addi	$s0,$s0,4
+	sw		$t0,4($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,4
+	j		LOOP_BEGIN6
+	nop
+END_LOOP6:
+
+addi	$s2,$0,0
+addi	$s1,$0,96
+addi	$s0,$s0,8
+
+LOOP_BEGIN7:
+	beq 	$s2,$s1,END_LOOP7
+	nop
+	lw		$t0,0($s2)
+	sh		$t0,-6($s0)
+	addi	$s0,$s0,4
+	sh		$t0,-4($s0)
+	addi	$s0,$s0,4
+	sh		$t0,-2($s0)
+	addi	$s0,$s0,4
+	sh		$t0,0($s0)
+	addi	$s0,$s0,4
+	sh		$t0,2($s0)
+	addi	$s0,$s0,4
+	sh		$t0,4($s0)
+	addi	$s0,$s0,4
+	sh		$t0,6($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,4
+	j		LOOP_BEGIN7
+	nop
+END_LOOP7:
+
+addi	$s2,$0,0
+addi	$s1,$0,96
+addi	$s0,$s0,8
+
+LOOP_BEGIN8:
+	beq 	$s2,$s1,END_LOOP8
+	nop
+	lw		$t0,0($s2)
+	sb		$t0,-5($s0)
+	addi	$s0,$s0,4
+	sb		$t0,-4($s0)
+	addi	$s0,$s0,4
+	sb		$t0,-3($s0)
+	addi	$s0,$s0,4
+	sb		$t0,-2($s0)
+	addi	$s0,$s0,4
+	sb		$t0,-1($s0)
+	addi	$s0,$s0,4
+	sb		$t0,0($s0)
+	addi	$s0,$s0,4
+	sb		$t0,1($s0)
+	addi	$s0,$s0,4
+	sb		$t0,2($s0)
+	addi	$s0,$s0,4
+	sb		$t0,3($s0)
+	addi	$s0,$s0,4
+	sb		$t0,4($s0)
+	addi	$s0,$s0,4
+	sb		$t0,5($s0)
+	addi	$s0,$s0,4
+	addi	$s2,$s2,4
+	j		LOOP_BEGIN8
+	nop
+END_LOOP8:
+
 nop
-la		$31,TAG_0
-jr		$31
-addu	$31,$t0,$31
-addu	$31,$31,$t0
-TAG_0:
-
-addi	$31,$0,20
-lw		$31,0($31)
-lw		$31,0($31)
-addi	$31,$31,4
 nop
-la		$31,TAG_1
-jr		$31
-sw		$31,-8192($31)
-addi	$31,$31,4
-TAG_1:
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-addi	$31,$31,4
 nop
-la		$31,TAG_2
-jalr	$t3,$31
-addu	$31,$31,$t0
-addu	$31,$31,$t0
-TAG_2:
-
-addi	$31,$0,8
-lw		$31,0($31)
-lw		$31,0($31)
-addi	$31,$31,4
-nop
-la		$31,TAG_3
-jalr	$t3,$31
-addu	$31,$31,$t0
-addi	$31,$31,4
-TAG_3:
-
-addi	$31,$0,20
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_4
-addu	$31,$t0,$31
-lw		$31,-12288($31)
-TAG_4:
-lw		$31,-12288($31)
-lw		$31,0($31)
-
-addi	$31,$0,20
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_5
-addu	$31,$31,$t0
-addi	$31,$31,4
-TAG_5:
-lw		$31,-12288($31)
-lw		$31,0($31)
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_6
-lw		$31,-12288($31)
-addu	$31,$31,$t0
-TAG_6:
-lw		$31,0($31)
-sw		$31,4096($31)
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_7
-lw		$31,-12288($31)
-addi	$31,$31,4
-TAG_7:
-lw		$31,0($31)
-sw		$31,4096($31)
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_8
-addi	$31,$31,4
-lw		$31,-12288($31)
-TAG_8:
-lw		$31,-12288($31)
-addu	$31,$t0,$31
-
-addi	$31,$0,8
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_9
-addu	$31,$t0,$31
-addu	$31,$t0,$31
-TAG_9:
-lw		$31,-12288($31)
-addu	$31,$t0,$31
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_10
-addu	$31,$31,$t0
-lw		$31,-12288($31)
-TAG_10:
-lw		$31,-12288($31)
-addu	$31,$31,$t0
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_11
-sw		$31,-8192($31)
-addu	$31,$t0,$31
-TAG_11:
-lw		$31,-12288($31)
-addu	$31,$31,$t0
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_12
-addi	$31,$31,4
-sw		$31,-8192($31)
-TAG_12:
-lw		$31,-12288($31)
-beq		$31,$31,TAG_13
-sw		$31,4096($31)
-lw		$31,0($31)
-TAG_13:
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_14
-addu	$31,$t0,$31
-sw		$31,-8192($31)
-TAG_14:
-lw		$31,-12288($31)
-beq		$31,$31,TAG_15
-lw		$31,0($31)
-lw		$31,0($31)
-TAG_15:
-
-addi	$31,$0,8
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_16
-addu	$31,$t0,$31
-sw		$31,-8192($31)
-TAG_16:
-lw		$31,-12288($31)
-beq		$31,$0,TAG_17
-sw		$31,4096($31)
-addu	$31,$t0,$31
-TAG_17:
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_18
-addu	$31,$t0,$31
-lw		$31,-12288($31)
-TAG_18:
-lw		$31,-12288($31)
-beq		$31,$0,TAG_19
-addi	$31,$31,4
-sw		$31,4096($31)
-TAG_19:
-
-addi	$31,$0,24
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_20
-addu	$31,$31,$t0
-addi	$31,$31,4
-TAG_20:
-lw		$31,-12288($31)
-addi	$t1,$31,0
-beq		$t1,$31,TAG_21
-lw		$31,0($31)
-lw		$31,0($31)
-TAG_21:
-
-addi	$31,$0,20
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_22
-addu	$31,$t0,$31
-addu	$31,$t0,$31
-TAG_22:
-lw		$31,-12288($31)
-addi	$t1,$31,0
-beq		$t1,$31,TAG_23
-addu	$31,$t0,$31
-addu	$31,$t0,$31
-TAG_23:
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_24
-addu	$31,$t0,$31
-addu	$31,$31,$t0
-TAG_24:
-lw		$31,-12288($31)
-addi	$t1,$31,1
-beq		$31,$t1,TAG_25
-addu	$31,$31,$t0
-sw		$31,4096($31)
-TAG_25:
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_26
-addi	$31,$31,4
-addu	$31,$t0,$31
-TAG_26:
-lw		$31,-12288($31)
-addi	$t1,$31,1
-beq		$31,$t1,TAG_27
-sw		$31,4096($31)
-addi	$31,$31,4
-TAG_27:
-
-addi	$31,$0,28
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_28
-addu	$31,$31,$t0
-addu	$31,$31,$t0
-TAG_28:
-lw		$31,-12288($31)
-addi	$31,$31,4
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_29
-sw		$31,-8192($31)
-lw		$31,-12288($31)
-TAG_29:
-lw		$31,-12288($31)
-addi	$31,$31,4
-
-addi	$31,$0,28
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_30
-addu	$31,$31,$t0
-addi	$31,$31,4
-TAG_30:
-lw		$31,-12288($31)
-la		$31,TAG_31
-jr		$31
-addu	$31,$31,$t0
-addu	$31,$31,$t0
-TAG_31:
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_32
-addi	$31,$31,4
-addu	$31,$t0,$31
-TAG_32:
-lw		$31,-12288($31)
-la		$31,TAG_33
-jr		$31
-lw		$31,-12288($31)
-addu	$31,$t0,$31
-TAG_33:
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_34
-addi	$31,$31,4
-addi	$31,$31,4
-TAG_34:
-lw		$31,-12288($31)
-la		$31,TAG_35
-jalr	$t3,$31
-sw		$31,-8192($31)
-addu	$31,$t0,$31
-TAG_35:
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_36
-sw		$31,-8192($31)
-addi	$31,$31,4
-TAG_36:
-lw		$31,-12288($31)
-la		$31,TAG_37
-jalr	$t3,$31
-addi	$31,$31,4
-addu	$31,$31,$t0
-TAG_37:
-
-addi	$31,$0,24
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_38
-lw		$31,-12288($31)
-addu	$31,$31,$t0
-TAG_38:
-addu	$31,$t0,$31
-lw		$31,0($31)
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_39
-lw		$31,-12288($31)
-addu	$31,$31,$t0
-TAG_39:
-addu	$31,$t0,$31
-lw		$31,0($31)
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_40
-addi	$31,$31,4
-addi	$31,$31,4
-TAG_40:
-addu	$31,$t2,$31
-sw		$31,4096($31)
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_41
-lw		$31,-12288($31)
-addi	$31,$31,4
-TAG_41:
-addu	$31,$t0,$31
-sw		$31,4096($31)
-
-addi	$31,$0,8
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_42
-addi	$31,$31,4
-sw		$31,-8192($31)
-TAG_42:
-addu	$31,$t2,$31
-addu	$31,$t0,$31
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_43
-addu	$31,$31,$t0
-addi	$31,$31,4
-TAG_43:
-addu	$31,$t2,$31
-addu	$31,$t0,$31
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_44
-lw		$31,-12288($31)
-sw		$31,4096($31)
-TAG_44:
-addu	$31,$t0,$31
-addu	$31,$31,$t0
-
-addi	$31,$0,28
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_45
-lw		$31,-12288($31)
-lw		$31,0($31)
-TAG_45:
-addu	$31,$t0,$31
-addu	$31,$31,$t0
-
-addi	$31,$0,8
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_46
-addu	$31,$t0,$31
-addu	$31,$t0,$31
-TAG_46:
-addu	$31,$t2,$31
-beq		$31,$31,TAG_47
-addu	$31,$31,$t0
-addu	$31,$t0,$31
-TAG_47:
-
-addi	$31,$0,24
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_48
-addu	$31,$31,$t0
-addi	$31,$31,4
-TAG_48:
-addu	$31,$t2,$31
-beq		$31,$31,TAG_49
-addi	$31,$31,4
-addi	$31,$31,4
-TAG_49:
-
-addi	$31,$0,28
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_50
-sw		$31,-8192($31)
-addu	$31,$31,$t0
-TAG_50:
-addu	$31,$t2,$31
-beq		$31,$0,TAG_51
-addu	$31,$31,$t0
-sw		$31,4096($31)
-TAG_51:
-
-addi	$31,$0,24
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_52
-sw		$31,-8192($31)
-lw		$31,-12288($31)
-TAG_52:
-addu	$31,$t2,$31
-beq		$31,$0,TAG_53
-addu	$31,$t0,$31
-lw		$31,0($31)
-TAG_53:
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_54
-sw		$31,-8192($31)
-lw		$31,-12288($31)
-TAG_54:
-addu	$31,$t2,$31
-addi	$t1,$31,0
-beq		$t1,$31,TAG_55
-sw		$31,4096($31)
-addu	$31,$t0,$31
-TAG_55:
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_56
-lw		$31,-12288($31)
-lw		$31,0($31)
-TAG_56:
-addu	$31,$t0,$31
-addi	$t1,$31,0
-beq		$t1,$31,TAG_57
-addu	$31,$31,$t0
-addi	$31,$31,4
-TAG_57:
-
-addi	$31,$0,8
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_58
-sw		$31,-8192($31)
-sw		$31,-8192($31)
-TAG_58:
-addu	$31,$t2,$31
-addi	$t1,$31,1
-beq		$31,$t1,TAG_59
-lw		$31,0($31)
-addu	$31,$t0,$31
-TAG_59:
-
-addi	$31,$0,24
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_60
-addi	$31,$31,4
-lw		$31,-12288($31)
-TAG_60:
-addu	$31,$t2,$31
-addi	$t1,$31,1
-beq		$31,$t1,TAG_61
-addi	$31,$31,4
-addi	$31,$31,4
-TAG_61:
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_62
-addi	$31,$31,4
-addi	$31,$31,4
-TAG_62:
-addu	$31,$t2,$31
-addi	$31,$31,4
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_63
-sw		$31,-8192($31)
-lw		$31,-12288($31)
-TAG_63:
-addu	$31,$t2,$31
-addi	$31,$31,4
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_64
-lw		$31,-12288($31)
-addi	$31,$31,4
-TAG_64:
-addu	$31,$t0,$31
-la		$31,TAG_65
-jr		$31
-addi	$31,$31,4
-addu	$31,$t0,$31
-TAG_65:
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_66
-lw		$31,-12288($31)
-lw		$31,0($31)
-TAG_66:
-addu	$31,$t0,$31
-la		$31,TAG_67
-jr		$31
-lw		$31,-12288($31)
-lw		$31,0($31)
-TAG_67:
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_68
-sw		$31,-8192($31)
-addu	$31,$t0,$31
-TAG_68:
-addu	$31,$t2,$31
-la		$31,TAG_69
-jalr	$t3,$31
-addu	$31,$t0,$31
-sw		$31,-8192($31)
-TAG_69:
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_70
-sw		$31,-8192($31)
-addi	$31,$31,4
-TAG_70:
-addu	$31,$t2,$31
-la		$31,TAG_71
-jalr	$t3,$31
-addu	$31,$31,$t0
-addi	$31,$31,4
-TAG_71:
-
-addi	$31,$0,20
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_72
-sw		$31,-8192($31)
-addu	$31,$t0,$31
-TAG_72:
-addu	$31,$31,$t2
-lw		$31,0($31)
-
-addi	$31,$0,28
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_73
-addu	$31,$31,$t0
-addu	$31,$31,$t0
-TAG_73:
-addu	$31,$31,$t2
-lw		$31,0($31)
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_74
-addi	$31,$31,4
-sw		$31,-8192($31)
-TAG_74:
-addu	$31,$31,$t2
-sw		$31,4096($31)
-
-addi	$31,$0,8
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_75
-addi	$31,$31,4
-addu	$31,$31,$t0
-TAG_75:
-addu	$31,$31,$t2
-sw		$31,4096($31)
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_76
-sw		$31,-8192($31)
-lw		$31,-12288($31)
-TAG_76:
-addu	$31,$31,$t2
-addu	$31,$t0,$31
-
-addi	$31,$0,20
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_77
-addu	$31,$t0,$31
-addu	$31,$31,$t0
-TAG_77:
-addu	$31,$31,$t2
-addu	$31,$t0,$31
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_78
-sw		$31,-8192($31)
-lw		$31,-12288($31)
-TAG_78:
-addu	$31,$31,$t2
-addu	$31,$31,$t0
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_79
-addi	$31,$31,4
-addu	$31,$31,$t0
-TAG_79:
-addu	$31,$31,$t2
-addu	$31,$31,$t0
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_80
-addu	$31,$t0,$31
-sw		$31,-8192($31)
-TAG_80:
-addu	$31,$31,$t2
-beq		$31,$31,TAG_81
-lw		$31,0($31)
-lw		$31,0($31)
-TAG_81:
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_82
-addu	$31,$31,$t0
-sw		$31,-8192($31)
-TAG_82:
-addu	$31,$31,$t2
-beq		$31,$31,TAG_83
-addu	$31,$31,$t0
-addu	$31,$t0,$31
-TAG_83:
-
-addi	$31,$0,24
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_84
-addu	$31,$t0,$31
-addi	$31,$31,4
-TAG_84:
-addu	$31,$31,$t2
-beq		$31,$0,TAG_85
-addi	$31,$31,4
-sw		$31,4096($31)
-TAG_85:
-
-addi	$31,$0,28
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_86
-lw		$31,-12288($31)
-sw		$31,4096($31)
-TAG_86:
-addu	$31,$31,$t0
-beq		$31,$0,TAG_87
-lw		$31,0($31)
-addu	$31,$t0,$31
-TAG_87:
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_88
-sw		$31,-8192($31)
-addi	$31,$31,4
-TAG_88:
-addu	$31,$31,$t2
-addi	$t1,$31,0
-beq		$t1,$31,TAG_89
-addi	$31,$31,4
-addu	$31,$t0,$31
-TAG_89:
-
-addi	$31,$0,24
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_90
-addu	$31,$t0,$31
-lw		$31,-12288($31)
-TAG_90:
-addu	$31,$31,$t2
-addi	$t1,$31,0
-beq		$t1,$31,TAG_91
-addu	$31,$t0,$31
-addi	$31,$31,4
-TAG_91:
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_92
-sw		$31,-8192($31)
-addi	$31,$31,4
-TAG_92:
-addu	$31,$31,$t2
-addi	$t1,$31,1
-beq		$31,$t1,TAG_93
-lw		$31,0($31)
-addi	$31,$31,4
-TAG_93:
-
-addi	$31,$0,8
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_94
-addu	$31,$t0,$31
-addi	$31,$31,4
-TAG_94:
-addu	$31,$31,$t2
-addi	$t1,$31,1
-beq		$31,$t1,TAG_95
-lw		$31,0($31)
-addi	$31,$31,4
-TAG_95:
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_96
-sw		$31,-8192($31)
-addi	$31,$31,4
-TAG_96:
-addu	$31,$31,$t2
-addi	$31,$31,4
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_97
-addu	$31,$31,$t0
-addu	$31,$31,$t0
-TAG_97:
-addu	$31,$31,$t2
-addi	$31,$31,4
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_98
-lw		$31,-12288($31)
-addi	$31,$31,4
-TAG_98:
-addu	$31,$31,$t0
-la		$31,TAG_99
-jr		$31
-addu	$31,$31,$t0
-addu	$31,$31,$t0
-TAG_99:
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_100
-addu	$31,$31,$t0
-addu	$31,$t0,$31
-TAG_100:
-addu	$31,$31,$t2
-la		$31,TAG_101
-jr		$31
-lw		$31,-12288($31)
-lw		$31,0($31)
-TAG_101:
-
-addi	$31,$0,8
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_102
-sw		$31,-8192($31)
-lw		$31,-12288($31)
-TAG_102:
-addu	$31,$31,$t2
-la		$31,TAG_103
-jalr	$t3,$31
-addi	$31,$31,4
-addi	$31,$31,4
-TAG_103:
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_104
-sw		$31,-8192($31)
-addi	$31,$31,4
-TAG_104:
-addu	$31,$31,$t2
-la		$31,TAG_105
-jalr	$t3,$31
-addi	$31,$31,4
-addi	$31,$31,4
-TAG_105:
-
-addi	$31,$0,24
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_106
-sw		$31,-8192($31)
-addu	$31,$t0,$31
-TAG_106:
-addi	$31,$31,-12288
-lw		$31,0($31)
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_107
-addu	$31,$t0,$31
-sw		$31,-8192($31)
-TAG_107:
-addi	$31,$31,-12288
-lw		$31,0($31)
-
-addi	$31,$0,0
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_108
-addu	$31,$31,$t0
-lw		$31,-12288($31)
-TAG_108:
-addi	$31,$31,-12288
-sw		$31,4096($31)
-
-addi	$31,$0,28
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_109
-lw		$31,-12288($31)
-lw		$31,0($31)
-TAG_109:
-addi	$31,$31,4
-sw		$31,4096($31)
-
-addi	$31,$0,4
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_110
-addi	$31,$31,4
-addi	$31,$31,4
-TAG_110:
-addi	$31,$31,-12288
-addu	$31,$t0,$31
-
-addi	$31,$0,28
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_111
-sw		$31,-8192($31)
-lw		$31,-12288($31)
-TAG_111:
-addi	$31,$31,-12288
-addu	$31,$t0,$31
-
-addi	$31,$0,28
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_112
-sw		$31,-8192($31)
-sw		$31,-8192($31)
-TAG_112:
-addi	$31,$31,-12288
-addu	$31,$31,$t0
-
-addi	$31,$0,8
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_113
-addi	$31,$31,4
-addu	$31,$31,$t0
-TAG_113:
-addi	$31,$31,-12288
-addu	$31,$31,$t0
-
-addi	$31,$0,16
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_114
-addi	$31,$31,4
-lw		$31,-12288($31)
-TAG_114:
-addi	$31,$31,-12288
-beq		$31,$31,TAG_115
-addu	$31,$t0,$31
-addu	$31,$31,$t0
-TAG_115:
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_116
-lw		$31,-12288($31)
-lw		$31,0($31)
-TAG_116:
-addi	$31,$31,4
-beq		$31,$31,TAG_117
-addu	$31,$t0,$31
-addu	$31,$t0,$31
-TAG_117:
-
-addi	$31,$0,12
-lw		$31,0($31)
-lw		$31,0($31)
-jal		TAG_118
-addi	$31,$31,4
-addu	$31,$31,$t0
-TAG_118:
-addi	$31,$31,-12288
-beq		$31,$0,TAG_119
-addu	$31,$31,$t0
-addu	$31,$31,$t0
-TAG_119:
-
-#--------------
-
-addi	$t0,$0,2222
-sw		$t0,2048($0)
-addi	$t0,$0,3333
-sw		$t0,2052($0)
-addi	$t0,$0,4444
-sw		$t0,2056($0)

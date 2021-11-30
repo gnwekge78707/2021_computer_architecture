@@ -11,11 +11,13 @@ module IFU(
 	output [31:0] Instr
 	);
 	
+	integer i;
 	reg [31:0] pc;
 	reg [31:0] im [4095:0];
 	
 	initial begin
-		pc <= 32'h00003000;
+		for(i=0;i<4096;i=i+1) im[i] = 0;
+		pc = 32'h00003000;
 		$readmemh("code.txt", im);
 	end
 	

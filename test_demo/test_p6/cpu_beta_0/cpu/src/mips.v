@@ -125,7 +125,7 @@ module mips(
 	
 	wire [31:0] E_PC, E_RS, E_RT, E_PC8, E_EXT_OUT, E_ALU_C;
 	wire [4:0] E_rs, E_rt, shamt;
-	wire [3:0] ALU_op;
+	wire [4:0] ALU_op;
    wire [2:0] ALU_B_sel, E_RF_WD_sel;
 	wire E_cmp;
 	

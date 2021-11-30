@@ -25,8 +25,8 @@ WARNING:HDLCompiler:1016 - "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\c
 WARNING:HDLCompiler:1016 - "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\mips.v" Line 214: Port imm26 is not connected to this instance
 WARNING:HDLCompiler:1016 - "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\mips.v" Line 275: Port imm26 is not connected to this instance
 WARNING:HDLCompiler:1016 - "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\STL.v" Line 25: Port imm26 is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\STL.v" Line 49: Port imm26 is not connected to this instance
-WARNING:HDLCompiler:1016 - "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\STL.v" Line 63: Port imm26 is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\STL.v" Line 50: Port imm26 is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\STL.v" Line 64: Port imm26 is not connected to this instance
 Completed static elaboration
 Compiling module CTR
 Compiling module STL
@@ -45,3 +45,7 @@ Compiling module mips
 Compiling module mips_tb
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
+Compiled 15 Verilog Units
+Built simulation executable mips.exe
+Fuse Memory Usage: 31024 KB
+Fuse CPU Usage: 671 ms

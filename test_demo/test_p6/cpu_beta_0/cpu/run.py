@@ -171,8 +171,8 @@ def dasm(hexcode):
     out[mipscount] += mips
     mipscount += 1
     return out[0]
-
-for testflie in range(1,10):
+lll = [7,9,10]
+for testflie in lll:
     #asmfilename=("test1.asm")
     asmfilename=("testpoint%d.asm"%(testflie))
     xlinx="D:\\PROGRAM\\14.7\\ISE_DS\\ISE" 
@@ -230,7 +230,7 @@ for testflie in range(1,10):
                 if((l1== "" or l1==None) or (l2=="" or l2==None)):
                     break
                 elif l1==l2:
-                   # continue
+                    #continue
                     print("AC at line:%d "%(i)+"    source::"+l1+"  asm::"+asm)
                 elif l1!=l2 and not "$ 0"in l2 and not "$ 0" in  l1:
                     biao=1

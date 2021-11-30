@@ -15,7 +15,7 @@ module CTR(
 	//forward
 	output [4:0] RF_A3,
 	//control
-	output [3:0] ALU_op,
+	output [4:0] ALU_op,
 	output [2:0] CMP_op,
 	output [2:0] NPC_op,
 	output [2:0] EXT_op,
@@ -34,6 +34,7 @@ module CTR(
 	output calr,
 	output load,
 	output store,
+	output shifts,
 	output branch
 	);
 
@@ -49,21 +50,27 @@ module CTR(
 
 	wire addi	= (op==`op_addi);
 	wire addiu	= (op==`op_addiu);
+	wire andi	= (op==`op_andi);
 	wire beq		= (op==`op_beq);
+	wire bne		= (op==`op_bne);
+	wire bgtz	= (op==`op_bgtz);
+	wire bgez	= (op==`op_regimm&&rt==`rt_bgez);
 	wire blez	= (op==`op_blez);
 	wire bltz	= (op==`op_regimm&&rt==`rt_bltz);
-	wire j	= (op==`op_j);
-	wire jal	= (op==`op_jal);
-	wire lb	= (op==`op_lb);
-	wire lbu	= (op==`op_lbu);
-	wire lh	= (op==`op_lh);
-	wire lhu	= (op==`op_lhu);
-	wire lw	= (op==`op_lw);
-	wire ori	= (op==`op_ori);
-	wire slti= (op==`op_slti);
-	wire sw	= (op==`op_sw);
-	wire sh	= (op==`op_sh);
-	wire sb	= (op==`op_sb);
+	wire j		= (op==`op_j);
+	wire jal		= (op==`op_jal);
+	wire lb		= (op==`op_lb);
+	wire lbu		= (op==`op_lbu);
+	wire lh		= (op==`op_lh);
+	wire lhu		= (op==`op_lhu);
+	wire lw		= (op==`op_lw);
+	wire ori		= (op==`op_ori);
+	wire slti	= (op==`op_slti);
+	wire sltiu	= (op==`op_sltiu);
+	wire sw		= (op==`op_sw);
+	wire sh		= (op==`op_sh);
+	wire sb		= (op==`op_sb);
+	wire xori	= (op==`op_xori);
 	assign lui	= (op==`op_lui);
 	
 	wire add		= (op==`op_sp&&func==`func_add);
@@ -93,15 +100,20 @@ module CTR(
 
 	assign load		= lw|lb|lbu|lh|lhu;
 	assign store	= sw|sb|sh;
-	assign branch	= beq|blez|bltz;
-	assign cali		= addi|addiu|ori|slti;
-	assign calr		= add|addu|_and|sub|subu|slt|sll|srl|sra;
+	assign branch	= beq|bne|blez|bltz|bgez|bgtz;
+	assign cali		= addi|addiu|andi|ori|xori|slti|sltiu;
+	assign calr		= add|addu|_and|sub|subu|slt|sltu|
+						  sll|srl|sra|sllv|srlv|srav|_or|_xor|_nor;
+	assign shifts	= sll|srl|sra;
 	assign jimm		= j|jal;
 	assign jreg		= jr|jalr;
 	assign jlink	= jal|jalr;
 
 	//********stage D
 	assign CMP_op = (beq)? `CMP_eq:
+						 (bne)? `CMP_ne:
+						 (bgez)? `CMP_gez:
+						 (bgtz)? `CMP_gtz:
 						 (blez)? `CMP_lez:
 						 (bltz)? `CMP_ltz: `CMP_err;
 						 
@@ -109,17 +121,23 @@ module CTR(
 						 (j|jal)? `NPC_j:
 						 (jreg)? `NPC_jr: `NPC_default;
 						 
-	assign EXT_op = (load|store|addiu|addi|slti)? `EXT_signed:
+	assign EXT_op = (load|store|addiu|addi|slti|sltiu)? `EXT_signed:
 						 (lui)? `EXT_lui: `EXT_unsigned;
 						 
 	//********stage E
 	assign ALU_op = (sub|subu)? `ALU_sub:
-						 (sll)? `ALU_sll:
 						 (slt|slti)? `ALU_slt:
-						 (ori)? `ALU_or:
-						 (_and)? `ALU_and:
+						 (sltu|sltiu)? `ALU_sltu:
+						 (_nor)? `ALU_nor:
+						 (_or|ori)? `ALU_or:
+						 (_xor|xori)? `ALU_xor:
+						 (_and|andi)? `ALU_and:
+						 (sll)? `ALU_sll:
 						 (sra)? `ALU_sra:
-						 (srl)? `ALU_srl: `ALU_add;
+						 (srl)? `ALU_srl:
+						 (sllv)? `ALU_sllv:
+						 (srav)? `ALU_srav:
+						 (srlv)? `ALU_srlv: `ALU_add;
 						 
 	//********stage M
 	assign DM_op = (lw|sw)? `DM_w:

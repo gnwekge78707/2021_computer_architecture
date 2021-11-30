@@ -5,25 +5,26 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\mips.v" Line 65: Port <arg fmt="%s" index="1">rd</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p6\cpu_beta_0\cpu\src\mips.v" Line 65: Port <arg fmt="%s" index="1">rd</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\mips.v" Line 153: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p6\cpu_beta_0\cpu\src\mips.v" Line 153: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\mips.v" Line 214: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p6\cpu_beta_0\cpu\src\mips.v" Line 214: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\mips.v" Line 275: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p6\cpu_beta_0\cpu\src\mips.v" Line 275: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\STL.v" Line 25: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p6\cpu_beta_0\cpu\src\STL.v" Line 25: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\STL.v" Line 49: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p6\cpu_beta_0\cpu\src\STL.v" Line 50: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p5\cpu_beta3\cpu\src\STL.v" Line 63: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:\Users\86135\Desktop\test_demo\test_p6\cpu_beta_0\cpu\src\STL.v" Line 64: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
 </msg>
 
 </messages>
+

@@ -20,7 +20,7 @@ module STL(
 	
 /////////////////////////////////stage D/////////////////////////////////
 	wire [4:0] D_rs, D_rt, D_RF_A3;
-	wire D_load, D_store, D_cali, D_calr, D_branch, D_jreg;
+	wire D_load, D_store, D_cali, D_calr, D_branch, D_jreg, D_shifts;
 	
 	CTR D_CTR (
     .Instr(D_Instr),
@@ -33,11 +33,12 @@ module STL(
     .calr(D_calr), 
     .load(D_load), 
     .store(D_store), 
+	 .shifts(D_shifts),
     .branch(D_branch)
    );
 	 
 	assign rs_tuse = (D_branch|D_jreg)? 0:
-						  (D_cali|D_calr|D_load|D_store)? 1: 3;
+						  (D_cali|(D_calr && !D_shifts)|D_load|D_store)? 1: 3;
 	assign rt_tuse = (D_branch)? 0:
 						  (D_cali|D_calr)? 1:
 						  (D_store)? 2: 3;

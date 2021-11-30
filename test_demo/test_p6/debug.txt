@@ -1,0 +1,3 @@
++ use $signed() to mul and div::
+	if the assignment include "$signed", make it as simple as it could:
+	do not include expression like ```ans = (condition)? ($signed(...)) : 0

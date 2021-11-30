@@ -13088,7 +13088,7 @@ LAB19:    t194 = (t0 + 35504);
     t197 = (t196 + 56U);
     t198 = *((char **)t197);
     memset(t198, 0, 8);
-    t199 = 15U;
+    t199 = 31U;
     t200 = t199;
     t201 = (t3 + 4);
     t202 = *((unsigned int *)t3);
@@ -13100,7 +13100,7 @@ LAB19:    t194 = (t0 + 35504);
     *((unsigned int *)t198) = (t205 | t199);
     t206 = *((unsigned int *)t204);
     *((unsigned int *)t204) = (t206 | t200);
-    xsi_driver_vfirst_trans(t194, 0, 3);
+    xsi_driver_vfirst_trans(t194, 0, 4);
     t207 = (t0 + 31408);
     *((int *)t207) = 1;
 
@@ -13176,7 +13176,7 @@ LAB31:    memcpy(t50, t69, 8);
 
 LAB32:    goto LAB14;
 
-LAB15:    xsi_vlog_unsigned_bit_combine(t3, 4, t45, 4, t50, 4);
+LAB15:    xsi_vlog_unsigned_bit_combine(t3, 5, t45, 5, t50, 5);
     goto LAB19;
 
 LAB17:    memcpy(t3, t45, 8);
@@ -13251,7 +13251,7 @@ LAB47:    memcpy(t69, t117, 8);
 
 LAB48:    goto LAB27;
 
-LAB28:    xsi_vlog_unsigned_bit_combine(t50, 4, t64, 4, t69, 4);
+LAB28:    xsi_vlog_unsigned_bit_combine(t50, 5, t64, 5, t69, 5);
     goto LAB32;
 
 LAB30:    memcpy(t50, t64, 8);
@@ -13328,7 +13328,7 @@ LAB60:    memcpy(t117, t136, 8);
 
 LAB61:    goto LAB43;
 
-LAB44:    xsi_vlog_unsigned_bit_combine(t69, 4, t112, 4, t117, 4);
+LAB44:    xsi_vlog_unsigned_bit_combine(t69, 5, t112, 5, t117, 5);
     goto LAB48;
 
 LAB46:    memcpy(t69, t112, 8);
@@ -13384,7 +13384,7 @@ LAB73:    memcpy(t136, t155, 8);
 
 LAB74:    goto LAB56;
 
-LAB57:    xsi_vlog_unsigned_bit_combine(t117, 4, t131, 4, t136, 4);
+LAB57:    xsi_vlog_unsigned_bit_combine(t117, 5, t131, 5, t136, 5);
     goto LAB61;
 
 LAB59:    memcpy(t117, t131, 8);
@@ -13440,7 +13440,7 @@ LAB86:    memcpy(t155, t174, 8);
 
 LAB87:    goto LAB69;
 
-LAB70:    xsi_vlog_unsigned_bit_combine(t136, 4, t150, 4, t155, 4);
+LAB70:    xsi_vlog_unsigned_bit_combine(t136, 5, t150, 5, t155, 5);
     goto LAB74;
 
 LAB72:    memcpy(t136, t150, 8);
@@ -13496,7 +13496,7 @@ LAB99:    memcpy(t174, t193, 8);
 
 LAB100:    goto LAB82;
 
-LAB83:    xsi_vlog_unsigned_bit_combine(t155, 4, t169, 4, t174, 4);
+LAB83:    xsi_vlog_unsigned_bit_combine(t155, 5, t169, 5, t174, 5);
     goto LAB87;
 
 LAB85:    memcpy(t155, t169, 8);
@@ -13516,7 +13516,7 @@ LAB92:    t188 = ((char*)((ng7)));
 LAB94:    t193 = ((char*)((ng5)));
     goto LAB95;
 
-LAB96:    xsi_vlog_unsigned_bit_combine(t174, 4, t188, 4, t193, 4);
+LAB96:    xsi_vlog_unsigned_bit_combine(t174, 5, t188, 5, t193, 5);
     goto LAB100;
 
 LAB98:    memcpy(t174, t188, 8);

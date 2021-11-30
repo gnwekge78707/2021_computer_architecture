@@ -1,0 +1,16 @@
+P6 对应 MIPS-C3 指令集：
+add+, addu+, sub+, subu+, addi+, addiu+, slt+, slti+, sltiu+, sltu+
+sll+, srl+, sra+, sllv, srlv, srav, and+, or+, xor+, nor+, andi+, ori+, xori+, lui+
+lb, lbu, lh, lhu, lw
+sb, sh, sw
+beq, bne, blez, bgtz, bltz, bgez
+j, jal, jalr, jr
+mult, multu, div, divu, mfhi, mflo, mthi, mtlo
+
+000000 00010 00011 00001 00000 111001	bgezalr  $1, $2, $3
+000001 00001 10001 0000000000000100	bgezal 	$1, l1
+000001 00001 10000 0000000000000011	bltzal	$1, l1
+000000 00010 00011 00001 00000 111000	bltzalr $1, $2, $3
+111111 00000 00001 0000000001100100	bmgezalr $1, 100($0)
+111110 00000 00001 0000000001100100	bmltzalr $1, 100($0)
+00000000000000000000100000100001	l1: addu $1, $0, $0

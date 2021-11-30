@@ -1,0 +1,183 @@
+1. ALU
+module ALU(
+	input [31:0] A
+	input [31:0] B
+	input [4:0] shamt
+	input [3:0] ALU_op
+	output [31:0] C
+);
+
+2. CMP
+module CMP(
+	input [31:0] A
+	input [31:0] B
+	input [2:0] CMP_op
+	output cmp
+);
+
+3. CTR
+module CTR(
+	input [31:0] Instr
+	decode
+);
+
+4. D
+module D2E(
+	input [31:0] D_Instr
+	input [31:0] D_PC
+	input [31:0] D_PC8
+	input [31:0] D_RS
+	input [31:0] D_RT
+	input [31:0] D_EXT_OUT
+	input D_cmp
+	input D2E_en
+	input flush
+	input clk
+	input reset
+	output [31:0] E_Instr
+	output [31:0] E_PC
+	output [31:0] E_PC8
+	output [31:0] E_RS
+	output [31:0] E_RT
+	output [31:0] E_EXT_OUT
+	output E_cmp
+);
+
+5. DM
+module DM(
+	input [31:0] A
+	input [31:0] WD
+	input [31:0] PC
+	input [31:0] Instr
+	input [2:0] DM_op
+	input clk
+	input reset
+	input DM_wr
+	output [31:0] DMout
+);
+
+6. E
+module E2M(
+	input [31:0] E_Instr
+	input [31:0] E_PC
+	input [31:0] E_PC8
+	input [31:0] E_RS
+	input [31:0] E_RT
+	input [31:0] E_ALU_C
+	input [31:0] E_EXT_OUT
+	input E_cmp
+	input E2M_en
+	input clk
+	input reset
+	output [31:0] M_Instr
+	output [31:0] M_PC
+	output [31:0] M_PC8
+	output [31:0] M_RS
+	output [31:0] M_RT
+	output [31:0] M_ALU_C
+	output [31:0] M_EXT_OUT
+	output M_cmp
+);
+
+7. EXT
+module EXT(
+	input [15:0] imm16
+	input [2:0] EXT_op
+	output [31:0] EXTout
+);
+
+8. F
+module F2D(
+	input [31:0] F_Instr
+	input [31:0] F_PC
+	input F2D_en
+	input clk
+	input reset
+	output [31:0] D_Instr
+	output [31:0] D_PC
+);
+
+9. IFU
+module IFU(
+	input clk
+	input reset
+	input IFU_en
+	input [31:0] NPC
+	output [31:0] PC
+	output [31:0] Instr
+);
+
+10. M
+module M2W(
+	input [31:0] M_Instr
+	input [31:0] M_PC
+	input [31:0] M_PC8
+	input [31:0] M_RS
+	input [31:0] M_RT
+	input [31:0] M_ALU_C
+	input [31:0] M_EXT_OUT
+	input [31:0] M_DM_OUT
+	input M_cmp
+	input M2W_en
+	input clk
+	input reset
+	output [31:0] W_Instr
+	output [31:0] W_PC
+	output [31:0] W_PC8
+	output [31:0] W_RS
+	output [31:0] W_RT
+	output [31:0] W_ALU_C
+	output [31:0] W_EXT_OUT
+	output [31:0] W_DM_OUT
+	output W_cmp
+);
+
+11. NPC
+module NPC(
+	input [31:0] F_PC
+	input [31:0] D_PC
+	input [31:0] JR
+	input [25:0] imm26
+	input [2:0] NPC_op
+	input cmp
+	output [31:0] NPC
+	output [31:0] PC8
+);
+
+12. RF
+module RF(
+	input [4:0] A1
+	input [4:0] A2
+	input [4:0] A3
+	input [31:0] WD
+	input [31:0] PC
+	input [31:0] Instr
+	input reset
+	input RF_wr
+	input clk
+	output [31:0] RD1
+	output [31:0] RD2
+);
+
+13. STL
+module STL(
+	input [31:0] D_Instr
+	input [31:0] E_Instr
+	input [31:0] M_Instr
+	input [31:0] W_Instr
+	output IFU_en
+	output F2D_en
+	output D2E_en
+	output D2E_flush
+	output E2M_en
+	output M2W_en
+	output stall
+);
+
+14. mips
+module mips(
+	input clk
+	input reset
+);
+
+ALU、CMP、CTR、D、DM、E、EXT、F、IFU、M、NPC、RF、STL、mips
