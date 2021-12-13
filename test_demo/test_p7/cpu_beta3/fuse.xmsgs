@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/mips_tb.v" Line 46: Port <arg fmt="%s" index="1">macroscopic_pc</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/mips.v" Line 67: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">30</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/mips_tb.v" Line 49: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">interrupt</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/CPU.v" Line 124: Port <arg fmt="%s" index="1">rd</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/CPU.v" Line 230: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/CPU.v" Line 277: Port <arg fmt="%s" index="1">MDU_en</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/CPU.v" Line 325: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/CPU.v" Line 442: Port <arg fmt="%s" index="1">imm26</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/STL.v" Line 32: Port <arg fmt="%s" index="1">chk</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/STL.v" Line 71: Port <arg fmt="%s" index="1">chk</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/STL.v" Line 92: Port <arg fmt="%s" index="1">chk</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta3/src/mips.v" Line 56: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">Addr</arg>&gt;. Formal port size is <arg fmt="%d" index="2">30</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+</messages>
+

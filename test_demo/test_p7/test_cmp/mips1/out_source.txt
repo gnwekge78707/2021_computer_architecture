@@ -1,0 +1,10 @@
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+WARNING: File "C:/Users/86135/Desktop/test_demo/test_p7/test_cmp/mips1/src/mips.v" Line 13.  For instance uut/T0/, width 30 of formal port Addr is not equal to width 32 of actual signal m_data_addr.
+WARNING: File "C:/Users/86135/Desktop/test_demo/test_p7/test_cmp/mips1/src/mips.v" Line 13.  For instance uut/T1/, width 30 of formal port Addr is not equal to width 32 of actual signal m_data_addr.
+WARNING:  For instance mips_tb/uut/, width 1 of formal port interrupt is not equal to width 32 of actual constant.
+Time resolution is 1 ps
+Simulator is doing circuit initialization process.
+ERROR: In process mips_tb.vInitial_77_2 
+ FATAL ERROR:ISim: This application has discovered an exceptional condition from which it cannot recover. Process will terminate. To search for possible resolutions to this issue, refer to the Xilinx answer database by going to http://www.xilinx.com/support/answers/index.htm and search with keywords 'ISim' and 'FATAL ERROR'. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+INFO: Simulator is stopped.

@@ -1,0 +1,76 @@
+ISim log file
+Running: C:\Users\86135\Desktop\test_demo\test_p7\cpu_beta_2(submit).h\mips_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta_2(submit).h/mips_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+WARNING: File "C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta_2(submit).h/src/mips.v" Line 13.  For instance uut/T0/, width 30 of formal port Addr is not equal to width 32 of actual signal m_data_addr.
+WARNING: File "C:/Users/86135/Desktop/test_demo/test_p7/cpu_beta_2(submit).h/src/mips.v" Line 13.  For instance uut/T1/, width 30 of formal port Addr is not equal to width 32 of actual signal m_data_addr.
+WARNING:  For instance mips_tb/uut/, width 1 of formal port interrupt is not equal to width 32 of actual constant.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+3421007b @00003000: $ 1 <= 0000007b
+00200821 @00003004: $ 1 <= 0000007b
+00411023 @00003008: $ 2 <= ffffff85
+00421820 @0000300c: $ 3 <= ffffff0a
+00432022 @00003010: $ 4 <= 0000007b
+00242824 @00003014: $ 5 <= 0000007b
+00641025 @00003018: $ 2 <= ffffff7b
+00611826 @0000301c: $ 3 <= ffffff71
+00432027 @00003020: $ 4 <= 00000084
+3c068765 @00003024: $ 6 <= 87650000
+34e78765 @00003028: $ 7 <= 00008765
+00c7282a @0000302c: $ 5 <= 00000001
+00c7402b @00003030: $ 8 <= 00000000
+34630324 @00003034: $ 3 <= ffffff75
+00064882 @00003038: $ 9 <= 21d94000
+00064080 @0000303c: $ 8 <= 1d940000
+00064083 @00003040: $ 8 <= e1d94000
+00e64004 @00003044: $ 8 <= eca00000
+00e64006 @00003048: $ 8 <= 043b2800
+00e64007 @0000304c: $ 8 <= fc3b2800
+34210929 @00003050: $ 1 <= 0000097b
+30220cab @00003054: $ 2 <= 0000082b
+384304bd @00003058: $ 3 <= 00000c96
+20610290 @0000305c: $ 1 <= 00000f26
+ac010000 @00003060: *00000000 <= 00000f26
+a4020004 @00003064: *00000004 <= 0000082b
+a4030006 @00003068: *00000006 <= 00000c96
+ac060008 @0000306c: *00000008 <= 87650000
+9407000a @00003070: $ 7 <= 00008765
+8409000a @00003074: $ 9 <= ffff8765
+94080008 @00003078: $ 8 <= 00000000
+840a0000 @0000307c: $10 <= 00000f26
+90070008 @00003080: $ 7 <= 00000000
+90080009 @00003084: $ 8 <= 00000000
+3421000c @00003088: $ 1 <= 00000f2e
+34420022 @0000308c: $ 2 <= 0000082b
+00221823 @00003090: $ 3 <= 00000703
+00002012 @00003098: $ 4 <= 006a6f8a
+34a5000c @0000309c: $ 5 <= 0000000d
+34c60022 @000030a0: $ 6 <= 87650022
+00a63823 @000030a4: $ 7 <= 789affeb
+00002012 @000030ac: $ 4 <= 1fdefeef
+3c010234 @000030b0: $ 1 <= 02340000
+3c02ffff @000030b4: $ 2 <= ffff0000
+3442ffff @000030b8: $ 2 <= ffffffff
+00001812 @000030c0: $ 3 <= fdcc0000
+00002010 @000030c4: $ 4 <= 00000000
+3463014d @000030c8: $ 3 <= fdcc014d
+00001812 @000030d0: $ 3 <= 00000073
+00002010 @000030d4: $ 4 <= 0070014d
+ac030000 @000030d8: *00000000 <= 00000073
+ac040004 @000030dc: *00000004 <= 0070014d
+8c060000 @000030e0: $ 6 <= 00000073
+00004012 @000030e8: $ 8 <= 2da0f691
+34a59999 @000030ec: $ 5 <= 0000999d
+00005012 @000030f4: $10 <= 0000999d
+0c000c41 @000030f8: $31 <= 00003100
+00001812 @00003104: $ 3 <= 1d670d00
+00002010 @00003108: $ 4 <= 00000000
+34a58765 @0000310c: $ 5 <= 00009ffd
+0c000c47 @00003110: $31 <= 00003118
+00001812 @0000311c: $ 3 <= 1eae6cb8
+00002010 @00003120: $ 4 <= 00000000

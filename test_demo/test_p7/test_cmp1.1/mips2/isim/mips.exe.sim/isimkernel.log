@@ -1,0 +1,28 @@
+Command line:
+   mips.exe
+     -simmode  tcl
+     -simrunnum  0
+     -socket  63921
+
+Sun Dec 12 18:34:01 2021
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 5458.19 Meg
+
+ Total Signals          : 1076
+ Total Nets             : 5451
+ Total Signal Drivers   : 846
+ Total Blocks           : 32
+ Total Primitive Blocks : 22
+ Total Processes        : 864
+ Total Traceable Variables  : 66
+ Total Scalar Nets and Variables : 1188206
+
+ Total Simulation Time: 0.140625 sec
+
+ Current Memory Usage: 5474.77 Meg
+
+Sun Dec 12 18:34:02 2021
+

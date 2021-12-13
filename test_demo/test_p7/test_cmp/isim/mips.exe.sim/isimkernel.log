@@ -1,0 +1,30 @@
+Command line:
+   mips.exe
+     -simmode  tcl
+     -simrunnum  0
+     -socket  63577
+
+Sun Dec 12 00:42:23 2021
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 5458.08 Meg
+
+ Total Signals          : 1221
+ Total Nets             : 3825
+ Total Signal Drivers   : 929
+ Total Blocks           : 31
+ Total Primitive Blocks : 23
+ Total Processes        : 958
+ Total Traceable Variables  : 96
+ Total Scalar Nets and Variables : 531378
+In process F_IFU.vInitial_24_0 
+ FATAL ERROR:ISim: This application has discovered an exceptional condition from which it cannot recover. Process will terminate. To search for possible resolutions to this issue, refer to the Xilinx answer database by going to http://www.xilinx.com/support/answers/index.htm and search with keywords 'ISim' and 'FATAL ERROR'. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+
+ Total Simulation Time: 0.21875 sec
+
+ Current Memory Usage: 5510.64 Meg
+
+Sun Dec 12 00:42:24 2021
+
