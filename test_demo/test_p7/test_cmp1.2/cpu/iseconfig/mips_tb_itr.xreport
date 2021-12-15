@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-12-12T10:16:44</DateModified>
+  <DateModified>2021-12-14T14:17:14</DateModified>
   <ModuleName>mips_tb_itr</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/cpu/iseconfig/mips_tb_itr.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/cpu</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu/iseconfig/mips_tb_itr.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu\</ImplementationReportsDirectory>
   <DateInitialized>2021-12-12T10:16:44</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

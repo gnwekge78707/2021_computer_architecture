@@ -19,12 +19,13 @@ module IFU(
 	
 	integer i;
 	reg [31:0] pc;
-	reg [31:0] im [4095:0];
+	reg [31:0] im [5119:0];
 	
 	initial begin
-		for(i=0;i<4096;i=i+1) im[i] = 0;
+		//for(i=0;i<4096;i=i+1) im[i] = 0;
 		pc = 32'h00003000;
 		$readmemh("code.txt", im);
+		$readmemh("code_handler.txt", im, 1120, 2047);
 	end
 	
 	always @(posedge clk) begin
@@ -32,7 +33,7 @@ module IFU(
 		else if(IFU_en|req) pc <= NPC;
 	end
 	
-	assign F_adel = !D_eret && (PC[1:0]!=0||PC<32'h3000||PC>32'h4fff);
+	assign F_adel = !D_eret && (PC[1:0]!=0||PC<32'h3000||PC>32'h6fff);
 	
 	assign PC = (D_eret)? EPC: pc;
 	//what if exception handler is very short

@@ -59,12 +59,12 @@ module CTR(
 	output ri
 	);
 
-	assign imm26 = Instr[25:0];
-	assign imm16 = Instr[15:0];
-	assign rs = Instr[25:21];
-	assign rt = Instr[20:16];
-	assign rd = Instr[15:11];
-	assign shamt = Instr[10:6];
+	assign imm26 = ri? 0: Instr[25:0];
+	assign imm16 = ri? 0: Instr[15:0];
+	assign rs = ri? 0: Instr[25:21];
+	assign rt =  Instr[20:16];
+	assign rd = ri? 0: Instr[15:11];
+	assign shamt = ri? 0: Instr[10:6];
 	
 	wire [5:0] op = Instr[31:26];
 	wire [5:0] func = Instr[5:0];
@@ -92,10 +92,10 @@ module CTR(
 	wire sh		= (op==`op_sh);
 	wire sb		= (op==`op_sb);
 	wire xori	= (op==`op_xori);
-	wire bgezal = (op==`op_regimm&&rt==`rt_bgezal);
-	wire bltzal = (op==`op_regimm&&rt==`rt_bltzal);
-	wire bmgezalr = (op==`op_bmgezalr);
-	wire bmltzalr = (op==`op_bmltzalr);
+	wire bgezal = 0;//(op==`op_regimm&&rt==`rt_bgezal);
+	wire bltzal = 0;//(op==`op_regimm&&rt==`rt_bltzal);
+	wire bmgezalr = 0;//(op==`op_bmgezalr);
+	wire bmltzalr = 0;//(op==`op_bmltzalr);
 	assign lui	= (op==`op_lui);
 	
 	assign eret	= (Instr==`op_eret);
@@ -109,19 +109,19 @@ module CTR(
 	wire divu	= (op==`op_sp&&func==`func_divu);
 	wire jalr	= (op==`op_sp&&func==`func_jalr);
 	wire jr		= (op==`op_sp&&func==`func_jr);
-	wire movn	= (op==`op_sp&&func==`func_movn);
-	wire movz	= (op==`op_sp&&func==`func_movz);
+	wire movn	= 0;//(op==`op_sp&&func==`func_movn);
+	wire movz	= 0;//(op==`op_sp&&func==`func_movz);
 	wire mfhi	= (op==`op_sp&&func==`func_mfhi);
 	wire mflo	= (op==`op_sp&&func==`func_mflo);
 	wire mthi	= (op==`op_sp&&func==`func_mthi);
 	wire mtlo	= (op==`op_sp&&func==`func_mtlo);
 	wire mult	= (op==`op_sp&&func==`func_mult);
 	wire multu	= (op==`op_sp&&func==`func_multu);
-	wire mul		= (op==`op_sp2&&func==`func_mul);
-	wire madd	= (op==`op_sp2&&func==`func_madd);
-	wire maddu	= (op==`op_sp2&&func==`func_maddu);
-	wire msub	= (op==`op_sp2&&func==`func_msub);
-	wire msubu	= (op==`op_sp2&&func==`func_msubu);
+	wire mul		= 0;//(op==`op_sp2&&func==`func_mul);
+	wire madd	= 0;//(op==`op_sp2&&func==`func_madd);
+	wire maddu	= 0;//(op==`op_sp2&&func==`func_maddu);
+	wire msub	= 0;//(op==`op_sp2&&func==`func_msub);
+	wire msubu	= 0;//(op==`op_sp2&&func==`func_msubu);
 	wire _nor	= (op==`op_sp&&func==`func_nor);
 	wire _or		= (op==`op_sp&&func==`func_or);
 	wire sll		= (op==`op_sp&&func==`func_sll);
@@ -135,10 +135,10 @@ module CTR(
 	wire sub		= (op==`op_sp&&func==`func_sub);
 	wire subu	= (op==`op_sp&&func==`func_subu);
 	wire _xor	= (op==`op_sp&&func==`func_xor);
-	wire clo		= (op==`op_sp2&&func==`func_clo);
-	wire clz		= (op==`op_sp2&&func==`func_clz);
-	wire bgezalr = (op==`op_sp&&func==`func_bgezalr);
-	wire bltzalr = (op==`op_sp&&func==`func_bltzalr);
+	wire clo		= 0;//(op==`op_sp2&&func==`func_clo);
+	wire clz		= 0;//(op==`op_sp2&&func==`func_clz);
+	wire bgezalr = 0;//(op==`op_sp&&func==`func_bgezalr);
+	wire bltzalr = 0;//(op==`op_sp&&func==`func_bltzalr);
 
 	assign load		= lw|lb|lbu|lh|lhu;
 	assign store	= sw|sb|sh;

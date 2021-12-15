@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu/mips_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="mips_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/mips_tb/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/selTC1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">selTC1</obj_property>
+      <obj_property name="ObjectShortName">selTC1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/selTC2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">selTC2</obj_property>
+      <obj_property name="ObjectShortName">selTC2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/TCwe1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TCwe1</obj_property>
+      <obj_property name="ObjectShortName">TCwe1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/TCwe2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">TCwe2</obj_property>
+      <obj_property name="ObjectShortName">TCwe2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/IRQ1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IRQ1</obj_property>
+      <obj_property name="ObjectShortName">IRQ1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/IRQ2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IRQ2</obj_property>
+      <obj_property name="ObjectShortName">IRQ2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mips_tb/uut/M_pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">M_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">M_pc[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

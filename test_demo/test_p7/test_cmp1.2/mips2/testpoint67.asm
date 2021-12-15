@@ -1,982 +1,541 @@
-addi	$0,$0,252
-addi	$1,$0,252
-addi	$2,$0,252
-addi	$3,$0,252
-addi	$4,$0,252
-addi	$5,$0,252
-addi	$6,$0,252
-addi	$7,$0,252
-addi	$8,$0,252
-addi	$9,$0,252
-addi	$10,$0,252
-addi	$11,$0,252
-addi	$12,$0,252
-addi	$13,$0,252
-addi	$14,$0,252
-addi	$15,$0,252
-addi	$16,$0,252
-addi	$17,$0,252
-addi	$18,$0,252
-addi	$19,$0,252
-addi	$20,$0,252
-addi	$21,$0,252
-addi	$22,$0,252
-addi	$23,$0,252
-addi	$24,$0,252
-addi	$25,$0,252
-addi	$26,$0,252
-addi	$27,$0,252
-addi	$28,$0,252
-addi	$29,$0,252
-addi	$30,$0,252
-addi	$31,$0,252
-
-sra		$20,$0,1
-nor		$0,$20,$0
-sll		$20,$20,1
-slti	$0,$20,-3
-addi	$20,$0,16
-srl		$19,$19,1
-or		$19,$19,$19
-sra		$19,$19,1
-sll		$19,$19,1
-srl		$23,$3,1
-sllv	$3,$23,$3
-sra		$23,$3,1
-sll		$3,$3,2
-srl		$3,$24,2
-srlv	$24,$24,$3
-sra		$3,$3,2
-sll		$24,$24,2
-addi	$24,$0,4
-srl		$0,$13,1
-srav	$13,$0,$13
-sra		$0,$0,1
-sll		$13,$13,2
-addi	$13,$0,231
-srl		$22,$22,1
-slt		$22,$22,$22
-sra		$22,$22,2
-mthi	$22
-mflo	$1
-mfhi	$2
-addi	$1,$0,192
-addi	$2,$0,111
-addi	$22,$0,26
-sll		$3,$29,2
-sltu	$29,$29,$3
-srl		$3,$29,1
-mtlo	$29
-mflo	$1
-mfhi	$2
-addi	$2,$0,96
-addi	$3,$0,21
-sra		$30,$30,2
-sub		$3,$3,$30
-sll		$3,$30,2
-mtc0	$3,$12
-mflo	$1
-mfhi	$2
-addi	$2,$0,103
-srl		$0,$14,2
-subu	$14,$14,$0
-sra		$0,$14,2
-div		$0,$20
-mflo	$1
-mfhi	$2
-addi	$1,$0,13
-addi	$2,$0,55
-sll		$23,$23,1
-xor		$23,$23,$23
-srl		$23,$23,2
-beq		$23,$23,TAG_0
-addiu	$23,$23,1
-addiu	$23,$23,1
-TAG_0:
-sra		$4,$1,2
-add		$1,$1,$1
-sll		$4,$1,2
-bne		$1,$0,TAG_1
-addiu	$1,$0,1
-addiu	$0,$1,1
-TAG_1:
-srl		$4,$4,2
-addu	$2,$2,$4
-sra		$2,$2,1
-beq		$2,$2,TAG_2
-addiu	$2,$2,1
-addiu	$2,$2,1
-TAG_2:
-sll		$0,$0,1
-and		$7,$0,$0
-srl		$0,$0,2
-bne		$7,$1,TAG_3
-addiu	$7,$1,1
-addiu	$1,$7,1
-TAG_3:
-sra		$24,$24,1
-nor		$24,$24,$24
-sll		$24,$24,2
-beq		$24,$0,TAG_4
-addiu	$24,$0,1
-addiu	$0,$24,1
-TAG_4:
-srl		$3,$4,2
-or		$4,$4,$4
-sra		$4,$4,2
-bne		$4,$3,TAG_5
-addiu	$4,$3,1
-addiu	$3,$4,1
-TAG_5:
-sll		$4,$4,2
-sllv	$4,$4,$4
-srl		$4,$4,1
-beq		$4,$0,TAG_6
-addiu	$4,$0,1
-addiu	$0,$4,1
-TAG_6:
-sra		$1,$1,1
-srlv	$0,$1,$1
-sll		$1,$0,2
-bne		$0,$0,TAG_7
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_7:
-addi	$1,$0,143
-srl		$25,$25,1
-srav	$25,$25,$25
-sra		$25,$25,1
-bgtz	$25,TAG_8
-addiu	$25,$25,1
-addiu	$25,$25,1
-TAG_8:
-sll		$4,$4,1
-slt		$5,$5,$5
-srl		$4,$4,1
-bgez	$4,TAG_9
-addiu	$4,$4,1
-addiu	$4,$4,1
-TAG_9:
-addi	$5,$0,176
-sra		$6,$4,1
-sltu	$4,$4,$4
-sll		$4,$6,2
-bltz	$4,TAG_10
-addiu	$4,$4,1
-addiu	$4,$4,1
-TAG_10:
-srl		$9,$9,1
-sub		$0,$9,$0
-sra		$0,$9,1
-blez	$0,TAG_11
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_11:
-sll		$26,$26,1
-subu	$26,$26,$26
-srl		$26,$26,2
-bgtz	$26,TAG_12
-addiu	$26,$26,1
-addiu	$26,$26,1
-TAG_12:
-sra		$7,$7,2
-xor		$4,$4,$7
-sll		$7,$4,2
-bgez	$4,TAG_13
-addiu	$4,$4,1
-addiu	$4,$4,1
-TAG_13:
-srl		$4,$4,2
-add		$8,$8,$8
-sra		$4,$8,1
-bltz	$4,TAG_14
-addiu	$4,$4,1
-addiu	$4,$4,1
-TAG_14:
-sll		$0,$0,1
-addu	$27,$0,$27
-srl		$0,$27,1
-blez	$27,TAG_15
-addiu	$27,$27,1
-addiu	$27,$27,1
-TAG_15:
-sra		$11,$11,1
-and		$11,$11,$11
-divu	$11,$11
-nor		$11,$11,$11
-mflo	$1
-mfhi	$2
-addi	$2,$0,139
-sll		$7,$5,2
-or		$5,$7,$7
-mult	$7,$7
-sllv	$5,$7,$5
-mflo	$1
-mfhi	$2
-addi	$2,$0,153
-srl		$5,$5,2
-srlv	$8,$8,$8
-multu	$5,$5
-srav	$8,$8,$8
-mflo	$1
-mfhi	$2
-addi	$2,$0,144
-addi	$8,$0,154
-sra		$28,$28,1
-slt		$0,$0,$0
-mthi	$0
-sltu	$28,$0,$28
-mflo	$1
-mfhi	$2
-addi	$2,$0,140
-sll		$12,$12,2
-sub		$12,$12,$12
-mtlo	$12
-sltiu	$12,$12,-2
-mflo	$1
-mfhi	$2
-addi	$1,$0,202
-addi	$2,$0,44
-srl		$5,$9,2
-subu	$9,$9,$9
-mtc0	$9,$13
-xori	$9,$9,231
-mflo	$1
-mfhi	$2
-addi	$1,$0,54
-addi	$2,$0,191
-sra		$5,$5,1
-xor		$10,$10,$10
-div		$5,$5
-addi	$10,$10,-110
-mflo	$1
-mfhi	$2
-addi	$2,$0,160
-sll		$0,$21,1
-add		$21,$21,$21
-divu	$0,$18
-addiu	$21,$21,66
-mflo	$1
-mfhi	$2
-addi	$1,$0,160
-addi	$2,$0,211
-srl		$13,$13,1
-addu	$13,$13,$13
-mult	$13,$13
-sra		$13,$13,2
-mflo	$1
-mfhi	$2
-addi	$2,$0,107
-sll		$11,$5,2
-and		$5,$11,$11
-multu	$5,$11
-srl		$11,$11,2
-mflo	$1
-mfhi	$2
-addi	$2,$0,177
-sra		$5,$12,2
-nor		$12,$5,$5
-mthi	$5
-sll		$5,$5,2
-mflo	$1
-mfhi	$2
-addi	$2,$0,98
-addi	$5,$0,52
-srl		$0,$0,1
-or		$13,$13,$0
-mtlo	$0
-sra		$13,$0,1
-mflo	$1
-mfhi	$2
-addi	$1,$0,41
-addi	$2,$0,39
-addi	$13,$0,217
-sll		$16,$16,2
-sllv	$16,$16,$16
-mtc0	$16,$12
-div		$16,$16
-mflo	$1
-mfhi	$2
-addi	$2,$0,96
-srl		$5,$17,2
-srlv	$17,$5,$17
-divu	$17,$5
-mult	$17,$5
-mflo	$1
-mfhi	$2
-addi	$1,$0,22
-addi	$2,$0,22
-addi	$17,$0,11
-sra		$18,$5,1
-srav	$5,$5,$18
-multu	$18,$5
-mthi	$18
-mflo	$1
-mfhi	$2
-addi	$1,$0,221
-addi	$5,$0,5
-sll		$0,$0,1
-slt		$17,$17,$17
-mtlo	$17
-mtc0	$0,$12
-mflo	$1
-mfhi	$2
-addi	$1,$0,222
-addi	$17,$0,147
-srl		$17,$17,1
-sltu	$17,$17,$17
-div		$17,$7
-beq		$17,$17,TAG_16
-addiu	$17,$17,1
-addiu	$17,$17,1
-TAG_16:
-mflo	$1
-mfhi	$2
-addi	$1,$0,155
-addi	$2,$0,118
-sra		$5,$5,1
-sub		$19,$5,$5
-divu	$19,$4
-bne		$19,$1,TAG_17
-addiu	$19,$1,1
-addiu	$1,$19,1
-TAG_17:
-mflo	$1
-mfhi	$2
-addi	$1,$0,118
-addi	$2,$0,175
-sll		$5,$20,2
-subu	$20,$5,$20
-mult	$5,$5
-beq		$5,$5,TAG_18
-addiu	$5,$5,1
-addiu	$5,$5,1
-TAG_18:
-mflo	$1
-mfhi	$2
-addi	$2,$0,172
-srl		$13,$13,2
-xor		$0,$13,$0
-multu	$0,$0
-bne		$13,$0,TAG_19
-addiu	$13,$0,1
-addiu	$0,$13,1
-TAG_19:
-mflo	$1
-mfhi	$2
-addi	$1,$0,82
-addi	$2,$0,22
-sra		$18,$18,2
-add		$18,$18,$18
-mthi	$18
-beq		$18,$0,TAG_20
-addiu	$18,$0,1
-addiu	$0,$18,1
-TAG_20:
-mflo	$1
-mfhi	$2
-addi	$1,$0,110
-sll		$5,$21,1
-addu	$21,$21,$21
-mtlo	$21
-bne		$21,$21,TAG_21
-addiu	$21,$21,1
-addiu	$21,$21,1
-TAG_21:
-mflo	$1
-mfhi	$2
-srl		$5,$5,2
-and		$22,$5,$22
-mtc0	$5,$13
-beq		$22,$5,TAG_22
-addiu	$22,$5,1
-addiu	$5,$22,1
-TAG_22:
-mflo	$1
-mfhi	$2
-sra		$0,$0,2
-nor		$18,$18,$18
-div		$0,$26
-bne		$0,$0,TAG_23
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_23:
-mflo	$1
-mfhi	$2
-addi	$1,$0,73
-addi	$2,$0,191
-sll		$19,$19,1
-or		$19,$19,$19
-divu	$19,$19
-bgtz	$19,TAG_24
-addiu	$19,$19,1
-addiu	$19,$19,1
-TAG_24:
-mflo	$1
-mfhi	$2
-addi	$2,$0,58
-srl		$23,$5,2
-sllv	$5,$5,$23
-mult	$23,$23
-bgez	$5,TAG_25
-addiu	$5,$5,1
-addiu	$5,$5,1
-TAG_25:
-mflo	$1
-mfhi	$2
-addi	$2,$0,189
-sra		$5,$24,1
-srlv	$24,$24,$24
-multu	$5,$24
-bltz	$5,TAG_26
-addiu	$5,$5,1
-addiu	$5,$5,1
-TAG_26:
-mflo	$1
-mfhi	$2
-addi	$1,$0,219
-addi	$2,$0,239
-addi	$24,$0,227
-sll		$0,$28,2
-srav	$28,$0,$0
-mthi	$0
-blez	$28,TAG_27
-addiu	$28,$28,1
-addiu	$28,$28,1
-TAG_27:
-mflo	$1
-mfhi	$2
-addi	$1,$0,210
-addi	$2,$0,215
-srl		$20,$20,2
-slt		$20,$20,$20
-mtlo	$20
-bgtz	$20,TAG_28
-addiu	$20,$20,1
-addiu	$20,$20,1
-TAG_28:
-mflo	$1
-mfhi	$2
-addi	$1,$0,39
-addi	$2,$0,225
-sra		$25,$5,1
-sltu	$5,$5,$25
-mtc0	$25,$12
-bgez	$5,TAG_29
-addiu	$5,$5,1
-addiu	$5,$5,1
-TAG_29:
-mflo	$1
-mfhi	$2
-addi	$1,$0,206
-addi	$2,$0,222
-sll		$26,$5,1
-sub		$5,$26,$5
-div		$26,$5
-bltz	$5,TAG_30
-addiu	$5,$5,1
-addiu	$5,$5,1
-TAG_30:
-mflo	$1
-mfhi	$2
-addi	$2,$0,70
-srl		$18,$0,2
-subu	$0,$0,$0
-divu	$0,$20
-blez	$18,TAG_31
-addiu	$18,$18,1
-addiu	$18,$18,1
-TAG_31:
-mflo	$1
-mfhi	$2
-addi	$1,$0,6
-addi	$2,$0,250
-sra		$23,$23,2
-xor		$23,$23,$23
-mfc0	$23,$12
-add		$23,$23,$23
-mflo	$1
-mfhi	$2
-addi	$1,$0,158
-addi	$2,$0,151
-sll		$1,$6,2
-addu	$6,$1,$6
-mfhi	$6
-and		$1,$1,$1
-mflo	$1
-mfhi	$2
-addi	$1,$0,15
-addi	$2,$0,223
-addi	$6,$0,4
-srl		$6,$2,2
-nor		$2,$2,$2
-mflo	$6
-or		$2,$2,$6
-mflo	$1
-mfhi	$2
-addi	$1,$0,238
-addi	$2,$0,157
-addi	$6,$0,143
-sra		$16,$0,1
-sllv	$0,$0,$0
-mfc0	$0,$13
-srlv	$16,$0,$16
-mflo	$1
-mfhi	$2
-addi	$1,$0,169
-addi	$2,$0,8
-addi	$16,$0,136
-sll		$24,$24,1
-srav	$24,$24,$24
-mfhi	$24
-andi	$24,$24,87
-mflo	$1
-mfhi	$2
-addi	$1,$0,20
-addi	$2,$0,15
-addi	$24,$0,119
-srl		$3,$6,2
-slt		$6,$3,$6
-mflo	$6
-ori		$6,$6,137
-mflo	$1
-mfhi	$2
-addi	$1,$0,130
-addi	$2,$0,119
-sra		$4,$4,1
-sltu	$6,$4,$4
-mfc0	$6,$13
-slti	$6,$4,4
-mflo	$1
-mfhi	$2
-addi	$1,$0,97
-addi	$2,$0,185
-addi	$6,$0,77
-sll		$0,$11,1
-sub		$11,$11,$0
-mfhi	$0
-sltiu	$11,$0,1
-mflo	$1
-mfhi	$2
-addi	$1,$0,171
-addi	$2,$0,131
-srl		$25,$25,1
-subu	$25,$25,$25
-mflo	$25
-sra		$25,$25,1
-mflo	$1
-mfhi	$2
-addi	$1,$0,14
-addi	$2,$0,201
-addi	$25,$0,113
-sll		$6,$6,1
-xor		$5,$5,$6
-mfc0	$6,$13
-srl		$5,$5,1
-mflo	$1
-mfhi	$2
-addi	$1,$0,113
-addi	$2,$0,50
-sra		$6,$6,1
-add		$6,$6,$6
-mfhi	$6
-sll		$6,$6,1
-mflo	$1
-mfhi	$2
-addi	$1,$0,229
-addi	$2,$0,204
-addi	$6,$0,230
-srl		$0,$0,1
-addu	$29,$0,$29
-mflo	$0
-sra		$0,$0,2
-mflo	$1
-mfhi	$2
-addi	$1,$0,68
-addi	$2,$0,10
-sll		$28,$28,2
-and		$28,$28,$28
-mfc0	$28,$12
-mult	$28,$28
-mflo	$1
-mfhi	$2
-addi	$2,$0,71
-srl		$6,$11,2
-nor		$11,$6,$11
-mfhi	$6
-multu	$6,$6
-mflo	$1
-mfhi	$2
-addi	$1,$0,219
-addi	$2,$0,167
-addi	$6,$0,171
-sra		$12,$6,1
-or		$6,$6,$12
-mflo	$6
-mthi	$12
-mflo	$1
-mfhi	$2
-addi	$1,$0,238
-addi	$6,$0,152
-sll		$0,$0,2
-sllv	$14,$14,$0
-mfc0	$0,$12
-mtlo	$14
-mflo	$1
-mfhi	$2
-srl		$29,$29,1
-srlv	$29,$29,$29
-mfhi	$29
-beq		$29,$29,TAG_32
-addiu	$29,$29,1
-addiu	$29,$29,1
-TAG_32:
-mflo	$1
-mfhi	$2
-sra		$6,$13,2
-srav	$13,$13,$13
-mflo	$6
-bne		$6,$0,TAG_33
-addiu	$6,$0,1
-addiu	$0,$6,1
-TAG_33:
-mflo	$1
-mfhi	$2
-addi	$13,$0,189
-sll		$6,$14,2
-slt		$14,$14,$6
-mfc0	$6,$13
-beq		$6,$6,TAG_34
-addiu	$6,$6,1
-addiu	$6,$6,1
-TAG_34:
-mflo	$1
-mfhi	$2
-srl		$14,$0,1
-sltu	$0,$14,$14
-mfhi	$14
-bne		$14,$0,TAG_35
-addiu	$14,$0,1
-addiu	$0,$14,1
-TAG_35:
-mflo	$1
-mfhi	$2
-sra		$30,$30,1
-sub		$30,$30,$30
-mflo	$30
-beq		$30,$0,TAG_36
-addiu	$30,$0,1
-addiu	$0,$30,1
-TAG_36:
-mflo	$1
-mfhi	$2
-sll		$15,$15,2
-subu	$6,$6,$15
-mfc0	$6,$12
-bne		$6,$6,TAG_37
-addiu	$6,$6,1
-addiu	$6,$6,1
-TAG_37:
-mflo	$1
-mfhi	$2
-srl		$6,$6,2
-xor		$16,$16,$6
-mfhi	$6
-beq		$16,$6,TAG_38
-addiu	$16,$6,1
-addiu	$6,$16,1
-TAG_38:
-mflo	$1
-mfhi	$2
-sra		$17,$17,2
-add		$0,$17,$0
-mflo	$17
-bne		$17,$17,TAG_39
-addiu	$17,$17,1
-addiu	$17,$17,1
-TAG_39:
-mflo	$1
-mfhi	$2
-sll		$1,$1,2
-addu	$1,$1,$1
-mfc0	$1,$13
-bgtz	$1,TAG_40
-addiu	$1,$1,1
-addiu	$1,$1,1
-TAG_40:
-mflo	$1
-mfhi	$2
-srl		$6,$6,2
-and		$17,$6,$6
-mfhi	$6
-bgez	$6,TAG_41
-addiu	$6,$6,1
-addiu	$6,$6,1
-TAG_41:
-mflo	$1
-mfhi	$2
-sra		$18,$18,1
-nor		$6,$18,$18
-mflo	$6
-bltz	$6,TAG_42
-addiu	$6,$6,1
-addiu	$6,$6,1
-TAG_42:
-mflo	$1
-mfhi	$2
-addi	$18,$0,8
-sll		$19,$19,2
-or		$0,$0,$19
-mfc0	$19,$12
-blez	$19,TAG_43
-addiu	$19,$19,1
-addiu	$19,$19,1
-TAG_43:
-mflo	$1
-mfhi	$2
-srl		$2,$2,1
-sllv	$2,$2,$2
-mfhi	$2
-bgtz	$2,TAG_44
-addiu	$2,$2,1
-addiu	$2,$2,1
-TAG_44:
-mflo	$1
-mfhi	$2
-sra		$19,$19,2
-srlv	$6,$6,$19
-mflo	$6
-bgez	$6,TAG_45
-addiu	$6,$6,1
-addiu	$6,$6,1
-TAG_45:
-mflo	$1
-mfhi	$2
-addi	$19,$0,94
-sll		$20,$20,2
-srav	$6,$20,$6
-mfc0	$6,$12
-bltz	$6,TAG_46
-addiu	$6,$6,1
-addiu	$6,$6,1
-TAG_46:
-mflo	$1
-mfhi	$2
-srl		$12,$0,1
-slt		$0,$12,$12
-mfhi	$0
-blez	$0,TAG_47
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_47:
-mflo	$1
-mfhi	$2
-addi	$12,$0,236
-sra		$5,$5,1
-sltu	$5,$5,$5
-lui		$5,3
-sub		$5,$5,$5
-addi	$5,$0,197
-sll		$25,$25,1
-subu	$6,$25,$25
-lui		$6,2
-xor		$25,$6,$25
-srl		$6,$6,2
-add		$26,$26,$6
-lui		$6,3
-addu	$26,$26,$6
-sra		$12,$12,1
-and		$0,$0,$12
-lui		$0,4
-nor		$12,$0,$12
-sll		$6,$6,1
-or		$6,$6,$6
-lui		$6,0
-xori	$6,$6,123
-srl		$6,$6,1
-sllv	$27,$6,$6
-lui		$6,2
-addi	$6,$6,-28
-sra		$6,$28,1
-srlv	$28,$6,$28
-lui		$6,5
-addiu	$28,$28,-19
-sll		$0,$2,1
-srav	$2,$2,$2
-lui		$0,6
-andi	$0,$2,62
-addi	$2,$0,172
-srl		$7,$7,1
-slt		$7,$7,$7
-lui		$7,6
-sra		$7,$7,2
-sll		$29,$29,1
-sltu	$6,$29,$6
-lui		$6,4
-srl		$29,$6,1
-sra		$6,$6,1
-sub		$30,$30,$30
-lui		$6,5
-sll		$30,$30,2
-addi	$30,$0,19
-srl		$0,$0,1
-subu	$1,$1,$0
-lui		$1,0
-sra		$1,$1,1
-addi	$1,$0,102
-sll		$10,$10,1
-xor		$10,$10,$10
-lui		$10,5
-mtc0	$10,$13
-mflo	$1
-mfhi	$2
-srl		$5,$7,2
-add		$7,$7,$7
-lui		$7,2
-div		$7,$7
-mflo	$1
-mfhi	$2
-addi	$2,$0,247
-sra		$7,$6,2
-addu	$6,$6,$7
-lui		$7,0
-divu	$7,$6
-mflo	$1
-mfhi	$2
-addi	$1,$0,74
-addi	$2,$0,143
-addi	$7,$0,8
-sll		$0,$0,1
-and		$28,$0,$28
-lui		$28,7
-mult	$0,$28
-mflo	$1
-mfhi	$2
-addi	$1,$0,164
-addi	$2,$0,126
-srl		$11,$11,2
-nor		$11,$11,$11
-lui		$11,7
-beq		$11,$11,TAG_48
-addiu	$11,$11,1
-addiu	$11,$11,1
-TAG_48:
-sra		$7,$7,1
-or		$7,$7,$7
-lui		$7,2
-bne		$7,$0,TAG_49
-addiu	$7,$0,1
-addiu	$0,$7,1
-TAG_49:
-sll		$8,$8,1
-sllv	$7,$8,$8
-lui		$7,7
-beq		$8,$8,TAG_50
-addiu	$8,$8,1
-addiu	$8,$8,1
-TAG_50:
-srl		$2,$0,1
-srlv	$0,$0,$2
-lui		$0,5
-bne		$0,$1,TAG_51
-addiu	$0,$1,1
-addiu	$1,$0,1
-TAG_51:
-addi	$2,$0,200
-sra		$12,$12,1
-srav	$12,$12,$12
-lui		$12,6
-beq		$12,$0,TAG_52
-addiu	$12,$0,1
-addiu	$0,$12,1
-TAG_52:
-sll		$9,$9,2
-slt		$7,$9,$9
-lui		$7,2
-bne		$9,$9,TAG_53
-addiu	$9,$9,1
-addiu	$9,$9,1
-TAG_53:
-srl		$7,$10,1
-sltu	$10,$7,$7
-lui		$7,3
-beq		$7,$10,TAG_54
-addiu	$7,$10,1
-addiu	$10,$7,1
-TAG_54:
-sra		$28,$28,1
-sub		$0,$28,$0
-lui		$28,0
-bne		$0,$28,TAG_55
-addiu	$0,$28,1
-addiu	$28,$0,1
-TAG_55:
-sll		$13,$13,1
-subu	$13,$13,$13
-lui		$13,1
-bgtz	$13,TAG_56
-addiu	$13,$13,1
-addiu	$13,$13,1
-TAG_56:
-srl		$11,$11,2
-xor		$7,$7,$11
-lui		$7,4
-bgez	$7,TAG_57
-addiu	$7,$7,1
-addiu	$7,$7,1
-TAG_57:
-sra		$12,$7,2
-add		$7,$7,$7
-lui		$7,0
-bltz	$7,TAG_58
-addiu	$7,$7,1
-addiu	$7,$7,1
-TAG_58:
-sll		$24,$0,1
-addu	$0,$0,$0
-lui		$0,0
-blez	$0,TAG_59
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_59:
-addi	$24,$0,34
-srl		$14,$14,1
-and		$14,$14,$14
-lui		$14,7
-bgtz	$14,TAG_60
-addiu	$14,$14,1
-addiu	$14,$14,1
-TAG_60:
-sra		$13,$13,2
-nor		$7,$7,$13
-lui		$7,0
-bgez	$7,TAG_61
-addiu	$7,$7,1
-addiu	$7,$7,1
-TAG_61:
-sll		$14,$14,2
-or		$7,$7,$14
-lui		$7,0
-bltz	$7,TAG_62
-addiu	$7,$7,1
-addiu	$7,$7,1
-TAG_62:
 .ktext 0x4180
+	
+_entry:	
+	mfc0	$1, $12
+	mfc0	$1, $14
+	mfc0	$1, $13
+	ori	$k0, $0, 0x1000
+	sw	$sp, -4($k0)
+	
+	addiu	$k0, $k0, -256
+	move	$sp, $k0
+	
+	j	_save_context
+	nop
 
-_entry8:
-	sw		$k0,0x2ffc($0)
-	mfc0	$k0,$12
-	mfc0	$k0,$13
-	mfc0	$k0,$14
-	addiu	$k0,$k0,4
-	mtc0	$k0,$14
-	lw		$k0,0x2ffc($0)
+_quick_handle:
+	mfc0	$1, $13
+	mfc0	$k0, $13
+	andi	$k0, $k0, 0x00ff
+	srl	$k0, $k0, 2
+	
+	ori	$k1, $0, 0x0004
+	beq	$k0, $k1, adel_handler_quick
+	nop
+	
+	ori	$k1, $0, 0x000a
+	beq	$k0, $k1, ri_handler_quick
+	nop
+	
+	j _entry
+	nop
+	
+adel_handler_quick:
+	mfc0    $t8,$14
+	andi    $t9,$t8,3
+	bne     $t9,$0,adel_type_1
+	nop
+	addi    $t9,$t8,-0x3000
+	lui     $s7,0xffff
+	ori	$s7,$s7,0xe000
+	and     $t9,$t9,$s7
+	bne     $t9,$0,adel_type_2
+	nop
+	j       _entry
+	nop
+	
+
+adel_type_1:
+	ori       $10,$0,0x3230
+	mtc0      $10,$14
 	eret
-	bgez	$k0,JUMP1
-	lw		$k0,0x2ffc($0)
-	lw		$k0,0x2ffc($0)
-	JUMP1:
-	lw		$k0,0x2ffc($0)
-	lw		$k0,0x2ffc($0)
-	lw		$k0,0x2ffc($0)
-#end
+	
+adel_type_2:
+	ori       $10,$0,0x3240
+	mtc0      $10,$14
+	eret
+
+
+	
+ri_handler_quick:
+	ori       $10,$0,0x3220
+	mtc0      $10,$14
+	eret
+
+	
+_main_handler:
+	mfc0	$k0, $13
+	andi	$k0, $k0, 0x00ff
+	srl	$k0, $k0, 2
+	
+	ori	$k1, $0, 0x0000
+	beq	$k0, $k1, int_handler
+	nop
+	ori	$k1, $0, 0x0004
+	beq	$k0, $k1, adel_handler
+	nop
+	ori	$k1, $0, 0x0005
+	beq	$k0, $k1, ades_handler
+	nop
+	ori	$k1, $0, 0x000a
+	beq	$k0, $k1, ri_handler
+	nop
+	ori	$k1, $0, 0x000c
+	beq	$k0, $k1, ov_handler
+	nop
+	
+int_handler:
+	sw	$ra, 0($sp)
+	addiu	$sp, $sp, -16
+	mfc0	$v0, $12
+	sw	$v0, 0($sp)
+	mfc0	$v0, $13
+	sw	$v0, 4($sp)
+	
+	
+	# check INT[3]
+	lw	$v0, 0($sp)
+	lw	$v1, 4($sp)
+	and	$v0, $v1, $v0
+	andi	$v0, $v0, 0x800
+	bne	$v0, $0, timer1_handler
+	nop
+	
+	# check INT[2]
+	lw	$v0, 0($sp)
+	lw	$v1, 4($sp)
+	and	$v0, $v1, $v0
+	andi	$v0, $v0, 0x400
+	bne	$v0, $0, timer0_handler
+	nop
+
+timer0_handler:
+	# first we load the global variable cnt0:
+	# ++cnt0, then save to global variable cnt0
+	li 	$fp, 0x8
+	lw	$t0, 0($fp)			# get cnt0
+	addi    $s6, $0 , 1
+	beq	$t0, $s6, skip0
+	nop
+	
+	addiu 	$t0, $t0, 1			# add cnt0
+skip0:	sw 	$t0, 0($fp)			# update cnt0
+	jal	restart_timer
+	nop
+	
+	# mask INT[2]
+	mfc0 	$t0, $12
+	andi 	$t0, $t0, 0x03ff
+	ori 	$t0, $t0, 0x800
+	mtc0 	$t0, $12
+	
+	j	_restore_context
+	nop
+	
+timer1_handler:
+	# first we load the global variable cnt1:
+	# ++cnt1, then save to global variable cnt1
+	li 	$fp, 0xc
+	lw 	$t0, 0($fp)			# get cnt1
+	addi    $s6, $0 , 1
+	beq	$t0, $s6, skip1
+	nop
+	
+	addiu 	$t0, $t0, 1			# add cnt1
+skip1:	sw 	$t0, 0($fp)			# update cnt1
+	jal	restart_timer
+	nop
+	
+	# mask INT[3]
+	mfc0 	$t0, $12
+	andi 	$t0, $t0, 0x03ff
+	ori 	$t0, $t0, 0x400
+	mtc0 	$t0, $12
+	
+	j	_restore_context
+	nop
+	
+restart_timer:
+	# swap two PRESET
+	li	$t0, 0x0
+	lw	$t0, 0($t0)
+	lw	$t5, 4($t0)
+	li	$t2, 0x4
+	lw	$t2, 0($t2)
+	lw	$t6, 4($t2)
+	
+	
+
+
+	# restart Timer 0
+	li 	$t1, 0x0
+	lw 	$t1, 0($t1)
+	lw 	$t0, 0($t1)		# $t0 is the CTRL Reg of Timer 0
+	sw 	$0, 0($t1)		# disable Timer 0
+	
+	
+	li 	$t2, 0x8
+	lw	$t2, 0($t2)
+	
+	addi    $s6, $0 , 5
+	beq	$t2, $s6, f0		# check Timer0 pause times
+	nop
+	
+	sw	$t6, 4($t1)		# refill the count number
+	addiu 	$t0, $0, 9		# set Timer0.CTRL
+	sw 	$t0, 0($t1)		# Timer 0 restart count
+	f0:	
+	# restart Timer 1
+	li 	$t1, 0x4
+	lw 	$t1, 0($t1)
+	lw 	$t0, 0($t1)		# $t0 is the CTRL Reg of Timer 1
+	sw 	$0, 0($t1)		# disable Timer 1
+	
+		
+	li 	$t2, 0xc
+	lw	$t2, 0($t2)
+	
+	addi    $s6, $0 , 5
+	beq	$t2, $s6, f1		# check Timer1 pause times
+	nop
+
+	sw	$t5, 4($t1)		# refill the count number
+	addiu 	$t0, $0, 9		# set Timer1.CTRL
+	sw 	$t0, 0($t1)		# Timer 0 restart count
+	f1:	
+	jr 	$ra
+	nop	
+
+adel_handler:
+	mfc0	$t0, $14
+	mfc0	$k0, $13
+	lui	$t2, 0x8000
+	and	$t3, $k0, $t2
+	addi	$t0, $t0, 4
+	bne	$t3, $t2, adel_nxt
+	nop
+	addi	$t0, $t0, 4
+	adel_nxt:
+	mtc0	$t0, $14
+	j	_restore_context
+	nop
+
+ades_handler:
+	mfc0	$t0, $14
+	mfc0	$k0, $13
+	lui	$t2, 0x8000
+	and	$t3, $k0, $t2
+	addi	$t0, $t0, 4
+	bne	$t3, $t2, ades_nxt
+	nop
+	addi	$t0, $t0, 4
+	ades_nxt:
+	mtc0	$t0, $14
+	j	_restore_context
+	nop
+	
+
+ri_handler:
+	mfc0	$t0, $14
+	mfc0	$k0, $13
+	lui	$t2, 0x8000
+	and	$t3, $k0, $t2
+	addi	$t0, $t0, 4
+	bne	$t3, $t2, ri_nxt
+	nop
+	addi	$t0, $t0, 4
+	ri_nxt:
+	mtc0	$t0, $14
+	j	_restore_context
+	nop
+	
+ov_handler:
+	mfc0	$t0, $14
+	mfc0	$k0, $13
+	lui	$t2, 0x8000
+	and	$t3, $k0, $t2
+	addi	$t0, $t0, 4
+	bne	$t3, $t2, ov_nxt
+	nop
+	addi	$t0, $t0, 4
+	ov_nxt:
+	mtc0	$t0, $14
+	j	_restore_context
+	nop
+
+_restore:
+	eret
+	
+_save_context:
+    	sw  	$2, 8($sp)    
+    	sw  	$3, 12($sp)    
+    	sw  	$4, 16($sp)    
+    	sw  	$5, 20($sp)    
+    	sw  	$6, 24($sp)    
+    	sw  	$7, 28($sp)    
+    	sw  	$8, 32($sp)    
+    	sw  	$9, 36($sp)    
+    	sw  	$10, 40($sp)    
+    	sw  	$11, 44($sp)    
+    	sw  	$12, 48($sp)    
+    	sw  	$13, 52($sp)    
+    	sw  	$14, 56($sp)    
+    	sw  	$15, 60($sp)    
+    	sw  	$16, 64($sp)    
+    	sw  	$17, 68($sp)    
+    	sw  	$18, 72($sp)    
+    	sw  	$19, 76($sp)    
+    	sw  	$20, 80($sp)    
+    	sw  	$21, 84($sp)    
+    	sw  	$22, 88($sp)    
+    	sw  	$23, 92($sp)    
+    	sw  	$24, 96($sp)    
+    	sw  	$25, 100($sp)    
+    	sw  	$28, 112($sp)    
+    	sw  	$29, 116($sp)    
+    	sw  	$30, 120($sp)    
+    	sw  	$31, 124($sp)
+	mfhi 	$k0
+	sw 	$k0, 128($sp)
+	mflo 	$k0
+	sw 	$k0, 132($sp)
+	j	_main_handler
+	nop
+	
+
+
+_restore_context:
+	li	$sp, 0x1000
+	addi	$sp, $sp, -256
+    	lw  	$2, 8($sp)    
+    	lw  	$3, 12($sp)    
+    	lw  	$4, 16($sp)    
+    	lw  	$5, 20($sp)    
+    	lw  	$6, 24($sp)    
+    	lw  	$7, 28($sp)    
+    	lw  	$8, 32($sp)    
+    	lw  	$9, 36($sp)    
+    	lw  	$10, 40($sp)    
+    	lw  	$11, 44($sp)    
+    	lw  	$12, 48($sp)    
+    	lw  	$13, 52($sp)    
+    	lw  	$14, 56($sp)    
+    	lw  	$15, 60($sp)    
+    	lw  	$16, 64($sp)    
+    	lw  	$17, 68($sp)    
+    	lw  	$18, 72($sp)    
+    	lw  	$19, 76($sp)    
+    	lw  	$20, 80($sp)    
+    	lw  	$21, 84($sp)    
+    	lw  	$22, 88($sp)    
+    	lw  	$23, 92($sp)    
+    	lw  	$24, 96($sp)    
+    	lw  	$25, 100($sp)    
+    	lw  	$28, 112($sp)   
+    	lw  	$30, 120($sp)    
+    	lw  	$31, 124($sp)    
+	lw 	$k0, 128($sp)
+	mthi 	$k0
+	lw 	$k0, 132($sp)
+	mtlo 	$k0
+    	lw  	$29, 116($sp) 
+	ori     $1,$0,1
+    	j 	_restore	
+	nop	
+	
+.data
+.globl TC0_BASE TC1_BASE cnt0 cnt1 cnt0_double cnt1_double
+TC0_BASE: .word 0x7f00
+TC1_BASE: .word 0x7f10
+cnt0: .word 1
+cnt1: .word 1
+cnt0_double: .word 0
+cnt1_double: .word 0
+	
+
+.text
+	li $t0,0x7f00
+	sw $t0,0($0)
+	li $t0,0x7f10
+	sw $t0,4($0)
+	li $t0,1
+	sw $t0,8($0)
+	li $t0,1
+	sw $t0,12($0)
+	addi $t0,$0,0
+	ori	$28, $0, 0x0000
+	ori	$29, $0, 0x0f00
+	mtc0	$0, $12
+	
+	#save start address 
+	ori 	$t0, $0, 0x7f00
+	sw 	$t0, 0($0)
+	ori 	$t1, $0, 0x7f10
+	sw 	$t1, 4($0)
+	
+	#set SR included IM, IE, EXL
+	ori 	$t0,$0, 0x0c01
+	mtc0 	$t0,$12
+	
+	#set Timer0
+	la 	$t1, TC0_BASE
+	lw 	$t1, 0($t1)
+	sw 	$0, 0($t1)		# disable Timer0.CTRL
+	
+	addiu 	$t0, $0, 0x80		# set Timer0.PRESET
+	sw 	$t0, 4($t1)
+	addiu 	$t0, $0, 9		# set Timer0.CTRL
+	sw 	$t0, 0($t1)
+	
+	#set Timer1
+	la 	$t1, TC1_BASE
+	lw 	$t1, 0($t1)
+	sw 	$0, 0($t1)		# disable Timer1.CTRL
+	
+	addiu 	$t0, $0, 0x40		# set Timer1.PRESET
+	sw 	$t0, 4($t1)
+	addiu 	$t0, $0, 9		# set Timer1.CTRL
+	sw 	$t0, 0($t1)
+	
+	lui	$8, 0x7fff
+	lui	$9, 0x7fff
+	ori	$8, $8, 0xffff
+	j	slot_ov1
+	add	$10, $8, $9	        # 测试延迟槽内 add 的上界溢出
+slot_ov1:
+	lui     $t0,0x8000
+	jal	slot_ov2
+	addi	$10, $8, -1     # 测试延迟槽内 addi 的下界溢出
+slot_ov2:
+	ori	$t1, $0, 0x0ba0
+	lui	$8, 0x8000
+	lui	$9, 0x1000
+	j	slot_ov3
+	sub	$10, $8, $9			# 测试延迟槽内 sub 的下界溢出
+slot_ov3:
+	ori	$t2, $0, 0x93ac
+	lui	$8, 0x7fff
+	lui	$9, 0x7fff
+	j       slot_ov4
+	add     $10, $8, $9		# 测试延迟槽内 add 的下界溢出
+slot_ov4:
+	ori     $t2, $0, 0x5daa
+	lui	$8, 0x7fff
+	lui	$9, 0x8000
+	sub	$10, $8, $9			# 测试延迟槽内 sub 的上界溢出
+	lui	$8, 0x8111
+	lui	$9, 0x8111
+	add     $10, $8, $9
+	addi    $10, $8,-2
+	beq     $0,$0,slot_adel1
+	addi    $10, $8,-3
+	add     $10, $8, $9
+	sub	$10, $8, $9
+slot_adel1:	
+slot_adel2:
+	li	$8, 0x801
+	li      $9,0x800
+	sw      $9,0($9)        
+	lh      $9,0($8)         # 测试lh地址异常——后两位为1
+	j       slot_adel3
+	nop
+	
+slot_adel3:
+	li	$8, 0x802
+	lw      $9,0($8)         # 测试lw地址异常——后两位为2
+	j       slot_adel4
+	nop
+	
+slot_adel4:
+	li	$8, 0x803
+	lhu      $9,0($8)        # 测试lhu地址异常——后两位为3
+	j       slot_adel5
+	nop
+	
+slot_adel5:
+	li	$8, 0x803
+	lw      $9,0($8)         # 测试lw地址异常——后两位为3
+	j       slot_ades1
+	nop
+	
+slot_ades1:
+	li	$8, 0x801
+	sh      $9,0($8)         # 测试sh地址异常——后两位为1
+	j       slot_ades2
+	nop
+	
+slot_ades2:
+	li	$8, 0x802
+	sw      $9,0($8)         # 测试sw地址异常——后两位为2
+	j       slot_ades3
+	nop
+slot_ades3:
+	li	$8, 0x801
+	sw      $9,0($8)         # 测试lh地址异常——后两位为1
+	j       slot_combination
+	nop
+	
+slot_combination:
+	lui      $s0,0x8000      # 异常组合测试，且在连续的异常中插接乘除指令，且涉及了延迟槽中的异常。涉及到的冲突有——add 的下界溢出,addi的上界溢出,sub的下界溢出,sw的地址异常,sh的地址异常,lw的地址异常,lh的地址异常,lhu的地址异常.
+	lui      $s1,0x7fff
+	ori      $s1,$s1,0xffff
+	add     $10,$s0,$s0
+	sub     $10,$s0,$s1
+	addi    $10,$s1,10
+	sw      $10,0x1002($0)
+	sh      $10,0x1001($0)
+	mult    $10,$10
+	lw      $10,0x1002($0)
+	lh      $10,0x1001($0)
+	mult    $10,$10
+	lhu      $10,0x1001($0)
+	sub     $10,$s0,$s1
+	addi    $10,$s1,10
+	sw      $10,0x1002($0)
+	sh      $10,0x1001($0)
+	mult    $10,$10
+	sw      $10,0x1002($0)
+	sh      $10,0x1001($0)
+	lw      $10,0x1002($0)
+	lh      $10,0x1001($0)
+	mult    $10,$10
+	sh      $10,0x1001($0)
+	add     $10,$s0,$s0
+	sub     $10,$s0,$s1
+	mult    $10,$10
+	add     $10,$s0,$s0
+	sub     $10,$s0,$s1
+	j label_1
+	add     $10,$s0,$s0
+	sub     $10,$s0,$s1
+label_1:
+	mult    $10,$10
+	add     $10,$s0,$s0
+	sub     $10,$s0,$s1
+	mult    $10,$10
+	sh      $10,0x1001($0)
+	lw      $10,0x1002($0)
+	add     $10,$s0,$s0
+	bne     $0,$10,label_2
+	lw      $10,0x1002($0)
+	sh      $10,0x1001($0)
+label_2:
+	sub     $10,$s0,$s1
+	mult    $10,$10
+	sh      $10,0x1001($0)
+	lw      $10,0x1002($0)
+	nop
+	
+	ori	$t0, $0, 0x0005
+						# 测试每个计数器是否恰好中断 1 次
+	lw	$k0, 8($0)
+	lw	$k1,12($0)
+	bne	$k0, $t0, wait
+	nop
+	bne	$k1, $t0, wait
+	nop
+	ori	$t0, $0, 0xffff
+	ori	$t1, $0, 0xffff
+wait:
+	nop
+	nop

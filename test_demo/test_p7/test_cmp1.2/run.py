@@ -172,7 +172,7 @@ def dasm(hexcode):
     mipscount += 1
     return out[0]
 
-for lll in range(131,132):
+for lll in range(59,300):
     testflie = lll;
     #os.system("test_gen")
     #asmfilename=("test3.asm")
@@ -201,8 +201,9 @@ for lll in range(131,132):
     print("start running point%d"%(testflie))
         #"java -jar Mars.jar test.asm nc mc CompactTextAtZero a dump .text HexText "+rom_name
         # problem: can not exit mars
-    #os.system("java -jar Mars.jar db a nc mc CompactDataAtZero dump .text HexText code.txt 1000000 "+asmfilename)
-    #os.system("java -jar Mars.jar db nc mc CompactDataAtZero dump .text HexText code.txt >"+pre_path+"out_std.txt 1000000 "+asmfilename)
+        
+    os.system("java -jar Mars.jar 50000 db mc CompactDataAtZero a dump 0x00003000-0x0000417c HexText code.txt "+asmfilename)
+    os.system("java -jar Mars.jar 50000 db mc CompactDataAtZero a dump 0x00004180-0x00006ffc HexText code_handler.txt "+asmfilename)
     #print("std done")
     os.system(xlinx+"\\bin\\nt64\\fuse "+"--nodebug  --prj mips.prj -o mips.exe mips_tb >log.txt")
     os.system("mips.exe -nolog -tclbatch mips.tcl >out_source.txt")
@@ -231,7 +232,8 @@ for lll in range(131,132):
     print("start running point%d"%(testflie))
         #"java -jar Mars.jar test.asm nc mc CompactTextAtZero a dump .text HexText "+rom_name
         # problem: can not exit mars
-    #os.system("java -jar Mars.jar db a nc mc CompactDataAtZero dump .text HexText code.txt 1000000 "+asmfilename)
+    os.system("java -jar Mars.jar 50000 db mc CompactDataAtZero a dump 0x00003000-0x0000417c HexText code.txt "+asmfilename)
+    os.system("java -jar Mars.jar 50000 db mc CompactDataAtZero a dump 0x00004180-0x00006ffc HexText code_handler.txt "+asmfilename)
     #os.system("java -jar Mars.jar db nc mc CompactDataAtZero dump .text HexText code.txt >"+pre_path+"out_std.txt 1000000 "+asmfilename)
     #print("std done")
     os.system(xlinx+"\\bin\\nt64\\fuse "+"--nodebug  --prj mips.prj -o mips.exe mips_tb >log.txt")

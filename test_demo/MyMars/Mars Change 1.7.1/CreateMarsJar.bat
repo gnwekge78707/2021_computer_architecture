@@ -1,0 +1,1 @@
+jar cmf mainclass.txt Mars.jar PseudoOps.txt Config.properties Syscall.properties Settings.properties mainclass.txt CreateMarsJar.bat Mars.java Mars.class images mars

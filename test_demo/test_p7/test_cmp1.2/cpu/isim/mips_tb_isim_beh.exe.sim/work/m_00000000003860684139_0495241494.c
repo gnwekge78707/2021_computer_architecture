@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/mips2/src/M_DM.v";
+static const char *ng0 = "C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/mips2/src/M_DM.v";
 static int ng1[] = {15, 0};
 static int ng2[] = {16, 0};
 static int ng3[] = {1, 0};
@@ -41,7 +41,7 @@ static unsigned int ng16[] = {32539U, 0U};
 static unsigned int ng17[] = {32520U, 0U};
 static unsigned int ng18[] = {32536U, 0U};
 static int ng19[] = {0, 0};
-static const char *ng20 = "%h@%h: *%h <= %h";
+static const char *ng20 = "%h @%h: *%h <= %h";
 
 
 

@@ -5,28 +5,28 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/cpu/../mips2/src/mips.v" Line 42: &lt;<arg fmt="%s" index="1">HWInt</arg>&gt; is already implicitly declared earlier.
+<msg type="warning" file="HDLCompiler" num="35" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu/../mips2/src/mips.v" Line 42: &lt;<arg fmt="%s" index="1">HWInt</arg>&gt; is already implicitly declared earlier.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/cpu/../mips2/src/cpu.v" Line 125: Port <arg fmt="%s" index="1">rd_addr</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu/../mips2/src/cpu.v" Line 125: Port <arg fmt="%s" index="1">rd_addr</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/cpu/../mips2/src/cpu.v" Line 227: Port <arg fmt="%s" index="1">rd_addr</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu/../mips2/src/cpu.v" Line 227: Port <arg fmt="%s" index="1">rd_addr</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/cpu/../mips2/src/cpu.v" Line 324: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu/../mips2/src/cpu.v" Line 324: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/cpu/../mips2/src/cpu.v" Line 414: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu/../mips2/src/cpu.v" Line 414: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/cpu/../mips2/src/_SU.v" Line 16: Port <arg fmt="%s" index="1">rd_addr</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu/../mips2/src/_SU.v" Line 16: Port <arg fmt="%s" index="1">rd_addr</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/cpu/../mips2/src/_SU.v" Line 47: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu/../mips2/src/_SU.v" Line 47: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/cpu/../mips2/src/_SU.v" Line 68: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/cpu/../mips2/src/_SU.v" Line 68: Port <arg fmt="%s" index="1">rs_addr</arg> is not connected to this instance
 </msg>
 
 </messages>

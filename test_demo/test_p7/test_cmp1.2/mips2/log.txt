@@ -51,5 +51,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 5 sub-compilation(s) to finish...
 Compiled 20 Verilog Units
 Built simulation executable mips.exe
-Fuse Memory Usage: 33568 KB
-Fuse CPU Usage: 718 ms
+Fuse Memory Usage: 33236 KB
+Fuse CPU Usage: 765 ms

@@ -201,7 +201,7 @@ module CPU(
    wire [2:0] ALU_B_sel;
 	
 	D2E D2E (
-    .D_Instr(D_Instr), 
+    .D_Instr(D_ri? 0: D_Instr), 
     .D_PC(D_PC), 
     .D_PC8(D_PC8), 
     .D_RS(D_FWD_RS), 
@@ -279,6 +279,7 @@ module CPU(
     .RT(E_FWD_RT), 
     .MDU_op(MDU_op), 
     .clk(clk), 
+	 .req(req),
     .reset(reset), 
     .MDU_OUT(E_MDU_OUT), 
     .MDU_busy(E_MDU_busy)
@@ -289,7 +290,7 @@ module CPU(
 	wire [31:0] M_PC, M_RS, M_RT, M_PC8, M_EXT_OUT, M_ALU_C, M_MDU_OUT, M_DM_OUT;
 	wire [4:0] M_rs, M_rt, M_rd, M_RF_WD_sel;
 	wire [2:0] CHK_op, DM_op;
-	wire DM_wr, CP0_wr;
+	wire DM_wr, CP0_wr, itr_out;
 	
 	E2M E2M (
     .E_Instr(E_Instr), 
@@ -361,6 +362,7 @@ module CPU(
     .DM_op(DM_op), 
     .Instr(M_Instr),
     .clk(clk), 
+	 .req(req),
     .reset(reset), 
     .DM_wr(DM_wr), 
     .DMout(M_DM_OUT),
@@ -373,7 +375,8 @@ module CPU(
 	 .adel_en(M_adel_en),
 	 .ades_en(M_ades_en),
 	 .adel(M_adel),
-	 .ades(M_ades)
+	 .ades(M_ades),
+	 .itr_out(itr_out)
    );
 	
 	CHK M_CHK (
@@ -398,6 +401,7 @@ module CPU(
     .CP0_wr(CP0_wr), 
     .req(req), 
     .EPC(EPC), 
+	 .itr_out(itr_out),
     .CP0_OUT(M_CP0_OUT)
    );
 	 

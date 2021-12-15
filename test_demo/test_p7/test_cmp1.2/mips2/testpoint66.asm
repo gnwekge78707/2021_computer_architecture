@@ -1,1022 +1,411 @@
-j		START
-		nop
-JT_0:	jr	$1
-		nop
-JT_1:	jr	$1
-		nop
-JT_2:	jr	$1
-		nop
-JT_3:	jr	$1
-		nop
-JT_4:	jr	$1
-		nop
-JT_5:	jr	$1
-		nop
-JT_6:	jr	$1
-		nop
-JT_7:	jr	$1
-		nop
-JT_8:	jr	$1
-		nop
-JT_9:	jr	$1
-		nop
-JT_10:	jr	$1
-		nop
-JT_11:	jr	$1
-		nop
-JT_12:	jr	$1
-		nop
-JT_13:	jr	$1
-		nop
-JT_14:	jr	$1
-		nop
-JT_15:	jr	$1
-		nop
-JT_16:	jr	$1
-		nop
-JT_17:	jr	$1
-		nop
-JT_18:	jr	$1
-		nop
-JT_19:	jr	$1
-		nop
-JT_20:	jr	$1
-		nop
-JT_21:	jr	$1
-		nop
-JT_22:	jr	$1
-		nop
-JT_23:	jr	$1
-		nop
-JT_24:	jr	$1
-		nop
-JT_25:	jr	$1
-		nop
-JT_26:	jr	$1
-		nop
-JT_27:	jr	$1
-		nop
-JT_28:	jr	$1
-		nop
-JT_29:	jr	$1
-		nop
-JT_30:	jr	$1
-		nop
-JT_31:	jr	$1
-		nop
-JT_32:	jr	$1
-		nop
-JT_33:	jr	$1
-		nop
-JT_34:	jr	$1
-		nop
-JT_35:	jr	$1
-		nop
-JT_36:	jr	$1
-		nop
-JT_37:	jr	$1
-		nop
-JT_38:	jr	$1
-		nop
-JT_39:	jr	$1
-		nop
-JT_40:	jr	$1
-		nop
-JT_41:	jr	$1
-		nop
-JT_42:	jr	$1
-		nop
-JT_43:	jr	$1
-		nop
-JT_44:	jr	$1
-		nop
-JT_45:	jr	$1
-		nop
-JT_46:	jr	$1
-		nop
-JT_47:	jr	$1
-		nop
-JT_48:	jr	$1
-		nop
-JT_49:	jr	$1
-		nop
-JT_50:	jr	$1
-		nop
-JT_51:	jr	$1
-		nop
-JT_52:	jr	$1
-		nop
-JT_53:	jr	$1
-		nop
-JT_54:	jr	$1
-		nop
-JT_55:	jr	$1
-		nop
-JT_56:	jr	$1
-		nop
-JT_57:	jr	$1
-		nop
-JT_58:	jr	$1
-		nop
-JT_59:	jr	$1
-		nop
-JT_60:	jr	$1
-		nop
-JT_61:	jr	$1
-		nop
-JT_62:	jr	$1
-		nop
-JT_63:	jr	$1
-		nop
-JT_64:	jr	$1
-		nop
-JT_65:	jr	$1
-		nop
-JT_66:	jr	$1
-		nop
-JT_67:	jr	$1
-		nop
-JT_68:	jr	$1
-		nop
-JT_69:	jr	$1
-		nop
-JT_70:	jr	$1
-		nop
-JT_71:	jr	$1
-		nop
-JT_72:	jr	$1
-		nop
-JT_73:	jr	$1
-		nop
-JT_74:	jr	$1
-		nop
-JT_75:	jr	$1
-		nop
-JT_76:	jr	$1
-		nop
-JT_77:	jr	$1
-		nop
-JT_78:	jr	$1
-		nop
-JT_79:	jr	$1
-		nop
-JT_80:	jr	$1
-		nop
-JT_81:	jr	$1
-		nop
-JT_82:	jr	$1
-		nop
-JT_83:	jr	$1
-		nop
-JT_84:	jr	$1
-		nop
-JT_85:	jr	$1
-		nop
-JT_86:	jr	$1
-		nop
-JT_87:	jr	$1
-		nop
-JT_88:	jr	$1
-		nop
-JT_89:	jr	$1
-		nop
-JT_90:	jr	$1
-		nop
-JT_91:	jr	$1
-		nop
-JT_92:	jr	$1
-		nop
-JT_93:	jr	$1
-		nop
-JT_94:	jr	$1
-		nop
-JT_95:	jr	$1
-		nop
-JT_96:	jr	$1
-		nop
-JT_97:	jr	$1
-		nop
-JT_98:	jr	$1
-		nop
-JT_99:	jr	$1
-		nop
-JT_100:	jr	$1
-		nop
-JT_101:	jr	$1
-		nop
-JT_102:	jr	$1
-		nop
-JT_103:	jr	$1
-		nop
-JT_104:	jr	$1
-		nop
-JT_105:	jr	$1
-		nop
-JT_106:	jr	$1
-		nop
-JT_107:	jr	$1
-		nop
-JT_108:	jr	$1
-		nop
-JT_109:	jr	$1
-		nop
-JT_110:	jr	$1
-		nop
-JT_111:	jr	$1
-		nop
-JT_112:	jr	$1
-		nop
-JT_113:	jr	$1
-		nop
-JT_114:	jr	$1
-		nop
-JT_115:	jr	$1
-		nop
-JT_116:	jr	$1
-		nop
-JT_117:	jr	$1
-		nop
-JT_118:	jr	$1
-		nop
-JT_119:	jr	$1
-		nop
-JT_120:	jr	$1
-		nop
-JT_121:	jr	$1
-		nop
-JT_122:	jr	$1
-		nop
-JT_123:	jr	$1
-		nop
-JT_124:	jr	$1
-		nop
-JT_125:	jr	$1
-		nop
-JT_126:	jr	$1
-		nop
-JT_127:	jr	$1
-		nop
-JT_128:	jr	$1
-		nop
-JT_129:	jr	$1
-		nop
-JT_130:	jr	$1
-		nop
-JT_131:	jr	$1
-		nop
-JT_132:	jr	$1
-		nop
-JT_133:	jr	$1
-		nop
-JT_134:	jr	$1
-		nop
-JT_135:	jr	$1
-		nop
-JT_136:	jr	$1
-		nop
-JT_137:	jr	$1
-		nop
-JT_138:	jr	$1
-		nop
-JT_139:	jr	$1
-		nop
-JT_140:	jr	$1
-		nop
-JT_141:	jr	$1
-		nop
-JT_142:	jr	$1
-		nop
-JT_143:	jr	$1
-		nop
-JT_144:	jr	$1
-		nop
-JT_145:	jr	$1
-		nop
-JT_146:	jr	$1
-		nop
-JT_147:	jr	$1
-		nop
-JT_148:	jr	$1
-		nop
-JT_149:	jr	$1
-		nop
-START:
-
-addi	$1,$0,12376
-sw		$1,0($0)
-addi	$1,$0,12356
-sw		$1,4($0)
-addi	$1,$0,12392
-sw		$1,8($0)
-addi	$1,$0,12316
-sw		$1,12($0)
-addi	$1,$0,12320
-sw		$1,16($0)
-addi	$1,$0,12328
-sw		$1,20($0)
-addi	$1,$0,12380
-sw		$1,24($0)
-addi	$1,$0,12296
-sw		$1,28($0)
-addi	$1,$0,12484
-sw		$1,32($0)
-addi	$1,$0,12448
-sw		$1,36($0)
-addi	$1,$0,12368
-sw		$1,40($0)
-addi	$1,$0,12436
-sw		$1,44($0)
-addi	$1,$0,12420
-sw		$1,48($0)
-addi	$1,$0,12372
-sw		$1,52($0)
-addi	$1,$0,12308
-sw		$1,56($0)
-addi	$1,$0,12360
-sw		$1,60($0)
-addi	$1,$0,12408
-sw		$1,64($0)
-addi	$1,$0,12352
-sw		$1,68($0)
-addi	$1,$0,12344
-sw		$1,72($0)
-addi	$1,$0,12332
-sw		$1,76($0)
-addi	$1,$0,12364
-sw		$1,80($0)
-addi	$1,$0,12432
-sw		$1,84($0)
-addi	$1,$0,12488
-sw		$1,88($0)
-addi	$1,$0,12348
-sw		$1,92($0)
-addi	$1,$0,12312
-sw		$1,96($0)
-addi	$1,$0,12492
-sw		$1,100($0)
-addi	$1,$0,12444
-sw		$1,104($0)
-addi	$1,$0,12396
-sw		$1,108($0)
-addi	$1,$0,12388
-sw		$1,112($0)
-addi	$1,$0,12428
-sw		$1,116($0)
-addi	$1,$0,12480
-sw		$1,120($0)
-addi	$1,$0,12424
-sw		$1,124($0)
-addi	$1,$0,12476
-sw		$1,128($0)
-addi	$1,$0,12472
-sw		$1,132($0)
-addi	$1,$0,12304
-sw		$1,136($0)
-addi	$1,$0,12452
-sw		$1,140($0)
-addi	$1,$0,12340
-sw		$1,144($0)
-addi	$1,$0,12464
-sw		$1,148($0)
-addi	$1,$0,12300
-sw		$1,152($0)
-addi	$1,$0,12324
-sw		$1,156($0)
-addi	$1,$0,12400
-sw		$1,160($0)
-addi	$1,$0,12440
-sw		$1,164($0)
-addi	$1,$0,12404
-sw		$1,168($0)
-addi	$1,$0,12412
-sw		$1,172($0)
-addi	$1,$0,12384
-sw		$1,176($0)
-addi	$1,$0,12336
-sw		$1,180($0)
-addi	$1,$0,12416
-sw		$1,184($0)
-addi	$1,$0,12468
-sw		$1,188($0)
-addi	$1,$0,12460
-sw		$1,192($0)
-addi	$1,$0,12456
-sw		$1,196($0)
-
-addi	$0,$0,252
-addi	$1,$0,252
-addi	$2,$0,252
-addi	$3,$0,252
-addi	$4,$0,252
-addi	$5,$0,252
-addi	$6,$0,252
-addi	$7,$0,252
-addi	$8,$0,252
-addi	$9,$0,252
-addi	$10,$0,252
-addi	$11,$0,252
-addi	$12,$0,252
-addi	$13,$0,252
-addi	$14,$0,252
-addi	$15,$0,252
-addi	$16,$0,252
-addi	$17,$0,252
-addi	$18,$0,252
-addi	$19,$0,252
-addi	$20,$0,252
-addi	$21,$0,252
-addi	$22,$0,252
-addi	$23,$0,252
-addi	$24,$0,252
-addi	$25,$0,252
-addi	$26,$0,252
-addi	$27,$0,252
-addi	$28,$0,252
-addi	$29,$0,252
-addi	$30,$0,252
-addi	$31,$0,252
-
-addi	$8,$0,12296
-mtlo	$8
-mthi	$8
-addi	$8,$0,4
-
-addi	$31,$0,12304
-jal		TAG_0
-addi	$31,$31,-1720
-TAG_0:
-nop
-addu	$31,$31,$t0
-jr		$31
-TAG_1:
-la		$1,TAG_1
-addi	$31,$0,12300
-jal		TAG_2
-addi	$31,$31,-1752
-TAG_2:
-nop
-addi	$31,$31,4
-jalr	$1,$31
-nop
-addi	$31,$0,12320
-jal		TAG_3
-addi	$31,$31,-1776
-TAG_3:
-nop
-addi	$31,$31,4
-jr		$31
-TAG_4:
-la		$1,TAG_4
-addi	$31,$0,12304
-jal		TAG_5
-addi	$31,$31,-1808
-TAG_5:
-nop
-addi	$31,$31,4
-jalr	$1,$31
-nop
-addi	$31,$0,12312
-jal		TAG_6
-addi	$31,$31,-1832
-TAG_6:
-nop
-addi	$31,$31,4
-jr		$31
-TAG_7:
-la		$1,TAG_7
-addi	$31,$0,12300
-jal		TAG_8
-addi	$31,$31,-1864
-TAG_8:
-nop
-addi	$31,$31,4
-jalr	$1,$31
-nop
-addi	$31,$0,12308
-jal		TAG_9
-addi	$31,$31,-1888
-TAG_9:
-nop
-addi	$31,$31,4
-jr		$31
-TAG_10:
-la		$1,TAG_10
-addi	$31,$0,12296
-jal		TAG_11
-addi	$31,$31,-1920
-TAG_11:
-nop
-addi	$31,$31,4
-jalr	$1,$31
-nop
-addi	$31,$0,12320
-jal		TAG_12
-addi	$31,$31,-1944
-TAG_12:
-nop
-addi	$31,$31,4
-jr		$31
-TAG_13:
-la		$1,TAG_13
-addi	$31,$0,12316
-jal		TAG_14
-addi	$31,$31,-1976
-TAG_14:
-nop
-addi	$31,$31,4
-jalr	$1,$31
-nop
-addi	$31,$0,12296
-jal		TAG_15
-addi	$31,$31,-2000
-TAG_15:
-nop
-addi	$31,$31,4
-jr		$31
-TAG_16:
-la		$1,TAG_16
-addi	$31,$0,12316
-jal		TAG_17
-addi	$31,$31,-2032
-TAG_17:
-nop
-addi	$31,$31,4
-jalr	$1,$31
-nop
-addi	$31,$0,12300
-jal		TAG_18
-addi	$31,$31,-2056
-TAG_18:
-nop
-addi	$31,$31,4
-jr		$31
-TAG_19:
-la		$1,TAG_19
-addi	$31,$0,12316
-jal		TAG_20
-addi	$31,$31,-2088
-TAG_20:
-nop
-addi	$31,$31,4
-jalr	$1,$31
-nop
-addi	$31,$0,12320
-jal		TAG_21
-addi	$31,$31,-2112
-TAG_21:
-nop
-addi	$31,$31,4
-jr		$31
-TAG_22:
-la		$1,TAG_22
-addi	$31,$0,12300
-jal		TAG_23
-addi	$31,$31,-2144
-TAG_23:
-nop
-mfhi	$31
-jalr	$1,$31
-nop
-addi	$31,$0,12312
-jal		TAG_24
-addi	$31,$31,-2168
-TAG_24:
-nop
-mflo	$31
-jr		$31
-TAG_25:
-la		$1,TAG_25
-addi	$31,$0,12312
-jal		TAG_26
-addi	$31,$31,-2200
-TAG_26:
-nop
-mfhi	$31
-jalr	$1,$31
-nop
-addi	$31,$0,12320
-jal		TAG_27
-addi	$31,$31,-2224
-TAG_27:
-nop
-mfhi	$31
-jr		$31
-TAG_28:
-la		$1,TAG_28
-addi	$31,$0,12312
-jal		TAG_29
-addi	$31,$31,-2256
-TAG_29:
-nop
-mflo	$31
-jalr	$1,$31
-nop
-addi	$31,$0,12296
-jal		TAG_30
-addi	$31,$31,-2280
-TAG_30:
-nop
-mflo	$31
-jr		$31
-TAG_31:
-la		$1,TAG_31
-addi	$31,$0,12296
-jal		TAG_32
-addi	$31,$31,-2312
-TAG_32:
-nop
-mflo	$31
-jalr	$1,$31
-nop
-addi	$31,$0,12292
-jal		TAG_33
-addi	$31,$31,-2336
-TAG_33:
-nop
-mflo	$31
-jr		$31
-TAG_34:
-la		$1,TAG_34
-addi	$31,$0,12316
-jal		TAG_35
-addi	$31,$31,-2368
-TAG_35:
-nop
-mflo	$31
-jalr	$1,$31
-nop
-addi	$31,$0,12312
-jal		TAG_36
-addi	$31,$31,-2392
-TAG_36:
-nop
-mflo	$31
-jr		$31
-TAG_37:
-la		$1,TAG_37
-addi	$31,$0,12320
-jal		TAG_38
-addi	$31,$31,-2424
-TAG_38:
-nop
-mflo	$31
-jalr	$1,$31
-nop
-addi	$31,$0,12292
-jal		TAG_39
-addi	$31,$31,-2448
-TAG_39:
-nop
-mflo	$31
-jr		$31
-TAG_40:
-la		$1,TAG_40
-addi	$31,$0,12304
-jal		TAG_41
-addi	$31,$31,-2480
-TAG_41:
-nop
-mfhi	$31
-jalr	$1,$31
-nop
-addi	$31,$0,12300
-jal		TAG_42
-addi	$31,$31,-2504
-TAG_42:
-nop
-mflo	$31
-jr		$31
-TAG_43:
-la		$1,TAG_43
-addi	$31,$0,12300
-jal		TAG_44
-addi	$31,$31,-2536
-TAG_44:
-nop
-jal		TAG_45
-addi	$31,$31,-2548
-TAG_45:
-jalr	$1,$31
-nop
-addi	$31,$0,12320
-jal		TAG_46
-addi	$31,$31,-2564
-TAG_46:
-nop
-jal		TAG_47
-addi	$31,$31,-2576
-TAG_47:
-jr		$31
-TAG_48:
-la		$1,TAG_48
-addi	$31,$0,12320
-jal		TAG_49
-addi	$31,$31,-2600
-TAG_49:
-nop
-jal		TAG_50
-addi	$31,$31,-2612
-TAG_50:
-jalr	$1,$31
-nop
-addi	$31,$0,12296
-jal		TAG_51
-addi	$31,$31,-2628
-TAG_51:
-nop
-jal		TAG_52
-addi	$31,$31,-2640
-TAG_52:
-jr		$31
-TAG_53:
-la		$1,TAG_53
-addi	$31,$0,12320
-jal		TAG_54
-addi	$31,$31,-2664
-TAG_54:
-nop
-jal		TAG_55
-addi	$31,$31,-2676
-TAG_55:
-jalr	$1,$31
-nop
-addi	$31,$0,12308
-jal		TAG_56
-addi	$31,$31,-2692
-TAG_56:
-nop
-jal		TAG_57
-addi	$31,$31,-2704
-TAG_57:
-jr		$31
-TAG_58:
-la		$1,TAG_58
-addi	$31,$0,12304
-jal		TAG_59
-addi	$31,$31,-2728
-TAG_59:
-nop
-jal		TAG_60
-addi	$31,$31,-2740
-TAG_60:
-jalr	$1,$31
-nop
-addi	$31,$0,12320
-jal		TAG_61
-addi	$31,$31,-2756
-TAG_61:
-nop
-jal		TAG_62
-addi	$31,$31,-2768
-TAG_62:
-jr		$31
-TAG_63:
-la		$1,TAG_63
-addi	$31,$0,12312
-jal		TAG_64
-addi	$31,$31,-2792
-TAG_64:
-nop
-jal		TAG_65
-addi	$31,$31,-2804
-TAG_65:
-jalr	$1,$31
-nop
-addi	$31,$0,12292
-jal		TAG_66
-addi	$31,$31,-2820
-TAG_66:
-nop
-jal		TAG_67
-addi	$31,$31,-2832
-TAG_67:
-jr		$31
-TAG_68:
-la		$1,TAG_68
-addi	$31,$0,12308
-jal		TAG_69
-addi	$31,$31,-2856
-TAG_69:
-nop
-jal		TAG_70
-addi	$31,$31,-2868
-TAG_70:
-jalr	$1,$31
-nop
-addi	$31,$0,12308
-jal		TAG_71
-addi	$31,$31,-2884
-TAG_71:
-nop
-jal		TAG_72
-addi	$31,$31,-2896
-TAG_72:
-jr		$31
-TAG_73:
-la		$1,TAG_73
-addi	$31,$0,12304
-jal		TAG_74
-addi	$31,$31,-2920
-TAG_74:
-nop
-jal		TAG_75
-addi	$31,$31,-2932
-TAG_75:
-jalr	$1,$31
-nop
-addi	$31,$0,12316
-jal		TAG_76
-addi	$31,$31,-2948
-TAG_76:
-nop
-jal		TAG_77
-addi	$31,$31,-2960
-TAG_77:
-jr		$31
-TAG_78:
-la		$1,TAG_78
-la		$t3,TAG_80
-addi	$31,$0,12296
-jal		TAG_79
-addi	$31,$31,-2984
-TAG_79:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3000
-TAG_80:
-jalr	$1,$31
-nop
-la		$t3,TAG_82
-addi	$31,$0,12304
-jal		TAG_81
-addi	$31,$31,-3016
-TAG_81:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3032
-TAG_82:
-jr		$31
-TAG_83:
-la		$1,TAG_83
-la		$t3,TAG_85
-addi	$31,$0,12296
-jal		TAG_84
-addi	$31,$31,-3056
-TAG_84:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3072
-TAG_85:
-jalr	$1,$31
-nop
-la		$t3,TAG_87
-addi	$31,$0,12296
-jal		TAG_86
-addi	$31,$31,-3088
-TAG_86:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3104
-TAG_87:
-jr		$31
-TAG_88:
-la		$1,TAG_88
-la		$t3,TAG_90
-addi	$31,$0,12296
-jal		TAG_89
-addi	$31,$31,-3128
-TAG_89:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3144
-TAG_90:
-jalr	$1,$31
-nop
-la		$t3,TAG_92
-addi	$31,$0,12308
-jal		TAG_91
-addi	$31,$31,-3160
-TAG_91:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3176
-TAG_92:
-jr		$31
-TAG_93:
-la		$1,TAG_93
-la		$t3,TAG_95
-addi	$31,$0,12292
-jal		TAG_94
-addi	$31,$31,-3200
-TAG_94:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3216
-TAG_95:
-jalr	$1,$31
-nop
-la		$t3,TAG_97
-addi	$31,$0,12320
-jal		TAG_96
-addi	$31,$31,-3232
-TAG_96:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3248
-TAG_97:
-jr		$31
-TAG_98:
-la		$1,TAG_98
-la		$t3,TAG_100
-addi	$31,$0,12320
-jal		TAG_99
-addi	$31,$31,-3272
-TAG_99:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3288
-TAG_100:
-jalr	$1,$31
-nop
-la		$t3,TAG_102
-addi	$31,$0,12292
-jal		TAG_101
-addi	$31,$31,-3304
-TAG_101:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3320
-TAG_102:
-jr		$31
-TAG_103:
-la		$1,TAG_103
-la		$t3,TAG_105
-addi	$31,$0,12312
-jal		TAG_104
-addi	$31,$31,-3344
-TAG_104:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3360
-TAG_105:
-jalr	$1,$31
-nop
-la		$t3,TAG_107
-addi	$31,$0,12292
-jal		TAG_106
-addi	$31,$31,-3376
-TAG_106:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3392
-TAG_107:
-jr		$31
-TAG_108:
-la		$1,TAG_108
-la		$t3,TAG_110
-addi	$31,$0,12312
-jal		TAG_109
-addi	$31,$31,-3416
-TAG_109:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3432
-TAG_110:
-jalr	$1,$31
-nop
-la		$t3,TAG_112
-addi	$31,$0,12308
-jal		TAG_111
-addi	$31,$31,-3448
-TAG_111:
-nop
-jalr	$31,$t3
-addi	$31,$31,-3464
-TAG_112:
-jr		$31
-TAG_113:
-la		$1,TAG_113
-addi	$31,$0,12316
-jal		TAG_114
-addi	$31,$31,-3488
-TAG_114:
-nop
-nop
-jalr	$1,$31
-nop
 .ktext 0x4180
+	
+_entry:	
+	mfc0	$1, $12
+	mfc0	$1, $14
+	mfc0	$1, $13
+	ori	$k0, $0, 0x1000
+	sw	$sp, -4($k0)
+	
+	addiu	$k0, $k0, -256
+	move	$sp, $k0
+	
+	j	_save_context
+	nop
 
-_entry3:
-	sw		$k0,0x2ffc($0)
-	mfc0	$k0,$12
-	mfc0	$k0,$13
-	mfc0	$k0,$14
-	addiu	$k0,$k0,4
-	mtc0	$k0,$14
-	lw		$k0,0x2ffc($0)
-	mfc0	$0,$14
+_quick_handle:
+	mfc0	$1, $13
+	mfc0	$k0, $13
+	andi	$k0, $k0, 0x00ff
+	srl	$k0, $k0, 2
+	
+	ori	$k1, $0, 0x0004
+	beq	$k0, $k1, adel_handler_quick
+	nop
+	
+	ori	$k1, $0, 0x000a
+	beq	$k0, $k1, ri_handler_quick
+	nop
+	
+	j _entry
+	nop
+	
+adel_handler_quick:
+	mfc0    $t8,$14
+	andi    $t9,$t8,3
+	bne     $t9,$0,adel_type_1
+	nop
+	addi    $t9,$t8,-0x3000
+	lui     $s7,0xffff
+	ori	$s7,$s7,0xe000
+	and     $t9,$t9,$s7
+	bne     $t9,$0,adel_type_2
+	nop
+	j       _entry
+	nop
+	
+
+adel_type_1:
+	ori       $10,$0,0x3230
+	mtc0      $10,$14
 	eret
-	addiu	$k0,$k0,4
-	addiu	$k0,$k0,4
-	addiu	$k0,$k0,4
-#end
+	
+adel_type_2:
+	ori       $10,$0,0x3240
+	mtc0      $10,$14
+	eret
+
+
+	
+ri_handler_quick:
+	ori       $10,$0,0x3220
+	mtc0      $10,$14
+	eret
+
+	
+_main_handler:
+	mfc0	$k0, $13
+	andi	$k0, $k0, 0x00ff
+	srl	$k0, $k0, 2
+	
+	ori	$k1, $0, 0x0000
+	beq	$k0, $k1, int_handler
+	nop
+	ori	$k1, $0, 0x0004
+	beq	$k0, $k1, adel_handler
+	nop
+	ori	$k1, $0, 0x0005
+	beq	$k0, $k1, ades_handler
+	nop
+	ori	$k1, $0, 0x000a
+	beq	$k0, $k1, ri_handler
+	nop
+	ori	$k1, $0, 0x000c
+	beq	$k0, $k1, ov_handler
+	nop
+	
+int_handler:
+	sw	$ra, 0($sp)
+	addiu	$sp, $sp, -16
+	mfc0	$v0, $12
+	sw	$v0, 0($sp)
+	mfc0	$v0, $13
+	sw	$v0, 4($sp)
+	
+	
+	# check INT[3]
+	lw	$v0, 0($sp)
+	lw	$v1, 4($sp)
+	and	$v0, $v1, $v0
+	andi	$v0, $v0, 0x800
+	bne	$v0, $0, timer1_handler
+	nop
+	
+	# check INT[2]
+	lw	$v0, 0($sp)
+	lw	$v1, 4($sp)
+	and	$v0, $v1, $v0
+	andi	$v0, $v0, 0x400
+	bne	$v0, $0, timer0_handler
+	nop
+
+timer0_handler:
+	# first we load the global variable cnt0:
+	# ++cnt0, then save to global variable cnt0
+	li 	$fp, 0x8
+	lw	$t0, 0($fp)			# get cnt0
+	addi    $s6, $0 , 5
+	beq	$t0, $s6, skip0
+	nop
+	
+	addiu 	$t0, $t0, 1			# add cnt0
+skip0:	sw 	$t0, 0($fp)			# update cnt0
+	jal	restart_timer
+	nop
+	
+	# mask INT[2]
+	mfc0 	$t0, $12
+	andi 	$t0, $t0, 0x03ff
+	ori 	$t0, $t0, 0x800
+	mtc0 	$t0, $12
+	
+	j	_restore_context
+	nop
+	
+timer1_handler:
+	# first we load the global variable cnt1:
+	# ++cnt1, then save to global variable cnt1
+	li 	$fp, 0xc
+	lw 	$t0, 0($fp)			# get cnt1
+	addi    $s6, $0 , 5
+	beq	$t0, $s6, skip1
+	nop
+	
+	addiu 	$t0, $t0, 1			# add cnt1
+skip1:	sw 	$t0, 0($fp)			# update cnt1
+	jal	restart_timer
+	nop
+	
+	# mask INT[3]
+	mfc0 	$t0, $12
+	andi 	$t0, $t0, 0x03ff
+	ori 	$t0, $t0, 0x400
+	mtc0 	$t0, $12
+	
+	j	_restore_context
+	nop
+	
+restart_timer:
+	# swap two PRESET
+	li	$t0, 0x0
+	lw	$t0, 0($t0)
+	lw	$t5, 4($t0)
+	li	$t2, 0x4
+	lw	$t2, 0($t2)
+	lw	$t6, 4($t2)
+	
+	
+
+
+	# restart Timer 0
+	li 	$t1, 0x0
+	lw 	$t1, 0($t1)
+	lw 	$t0, 0($t1)		# $t0 is the CTRL Reg of Timer 0
+	sw 	$0, 0($t1)		# disable Timer 0
+	
+	
+	li 	$t2, 0x8
+	lw	$t2, 0($t2)
+	
+	addi    $s6, $0 , 5
+	beq	$t2, $s6, f0		# check Timer0 pause times
+	nop
+	
+	sw	$t6, 4($t1)		# refill the count number
+	addiu 	$t0, $0, 9		# set Timer0.CTRL
+	sw 	$t0, 0($t1)		# Timer 0 restart count
+	f0:	
+	# restart Timer 1
+	li 	$t1, 0x4
+	lw 	$t1, 0($t1)
+	lw 	$t0, 0($t1)		# $t0 is the CTRL Reg of Timer 1
+	sw 	$0, 0($t1)		# disable Timer 1
+	
+		
+	li 	$t2, 0xc
+	lw	$t2, 0($t2)
+	
+	addi    $s6, $0 , 5
+	beq	$t2, $s6, f1		# check Timer1 pause times
+	nop
+
+	sw	$t5, 4($t1)		# refill the count number
+	addiu 	$t0, $0, 9		# set Timer1.CTRL
+	sw 	$t0, 0($t1)		# Timer 0 restart count
+	f1:	
+	jr 	$ra
+	nop	
+
+adel_handler:
+	mfc0	$t0, $14
+	mfc0	$k0, $13
+	lui	$t2, 0x8000
+	and	$t3, $k0, $t2
+	addi	$t0, $t0, 4
+	bne	$t3, $t2, adel_nxt
+	nop
+	addi	$t0, $t0, 4
+	adel_nxt:
+	mtc0	$t0, $14
+	j	_restore_context
+	nop
+
+ades_handler:
+	mfc0	$t0, $14
+	mfc0	$k0, $13
+	lui	$t2, 0x8000
+	and	$t3, $k0, $t2
+	addi	$t0, $t0, 4
+	bne	$t3, $t2, ades_nxt
+	nop
+	addi	$t0, $t0, 4
+	ades_nxt:
+	mtc0	$t0, $14
+	j	_restore_context
+	nop
+	
+
+ri_handler:
+	mfc0	$t0, $14
+	mfc0	$k0, $13
+	lui	$t2, 0x8000
+	and	$t3, $k0, $t2
+	addi	$t0, $t0, 4
+	bne	$t3, $t2, ri_nxt
+	nop
+	addi	$t0, $t0, 4
+	ri_nxt:
+	mtc0	$t0, $14
+	j	_restore_context
+	nop
+	
+ov_handler:
+	mfc0	$t0, $14
+	mfc0	$k0, $13
+	lui	$t2, 0x8000
+	and	$t3, $k0, $t2
+	addi	$t0, $t0, 4
+	bne	$t3, $t2, ov_nxt
+	nop
+	addi	$t0, $t0, 4
+	ov_nxt:
+	mtc0	$t0, $14
+	j	_restore_context
+	nop
+
+_restore:
+	eret
+	
+_save_context:
+    	sw  	$2, 8($sp)    
+    	sw  	$3, 12($sp)    
+    	sw  	$4, 16($sp)    
+    	sw  	$5, 20($sp)    
+    	sw  	$6, 24($sp)    
+    	sw  	$7, 28($sp)    
+    	sw  	$8, 32($sp)    
+    	sw  	$9, 36($sp)    
+    	sw  	$10, 40($sp)    
+    	sw  	$11, 44($sp)    
+    	sw  	$12, 48($sp)    
+    	sw  	$13, 52($sp)    
+    	sw  	$14, 56($sp)    
+    	sw  	$15, 60($sp)    
+    	sw  	$16, 64($sp)    
+    	sw  	$17, 68($sp)    
+    	sw  	$18, 72($sp)    
+    	sw  	$19, 76($sp)    
+    	sw  	$20, 80($sp)    
+    	sw  	$21, 84($sp)    
+    	sw  	$22, 88($sp)    
+    	sw  	$23, 92($sp)    
+    	sw  	$24, 96($sp)    
+    	sw  	$25, 100($sp)    
+    	sw  	$28, 112($sp)    
+    	sw  	$29, 116($sp)    
+    	sw  	$30, 120($sp)    
+    	sw  	$31, 124($sp)
+	mfhi 	$k0
+	sw 	$k0, 128($sp)
+	mflo 	$k0
+	sw 	$k0, 132($sp)
+	j	_main_handler
+	nop
+	
+
+
+_restore_context:
+	li	$sp, 0x1000
+	addi	$sp, $sp, -256
+    	lw  	$2, 8($sp)    
+    	lw  	$3, 12($sp)    
+    	lw  	$4, 16($sp)    
+    	lw  	$5, 20($sp)    
+    	lw  	$6, 24($sp)    
+    	lw  	$7, 28($sp)    
+    	lw  	$8, 32($sp)    
+    	lw  	$9, 36($sp)    
+    	lw  	$10, 40($sp)    
+    	lw  	$11, 44($sp)    
+    	lw  	$12, 48($sp)    
+    	lw  	$13, 52($sp)    
+    	lw  	$14, 56($sp)    
+    	lw  	$15, 60($sp)    
+    	lw  	$16, 64($sp)    
+    	lw  	$17, 68($sp)    
+    	lw  	$18, 72($sp)    
+    	lw  	$19, 76($sp)    
+    	lw  	$20, 80($sp)    
+    	lw  	$21, 84($sp)    
+    	lw  	$22, 88($sp)    
+    	lw  	$23, 92($sp)    
+    	lw  	$24, 96($sp)    
+    	lw  	$25, 100($sp)    
+    	lw  	$28, 112($sp)   
+    	lw  	$30, 120($sp)    
+    	lw  	$31, 124($sp)    
+	lw 	$k0, 128($sp)
+	mthi 	$k0
+	lw 	$k0, 132($sp)
+	mtlo 	$k0
+    	lw  	$29, 116($sp) 
+	ori     $1,$0,1
+    	j 	_restore	
+	nop	
+	
+.data
+.globl TC0_BASE TC1_BASE cnt0 cnt1 cnt0_double cnt1_double
+TC0_BASE: .word 0x7f00
+TC1_BASE: .word 0x7f10
+cnt0: .word 5
+cnt1: .word 5
+cnt0_double: .word 0
+cnt1_double: .word 0
+	
+.text
+	li $t0,0x7f00
+	sw $t0,0($0)
+	li $t0,0x7f10
+	sw $t0,4($0)
+	li $t0,5
+	sw $t0,8($0)
+	li $t0,5
+	sw $t0,12($0)
+	addi $t0,$0,0
+	ori	$28, $0, 0x0000
+	ori	$29, $0, 0x0f00
+	mtc0	$0, $12
+	
+	#save start address 
+	ori 	$t0, $0, 0x7f00
+	sw 	$t0, 0($0)
+	ori 	$t1, $0, 0x7f10
+	sw 	$t1, 4($0)
+	
+	#set SR included IM, IE, EXL
+	ori 	$t0,$0, 0x0c01
+	mtc0 	$t0,$12
+	
+	#set Timer0
+	la 	$t1, TC0_BASE
+	lw 	$t1, 0($t1)
+	sw 	$0, 0($t1)		# disable Timer0.CTRL
+	
+	addiu 	$t0, $0, 0x80		# set Timer0.PRESET
+	sw 	$t0, 4($t1)
+	addiu 	$t0, $0, 9		# set Timer0.CTRL
+	sw 	$t0, 0($t1)
+	
+	#set Timer1
+	la 	$t1, TC1_BASE
+	lw 	$t1, 0($t1)
+	sw 	$0, 0($t1)		# disable Timer1.CTRL
+	
+	addiu 	$t0, $0, 0x40		# set Timer1.PRESET
+	sw 	$t0, 4($t1)
+	addiu 	$t0, $0, 9		# set Timer1.CTRL
+	sw 	$t0, 0($t1)
+	
+	ori	$t0, $0, 0x0005
+							# 测试每个计数器是否恰好中断 5 次
+	lw	$k0, 8($0)
+	lw	$k1,12($0)
+	bne	$k0, $t0, wait
+	nop
+	bne	$k1, $t0, wait
+	nop
+	ori	$t0, $0, 0xffff
+	ori	$t1, $0, 0xffff
+wait:
+	nop
+	nop

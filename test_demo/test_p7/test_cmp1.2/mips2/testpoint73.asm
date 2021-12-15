@@ -1,979 +1,951 @@
-addi	$0,$0,252
-addi	$1,$0,252
-addi	$2,$0,252
-addi	$3,$0,252
-addi	$4,$0,252
-addi	$5,$0,252
-addi	$6,$0,252
-addi	$7,$0,252
-addi	$8,$0,252
-addi	$9,$0,252
-addi	$10,$0,252
-addi	$11,$0,252
-addi	$12,$0,252
-addi	$13,$0,252
-addi	$14,$0,252
-addi	$15,$0,252
-addi	$16,$0,252
-addi	$17,$0,252
-addi	$18,$0,252
-addi	$19,$0,252
-addi	$20,$0,252
-addi	$21,$0,252
-addi	$22,$0,252
-addi	$23,$0,252
-addi	$24,$0,252
-addi	$25,$0,252
-addi	$26,$0,252
-addi	$27,$0,252
-addi	$28,$0,252
-addi	$29,$0,252
-addi	$30,$0,252
-addi	$31,$0,252
+li $28, 0
+li $29, 0
+mtc0 $0, $13
+mtc0 $0, $14
+li $0, 0x1da3a2d8
+li $1, 0x36f9b9cb
+li $2, 0x333f692
+li $3, 0x254b9bc1
+li $4, 0x72f47349
+li $5, 0x7e4e189b
+add $2, $1, $1
+sb $0, 25($0)
+add $5, $4, $4
+addi $2, $3, 0x2cbe
+or $3, $5, $3
+addi $3, $3, 0x5b56
+lbu $0, 8($0)
+mtlo $2
+add $1, $3, $3
+add $0, $2, $2
+add $2, $0, $0
+lb $5, 19($0)
+addi $5, $0, 0x71a8
+addi $5, $0, 0x2cf1
+add $4, $5, $0
+and $1, $5, $1
+addi $2, $2, 0x71d
+srav $0, $3, $2
+xor $2, $4, $4
+addi $2, $1, 0x3f57
+li $3, 0x1238d369
+sub $3, $3, $5
+multu $0, $4
+sub $4, $3, $3
+sllv $0, $4, $5
+nor $4, $2, $1
+li $3, 0xb73b76b9
+li $4, 0xa54cba72
+add $4, $0, $3
+andi $0, $4, 0x67ac
+addi $1, $2, 0xe65
+sub $3, $1, $3
+sub $0, $4, $1
+sltu $4, $5, $2
+sltiu $1, $3, 0x7d2f
+mult $2, $3
+addi $2, $2, 0x621
+addi $0, $3, 0x7c11
+sh $1, 9($0)
+andi $1, $1, 0x60c8
+nor $1, $2, $2
+lh $1, 9($0)
+slti $5, $3, 0x19d5
+xor $4, $2, $5
+add $0, $3, $4
+sw $0, 18($0)
+lbu $0, 24($0)
+addi $0, $4, 0x27c8
+sub $5, $3, $4
+sub $5, $2, $5
+lhu $5, 15($0)
+srlv $2, $1, $3
+sb $3, 13($0)
+subu $0, $3, $3
+mult $4, $3
+mult $0, $0
+li $1, 0x36142af4
+lw $5, 52($0)
+addi $0, $4, 0x6b1a
+mthi $1
+sw $3, 33($0)
+addi $4, $2, 0x3cda
+or $3, $5, $1
+sub $3, $5, $0
+addu $5, $1, $5
+addi $1, $3, 0x5733
+add $3, $0, $0
+addi $5, $1, 0x6d55
+add $3, $4, $3
+add $3, $5, $0
+addi $3, $0, 0x5fe0
+mult $3, $1
+addi $4, $3, 0x3d58
+sub $4, $2, $0
+add $1, $3, $2
+sub $2, $0, $1
+sub $0, $2, $5
+addi $2, $1, 0x276a
+add $1, $5, $3
+sub $3, $4, $2
+sw $3, 40($0)
+sb $2, 35($0)
+multu $2, $5
+sw $1, 16($0)
+sh $0, 44($0)
+ori $4, $0, 0x1200
+sub $3, $0, $2
+add $2, $2, $2
+lhu $0, 43($0)
+mult $5, $4
+add $2, $4, $4
+addi $2, $1, 0x193a
+addi $2, $1, 0x12de
+addu $2, $4, $4
+sltiu $3, $0, 0x5fa0
+sub $4, $2, $1
+li $0, 0xd933bd3d
+addi $0, $2, 0x1350
+lui $1, 0x7fa2
+multu $0, $0
+sltu $4, $4, $0
+sllv $3, $0, $2
+mult $5, $1
+lh $1, 0($0)
+and $0, $4, $0
+addi $0, $2, 0x65da
+mfhi $4
+lhu $5, 24($0)
+addu $0, $4, $3
+srav $2, $5, $2
+add $4, $2, $0
+lw $0, 26($0)
+mtlo $4
+srav $0, $2, $1
+slt $0, $1, $4
+mflo $2
+sub $5, $3, $3
+or $3, $0, $1
+addi $5, $0, 0x3e09
+slti $3, $3, 0x408a
+mult $3, $3
+sub $4, $3, $4
+sh $1, 22($0)
+sub $2, $5, $5
+lb $0, 28($0)
+sh $2, 31($0)
+add $3, $2, $3
+add $3, $5, $0
+xor $3, $5, $1
+addi $0, $3, 0xc81
+li $3, 0x519d6d9b
+xori $0, $4, 0x58d5
+multu $3, $1
+lb $3, 42($0)
+multu $2, $1
+multu $5, $0
+subu $1, $0, $4
+addi $1, $5, 0x43e8
+multu $3, $1
+xori $2, $1, 0x59d8
+mtlo $4
+add $3, $2, $3
+slti $4, $0, 0x48b2
+add $5, $5, $0
+add $0, $4, $2
+lh $5, 20($0)
+nor $3, $0, $2
+addi $0, $4, 0x1eb5
+sub $0, $2, $0
+addi $1, $1, 0x74f7
+addiu $5, $3, 0x5001
+lh $4, 42($0)
+addi $2, $1, 0x24d5
+add $2, $0, $4
+mflo $1
+addi $5, $3, 0x28b4
+add $0, $3, $0
+andi $0, $3, 0x54c9
+sub $2, $5, $2
+mult $3, $4
+sub $1, $5, $4
+sub $0, $4, $5
+mfhi $2
+addi $0, $0, 0x43bd
+addi $2, $2, 0x53f2
+nor $0, $2, $0
+or $1, $2, $5
+sub $0, $3, $1
+sltiu $3, $5, 0x6815
+subu $2, $2, $2
+nor $5, $3, $1
+mtlo $4
+sub $2, $2, $4
+lbu $0, 37($0)
+sllv $3, $1, $1
+multu $0, $4
+lw $2, 9($0)
+lh $4, 44($0)
+lui $5, 0x2083
+multu $3, $3
+add $1, $0, $4
+addi $1, $0, 0x13af
+sub $2, $3, $2
+add $0, $2, $0
+multu $0, $2
+addi $5, $3, 0x22c5
+mtlo $0
+andi $1, $1, 0x24e4
+addiu $3, $1, 0x2244
+mtlo $5
+sub $0, $0, $4
+lhu $4, 37($0)
+lui $1, 0x57be
+lh $5, 40($0)
+addi $4, $3, 0x688
+sub $0, $0, $0
+add $3, $3, $1
+add $2, $3, $4
+addi $3, $2, 0x59fe
+addi $0, $4, 0x2758
+addi $3, $5, 0x6e3a
+xori $2, $3, 0x38c7
+sub $1, $0, $0
+sub $4, $3, $2
+sub $0, $5, $2
+mfhi $3
+add $4, $1, $4
+lh $3, 6($0)
+sllv $2, $3, $5
+multu $2, $1
+lb $1, 43($0)
+lh $1, 23($0)
+lb $3, 50($0)
+addi $2, $4, 0x5d67
+lui $2, 0x67b5
+add $0, $5, $0
+addi $3, $1, 0x6310
+srlv $0, $2, $4
+lui $3, 0x20e9
+addi $2, $1, 0x3d11
+add $1, $1, $1
+sw $5, 7($0)
+add $5, $4, $1
+xor $2, $3, $4
+add $4, $5, $3
+addi $2, $0, 0x3d0c
+mtlo $1
+sub $3, $0, $0
+multu $3, $0
+addi $5, $5, 0x63a3
+addi $4, $0, 0x7265
+sub $1, $3, $2
+add $4, $3, $2
+li $2, 0x620a7859
+addi $5, $4, 0x4cd5
+srlv $1, $5, $4
+sub $5, $2, $0
+multu $5, $3
+lbu $5, 50($0)
+or $5, $5, $3
+xori $4, $1, 0x7ba9
+sub $3, $2, $5
+lb $2, 32($0)
+lb $3, 40($0)
+lui $5, 0x8da
+addi $1, $4, 0x6e78
+sltiu $1, $4, 0x4749
+lb $5, 35($0)
+slt $2, $1, $3
+mult $4, $0
+andi $3, $1, 0x4060
+or $3, $4, $3
+slt $5, $0, $0
+mult $0, $3
+lb $2, 44($0)
+slti $5, $2, 0x44c1
+andi $2, $3, 0x52ac
+sub $0, $1, $0
+nor $4, $3, $1
+slti $2, $3, 0x721
+andi $4, $3, 0x1695
+addi $5, $4, 0x13e7
+addu $3, $1, $2
+sltu $4, $1, $4
+add $4, $1, $4
+addi $0, $4, 0x2392
+nor $5, $1, $3
+lw $5, 3($0)
+xori $2, $4, 0x600e
+add $4, $3, $5
+andi $3, $1, 0x4f0e
+mthi $2
+mfhi $3
+li $2, 0xded04c64
+addi $3, $1, 0xf56
+lbu $2, 7($0)
+lw $3, 25($0)
+sub $0, $3, $1
+mthi $0
+mfhi $0
+sllv $5, $4, $5
+xor $5, $2, $5
+slti $1, $4, 0x53bc
+add $0, $1, $0
+addi $0, $4, 0x5d08
+lw $2, 45($0)
+slt $5, $2, $3
+add $0, $4, $4
+sb $3, 7($0)
+mult $5, $2
+mult $3, $5
+lw $3, 12($0)
+and $5, $5, $0
+sub $0, $5, $5
+addi $2, $1, 0x2a5f
+sb $2, 27($0)
+addiu $1, $2, 0x1baa
+mflo $3
+sub $1, $1, $2
+multu $2, $2
+addi $5, $1, 0x790b
+sub $4, $1, $5
+lb $3, 3($0)
+addi $4, $0, 0x21a1
+sb $3, 32($0)
+mflo $5
+sh $2, 41($0)
+mtlo $3
+xori $4, $5, 0x7829
+sw $1, 25($0)
+mtlo $5
+srav $1, $1, $1
+lbu $5, 18($0)
+addi $1, $0, 0x5884
+mflo $5
+addi $4, $0, 0x2a99
+mtlo $3
+subu $3, $0, $4
+addi $5, $3, 0x1e0f
+sub $0, $3, $3
+lb $5, 30($0)
+addi $2, $3, 0x7bf8
+addi $1, $4, 0x7a96
+mfhi $5
+add $5, $1, $0
+add $0, $5, $2
+li $0, 0xf65b04ad
+lw $5, 20($0)
+multu $1, $5
+slt $2, $0, $4
+mtlo $4
+xor $0, $5, $4
+lw $3, 19($0)
+lw $2, 18($0)
+or $2, $3, $4
+li $1, 0xaa848863
+addi $2, $2, 0x1e2b
+multu $1, $4
+mult $3, $2
+add $5, $3, $0
+add $3, $3, $5
+add $2, $1, $3
+and $4, $3, $5
+mthi $3
+ori $4, $0, 0x3d71
+addi $0, $2, 0x528
+srlv $0, $1, $1
+addi $5, $3, 0x620e
+addi $3, $0, 0x26aa
+sub $4, $2, $5
+sllv $0, $4, $0
+sllv $1, $5, $3
+mflo $0
+add $1, $3, $3
+xor $2, $1, $0
+andi $0, $0, 0x86e
+addi $0, $0, 0x3ad6
+slti $2, $0, 0x17fb
+and $3, $5, $4
+sltu $2, $3, $1
+xori $4, $3, 0x639d
+sb $5, 4($0)
+add $3, $3, $3
+addu $1, $5, $3
+mult $1, $0
+xor $2, $5, $3
+srav $0, $0, $1
+add $3, $5, $1
+mtlo $5
+sh $0, 2($0)
+addi $5, $2, 0xf5
+addiu $0, $3, 0x416
+sub $1, $5, $2
+addi $3, $2, 0x4cf
+add $5, $5, $4
+add $3, $5, $0
+lh $3, 27($0)
+sub $0, $1, $4
+lb $4, 19($0)
+multu $0, $5
+sllv $3, $2, $4
+add $5, $3, $4
+sub $2, $5, $0
+sub $5, $2, $4
+multu $2, $1
+sh $3, 38($0)
+mflo $4
+sub $5, $2, $4
+sh $5, 45($0)
+addi $0, $2, 0xa48
+lui $4, 0x3cb1
+lb $1, 12($0)
+mflo $4
+add $1, $0, $5
+sllv $4, $4, $3
+add $2, $3, $2
+srav $2, $4, $3
+lh $4, 41($0)
+addi $2, $2, 0x681a
+xor $2, $3, $5
+addi $2, $0, 0x425
+lhu $1, 32($0)
+and $3, $3, $5
+andi $3, $1, 0x1ba1
+sub $4, $4, $1
+add $3, $2, $3
+addi $4, $2, 0x47ea
+add $0, $4, $0
+lh $1, 3($0)
+srav $1, $3, $2
+or $5, $5, $5
+sub $5, $3, $0
+addu $4, $3, $2
+add $5, $2, $0
+add $1, $3, $2
+sub $3, $2, $4
+multu $0, $1
+sltiu $2, $5, 0x1c59
+add $0, $3, $0
+slt $3, $2, $4
+add $3, $4, $0
+add $1, $4, $5
+addi $2, $2, 0x236d
+addiu $2, $4, 0x181c
+slti $0, $5, 0x26a0
+addi $0, $3, 0x6c7b
+xori $1, $5, 0x604
+addi $5, $0, 0x47bc
+lhu $4, 18($0)
+sub $5, $0, $4
+mthi $2
+lbu $4, 52($0)
+add $3, $1, $5
+mflo $4
+nor $2, $2, $1
+add $0, $3, $4
+and $0, $5, $5
+sllv $5, $2, $5
+mtlo $3
+nor $3, $1, $1
+and $4, $4, $0
+sub $3, $0, $4
+mflo $3
+li $0, 0xeba0b20b
+or $2, $2, $5
+subu $1, $4, $1
+sub $4, $0, $2
+sub $1, $3, $2
+slt $0, $2, $2
+or $5, $5, $5
+sb $5, 6($0)
+mflo $0
+addi $0, $3, 0x6e33
+slt $4, $3, $4
+addi $1, $4, 0x70eb
+lhu $0, 38($0)
+mtlo $1
+lhu $4, 10($0)
+nor $5, $1, $4
+multu $2, $2
+slti $5, $2, 0x70ce
+sb $5, 23($0)
+sub $5, $1, $4
+add $1, $3, $5
+mult $1, $0
+sltiu $2, $0, 0x7fc0
+sltu $1, $3, $5
+addiu $4, $4, 0x488c
+addi $5, $1, 0xb6b
+addiu $0, $3, 0x5947
+sub $0, $5, $3
+srlv $0, $2, $0
+multu $3, $5
+sb $2, 19($0)
+lui $0, 0x1e12
+multu $1, $0
+addi $1, $4, 0x2b76
+lui $1, 0x223
+addi $3, $3, 0x7c93
+lui $5, 0xe5c
+add $4, $4, $0
+sub $5, $5, $3
+sh $2, 48($0)
+addi $2, $1, 0x742d
+lbu $0, 51($0)
+lb $5, 38($0)
+multu $0, $4
+sllv $1, $5, $3
+addi $1, $4, 0x291f
+add $5, $3, $4
+addi $0, $0, 0x2caf
+addi $2, $2, 0x464f
+add $3, $1, $2
+sub $3, $0, $0
+addi $2, $1, 0xf40
+sub $1, $4, $0
+sw $3, 30($0)
+addi $0, $1, 0x42c7
+add $3, $2, $1
+sub $4, $1, $2
+or $1, $0, $2
+sllv $5, $5, $5
+lb $5, 35($0)
+sub $2, $3, $0
+multu $2, $2
+mthi $1
+sub $2, $4, $3
+mult $0, $1
+ori $4, $5, 0x3ad9
+addi $4, $4, 0x6d21
+andi $0, $3, 0x1fb8
+sub $5, $4, $3
+and $3, $4, $4
+sh $2, 0($0)
+addi $0, $4, 0x47c3
+mfhi $0
+slt $3, $3, $0
+sub $4, $1, $1
+add $4, $4, $2
+mult $3, $1
+lhu $2, 20($0)
+lbu $0, 46($0)
+add $2, $4, $5
+addiu $5, $3, 0x7d19
+add $4, $1, $5
+srlv $2, $2, $4
+srlv $0, $3, $3
+sh $1, 7($0)
+sltiu $1, $0, 0x852
+add $3, $1, $3
+xori $3, $4, 0x342f
+sub $0, $0, $1
+addi $1, $3, 0x3e25
+srlv $4, $2, $1
+slti $1, $4, 0x1372
+mtlo $4
+li $2, 0x89a5325a
+srlv $1, $0, $4
+add $4, $5, $5
+sb $2, 42($0)
+lui $0, 0x7920
+add $0, $4, $1
+nor $1, $5, $0
+add $4, $3, $3
+xori $4, $0, 0x2aca
+addi $3, $3, 0x4ca6
+slt $3, $1, $0
+srav $1, $0, $2
+mfhi $3
+lw $0, 2($0)
+srlv $1, $5, $4
+and $5, $1, $2
+xori $2, $4, 0x4cca
+sub $4, $0, $4
+sub $5, $5, $1
+addi $0, $2, 0x3b42
+lhu $2, 5($0)
+srav $1, $3, $3
+lh $2, 12($0)
+xori $3, $0, 0x5033
+sltu $2, $2, $5
+andi $1, $3, 0x4b90
+xori $0, $0, 0x615b
+addi $4, $0, 0xe46
+sw $0, 25($0)
+addi $5, $4, 0x246d
+addu $2, $4, $5
+andi $4, $5, 0x225a
+addi $0, $4, 0x6ad
+sh $1, 9($0)
+subu $3, $1, $1
+nor $0, $1, $0
+lhu $5, 51($0)
+sltu $4, $4, $5
+addi $2, $0, 0x7347
+sllv $2, $3, $1
+addiu $1, $5, 0x535c
+slt $5, $1, $3
+sub $1, $0, $0
+addi $3, $4, 0x493
+addu $5, $0, $1
+add $2, $1, $0
+sub $1, $0, $0
+lb $4, 22($0)
+sub $3, $2, $2
+sub $3, $3, $2
+mfhi $4
+srav $2, $1, $5
+xori $0, $2, 0x329f
+sub $0, $1, $0
+addiu $2, $2, 0x4741
+lw $3, 34($0)
+sub $2, $4, $0
+subu $5, $1, $0
+lb $0, 30($0)
+srlv $0, $3, $1
+and $1, $2, $1
+add $3, $2, $1
+sub $2, $0, $3
+addi $4, $5, 0x766
+lb $5, 43($0)
+mthi $4
+xori $5, $3, 0x4774
+mflo $1
+sllv $2, $5, $1
+addi $4, $4, 0x5a22
+addi $2, $0, 0x30df
+lbu $0, 25($0)
+multu $2, $2
+mfhi $2
+sh $5, 12($0)
+sltu $0, $3, $5
+lui $1, 0x6bf6
+sub $5, $4, $5
+add $5, $3, $1
+sub $0, $1, $3
+lhu $5, 10($0)
+add $0, $0, $3
+add $1, $3, $4
+lhu $1, 1($0)
+sb $0, 5($0)
+addi $2, $0, 0xd2b
+and $5, $2, $5
+add $1, $3, $0
+addi $3, $1, 0x2d57
+or $1, $3, $3
+nor $4, $3, $1
+mflo $4
+lh $4, 30($0)
+sub $0, $4, $0
+sub $2, $5, $3
+lw $4, 50($0)
+lb $2, 35($0)
+addi $0, $4, 0x6d69
+add $1, $5, $0
+xor $5, $3, $2
+mtlo $1
+slt $5, $3, $3
+slt $3, $3, $1
+addi $5, $2, 0x64d7
+sw $5, 31($0)
+multu $5, $5
+addiu $1, $4, 0x26d
+sh $2, 19($0)
+srlv $5, $4, $4
+ori $3, $0, 0x538d
+sh $2, 0($0)
+addiu $0, $2, 0x24ca
+slt $4, $3, $5
+lb $5, 31($0)
+sh $1, 29($0)
+sub $3, $4, $4
+sub $3, $4, $0
+add $4, $1, $1
+add $3, $3, $5
+addiu $2, $1, 0x10c2
+lui $0, 0x3f45
+lw $0, 3($0)
+sb $4, 39($0)
+srlv $4, $3, $1
+sltu $1, $1, $4
+sub $4, $4, $4
+sub $0, $0, $0
+lb $3, 5($0)
+add $2, $1, $5
+and $5, $5, $5
+andi $3, $5, 0x3320
+lbu $1, 26($0)
+lbu $1, 30($0)
+lui $0, 0x4da0
+ori $4, $2, 0x25bd
+add $4, $0, $4
+addi $4, $5, 0x748d
+lui $4, 0x61bb
+add $3, $0, $0
+lb $1, 30($0)
+sltiu $3, $4, 0x34fb
+addi $1, $0, 0x3af6
+lh $0, 47($0)
+add $2, $3, $1
+sub $3, $2, $5
+multu $5, $2
+mult $0, $0
+multu $4, $0
+add $2, $3, $0
+sllv $2, $4, $2
+subu $2, $1, $0
+srlv $4, $3, $5
+mtlo $1
+addu $1, $3, $3
+ori $1, $4, 0x3a80
+sub $0, $4, $0
+lw $2, 0($0)
+addi $2, $0, 0x66ce
+sub $0, $5, $5
+lb $0, 51($0)
+sb $1, 5($0)
+lhu $5, 41($0)
+sub $2, $1, $3
+add $2, $2, $0
+lbu $2, 1($0)
+add $2, $5, $3
+mtlo $2
+addi $0, $4, 0xbca
+addiu $2, $1, 0x86e
+multu $1, $2
+mult $1, $3
+or $0, $2, $5
+add $3, $1, $3
+lhu $4, 35($0)
+xori $1, $4, 0x1405
+sltiu $2, $3, 0x283f
+ori $3, $1, 0xb0a
+sllv $3, $2, $5
+or $1, $2, $5
+andi $0, $1, 0x4440
+mult $0, $0
+add $0, $3, $1
+addiu $2, $1, 0x2193
+mfhi $2
+addi $5, $5, 0x480a
+addiu $1, $3, 0x6ee
+add $0, $2, $5
+nor $5, $4, $1
+andi $3, $2, 0x7256
+add $0, $3, $5
+sub $4, $3, $4
+andi $4, $5, 0x4d0a
+add $1, $4, $3
+or $3, $2, $1
+add $3, $0, $4
+mflo $0
+ori $5, $0, 0x5177
+addi $0, $5, 0x7d04
+sub $4, $1, $5
+srlv $1, $0, $2
+sub $2, $5, $0
+sub $2, $4, $0
+mult $2, $3
+xor $4, $0, $1
+sub $0, $4, $0
+sltiu $0, $5, 0x1f4d
+ori $1, $4, 0x7100
+sub $4, $2, $1
+addi $2, $2, 0x395b
+addi $5, $3, 0x7c2d
+addi $2, $4, 0x7940
+lui $2, 0x48cb
+sllv $0, $4, $1
+subu $2, $1, $2
+sub $1, $1, $1
+addiu $1, $2, 0x384b
+addi $1, $5, 0x7a32
+addi $5, $3, 0x226d
+sb $4, 35($0)
+xori $4, $2, 0x6545
+xori $0, $4, 0xf97
+subu $5, $3, $4
+mult $1, $4
+srav $1, $5, $1
+sltu $0, $2, $5
+xor $0, $5, $3
+xori $3, $3, 0x2e37
+add $2, $5, $3
+add $4, $3, $3
+add $1, $2, $0
+lbu $3, 7($0)
+sltiu $5, $1, 0x462d
+addi $2, $3, 0x2d0f
+lb $1, 31($0)
+and $2, $3, $3
+sub $3, $4, $4
+sub $3, $5, $0
+add $3, $4, $4
+lbu $3, 28($0)
+srav $0, $1, $1
+ori $1, $3, 0x491b
+mflo $0
+sub $1, $0, $1
+add $3, $0, $0
+sb $2, 16($0)
+sub $4, $1, $1
+slt $2, $2, $1
+sh $0, 15($0)
+sltu $4, $3, $5
+sub $4, $3, $1
+nor $0, $4, $2
+sub $3, $0, $5
+sub $5, $2, $1
+andi $1, $5, 0x4cba
+andi $4, $1, 0x5f8c
+add $2, $2, $3
+multu $1, $3
+sub $0, $3, $1
+sub $2, $2, $4
+lb $2, 30($0)
+addiu $1, $2, 0x34a7
+srav $2, $3, $2
+li $0, 0xbde2bd08
+sub $1, $2, $4
+mtlo $1
+addi $0, $2, 0x253f
+sltiu $1, $3, 0x5e73
+and $0, $4, $0
+sub $0, $3, $5
+add $2, $1, $1
+mflo $4
+sub $0, $1, $1
+sh $3, 6($0)
+mthi $0
+mult $5, $0
+add $1, $4, $4
+addi $2, $1, 0x1983
+xor $2, $3, $2
+sub $0, $2, $3
+mfhi $0
+add $3, $3, $3
+add $3, $2, $1
+sub $2, $4, $1
+sb $2, 35($0)
+multu $0, $4
+andi $1, $3, 0xec2
+addu $2, $2, $4
+addi $2, $0, 0x724d
+xori $5, $5, 0x5836
+sub $3, $4, $3
+sub $3, $2, $1
+srav $0, $0, $1
+subu $2, $4, $4
+sub $5, $3, $4
+mflo $3
+add $3, $0, $5
+addi $2, $5, 0x59f8
+addi $2, $2, 0x58d2
+add $2, $5, $4
+addi $1, $5, 0x2f13
+xori $2, $1, 0x6505
+add $2, $3, $0
+addu $3, $3, $0
+slti $4, $5, 0x2547
+nor $2, $1, $1
+srlv $4, $2, $5
+srav $5, $1, $1
+slt $3, $5, $5
+and $0, $4, $2
+addi $0, $5, 0x3144
+addi $3, $0, 0x6abc
+sw $0, 30($0)
+multu $5, $1
+sub $3, $4, $5
+mult $4, $3
+andi $2, $1, 0x2904
+addi $2, $0, 0x488d
+slti $5, $5, 0x7078
+slti $2, $0, 0x2680
+addiu $2, $3, 0x64d
+mtlo $3
+addi $5, $4, 0x4563
+sub $2, $2, $4
+lw $4, 24($0)
+addi $3, $4, 0x4bad
+sub $5, $3, $3
+addi $5, $1, 0x422e
+mflo $0
+mult $1, $5
+addi $1, $4, 0x7537
+add $3, $0, $4
+lh $3, 20($0)
+mthi $5
+mult $3, $3
+sub $3, $0, $3
+multu $1, $3
+sub $3, $0, $4
+mthi $0
+and $3, $2, $0
+lw $4, 14($0)
+mflo $1
+slti $1, $2, 0x17c3
+srav $5, $0, $1
+add $1, $0, $2
+mult $4, $2
+addi $2, $2, 0x5978
+or $4, $2, $5
+sltiu $5, $1, 0x6cb6
+sub $5, $2, $0
+andi $4, $4, 0x5245
+sub $5, $2, $0
+subu $1, $2, $5
+andi $0, $3, 0x6f6b
+sub $1, $2, $5
+sub $2, $1, $5
+lw $3, 4($0)
+srav $5, $1, $4
+addi $0, $0, 0x28e5
+add $0, $4, $5
+lb $2, 19($0)
+li $1, 0xfe671f44
+addi $3, $0, 0xf1e
+sub $0, $1, $3
+add $2, $4, $1
 
-sub		$18,$24,$24
-nop
-subu	$24,$24,$18
-sll		$24,$24,1
-addi	$18,$0,141
-xor		$0,$6,$6
-nop
-add		$6,$0,$6
-srl		$0,$0,1
-addu	$4,$4,$4
-nop
-and		$4,$4,$4
-div		$4,$4
-mflo	$1
-mfhi	$2
-addi	$2,$0,251
-nor		$23,$23,$23
-nop
-or		$24,$24,$24
-divu	$24,$24
-mflo	$1
-mfhi	$2
-addi	$2,$0,76
-sllv	$24,$24,$24
-nop
-srlv	$24,$24,$24
-mult	$24,$24
-mflo	$1
-mfhi	$2
-addi	$1,$0,95
-srav	$28,$0,$0
-nop
-slt		$0,$0,$28
-multu	$28,$0
-mflo	$1
-mfhi	$2
-addi	$1,$0,237
-addi	$2,$0,115
-addi	$28,$0,192
-sltu	$5,$5,$5
-nop
-sub		$5,$5,$5
-beq		$5,$5,TAG_0
-addiu	$5,$5,1
-addiu	$5,$5,1
-TAG_0:
-subu	$24,$25,$24
-nop
-xor		$24,$25,$25
-bne		$24,$25,TAG_1
-addiu	$24,$25,1
-addiu	$25,$24,1
-TAG_1:
-add		$26,$24,$26
-nop
-addu	$26,$26,$26
-beq		$24,$24,TAG_2
-addiu	$24,$24,1
-addiu	$24,$24,1
-TAG_2:
-and		$8,$0,$0
-nop
-nor		$8,$8,$0
-bne		$0,$1,TAG_3
-addiu	$0,$1,1
-addiu	$1,$0,1
-TAG_3:
-or		$6,$6,$6
-nop
-sllv	$6,$6,$6
-beq		$6,$0,TAG_4
-addiu	$6,$0,1
-addiu	$0,$6,1
-TAG_4:
-srlv	$27,$27,$27
-nop
-srav	$24,$27,$27
-bne		$24,$27,TAG_5
-addiu	$24,$27,1
-addiu	$27,$24,1
-TAG_5:
-slt		$24,$28,$28
-nop
-sltu	$28,$28,$28
-beq		$28,$1,TAG_6
-addiu	$28,$1,1
-addiu	$1,$28,1
-TAG_6:
-addi	$24,$0,57
-sub		$3,$3,$0
-nop
-subu	$3,$0,$0
-bne		$0,$3,TAG_7
-addiu	$0,$3,1
-addiu	$3,$0,1
-TAG_7:
-xor		$7,$7,$7
-nop
-add		$7,$7,$7
-bgtz	$7,TAG_8
-addiu	$7,$7,1
-addiu	$7,$7,1
-TAG_8:
-addu	$24,$24,$29
-nop
-and		$24,$29,$29
-bgez	$24,TAG_9
-addiu	$24,$24,1
-addiu	$24,$24,1
-TAG_9:
-nor		$24,$30,$30
-nop
-or		$30,$30,$24
-bltz	$24,TAG_10
-addiu	$24,$24,1
-addiu	$24,$24,1
-TAG_10:
-sllv	$0,$0,$0
-nop
-srlv	$0,$13,$0
-blez	$0,TAG_11
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_11:
-srav	$8,$8,$8
-nop
-slt		$8,$8,$8
-bgtz	$8,TAG_12
-addiu	$8,$8,1
-addiu	$8,$8,1
-TAG_12:
-sltu	$1,$25,$1
-nop
-sub		$1,$1,$25
-bgez	$25,TAG_13
-addiu	$25,$25,1
-addiu	$25,$25,1
-TAG_13:
-subu	$25,$25,$2
-nop
-xor		$2,$2,$2
-bltz	$25,TAG_14
-addiu	$25,$25,1
-addiu	$25,$25,1
-TAG_14:
-addi	$2,$0,32
-add		$10,$0,$10
-nop
-addu	$10,$10,$10
-blez	$0,TAG_15
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_15:
-and		$11,$11,$11
-nop
-slti	$11,$11,2
-nor		$11,$11,$11
-or		$25,$7,$7
-nop
-sltiu	$25,$25,7
-sllv	$7,$25,$7
-srlv	$25,$8,$8
-nop
-xori	$25,$25,177
-srav	$8,$25,$8
-slt		$21,$0,$0
-nop
-addi	$0,$0,191
-sltu	$21,$0,$21
-addi	$21,$0,112
-sub		$12,$12,$12
-nop
-addiu	$12,$12,27
-andi	$12,$12,189
-subu	$25,$25,$25
-nop
-ori		$25,$25,164
-slti	$9,$9,-3
-addi	$9,$0,130
-xor		$10,$10,$10
-nop
-sltiu	$25,$25,-3
-xori	$25,$10,30
-addi	$10,$0,134
-add		$29,$0,$29
-nop
-addi	$29,$29,-193
-addiu	$0,$29,-180
-addu	$13,$13,$13
-nop
-andi	$13,$13,200
-sra		$13,$13,2
-and		$11,$11,$25
-nop
-ori		$11,$11,126
-sll		$25,$25,1
-nor		$12,$12,$25
-nop
-slti	$25,$25,-6
-srl		$25,$25,1
-addi	$25,$0,66
-or		$5,$0,$0
-nop
-sltiu	$0,$0,-2
-sra		$5,$5,1
-addi	$5,$0,119
-sllv	$16,$16,$16
-nop
-xori	$16,$16,64
-mthi	$16
-mflo	$1
-mfhi	$2
-addi	$1,$0,252
-srlv	$25,$17,$17
-nop
-addi	$17,$25,40
-mtlo	$25
-mflo	$1
-mfhi	$2
-addi	$1,$0,185
-addi	$25,$0,61
-srav	$18,$18,$25
-nop
-addiu	$18,$25,-101
-mtc0	$18,$12
-mflo	$1
-mfhi	$2
-addi	$1,$0,127
-slt		$0,$0,$15
-nop
-andi	$0,$0,78
-div		$0,$15
-mflo	$1
-mfhi	$2
-addi	$1,$0,23
-addi	$2,$0,157
-sltu	$17,$17,$17
-nop
-ori		$17,$17,169
-beq		$17,$17,TAG_16
-addiu	$17,$17,1
-addiu	$17,$17,1
-TAG_16:
-sub		$19,$19,$19
-nop
-slti	$19,$25,1
-bne		$25,$0,TAG_17
-addiu	$25,$0,1
-addiu	$0,$25,1
-TAG_17:
-addi	$19,$0,150
-subu	$25,$20,$25
-nop
-sltiu	$25,$20,-6
-beq		$25,$25,TAG_18
-addiu	$25,$25,1
-addiu	$25,$25,1
-TAG_18:
-xor		$29,$29,$29
-nop
-xori	$0,$0,64
-bne		$29,$1,TAG_19
-addiu	$29,$1,1
-addiu	$1,$29,1
-TAG_19:
-add		$18,$18,$18
-nop
-addi	$18,$18,-243
-beq		$18,$0,TAG_20
-addiu	$18,$0,1
-addiu	$0,$18,1
-TAG_20:
-addu	$21,$25,$25
-nop
-addiu	$25,$21,-217
-bne		$25,$25,TAG_21
-addiu	$25,$25,1
-addiu	$25,$25,1
-TAG_21:
-and		$25,$22,$22
-nop
-andi	$22,$25,14
-beq		$25,$22,TAG_22
-addiu	$25,$22,1
-addiu	$22,$25,1
-TAG_22:
-nor		$0,$0,$14
-nop
-ori		$14,$0,47
-bne		$14,$14,TAG_23
-addiu	$14,$14,1
-addiu	$14,$14,1
-TAG_23:
-or		$19,$19,$19
-nop
-slti	$19,$19,-7
-bgtz	$19,TAG_24
-addiu	$19,$19,1
-addiu	$19,$19,1
-TAG_24:
-sllv	$23,$25,$25
-nop
-sltiu	$25,$23,-3
-bgez	$25,TAG_25
-addiu	$25,$25,1
-addiu	$25,$25,1
-TAG_25:
-srlv	$25,$25,$24
-nop
-xori	$25,$25,63
-bltz	$25,TAG_26
-addiu	$25,$25,1
-addiu	$25,$25,1
-TAG_26:
-srav	$16,$0,$16
-nop
-addi	$16,$0,-211
-blez	$0,TAG_27
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_27:
-slt		$20,$20,$20
-nop
-addiu	$20,$20,-11
-bgtz	$20,TAG_28
-addiu	$20,$20,1
-addiu	$20,$20,1
-TAG_28:
-sltu	$25,$25,$25
-nop
-andi	$25,$25,148
-bgez	$25,TAG_29
-addiu	$25,$25,1
-addiu	$25,$25,1
-TAG_29:
-sub		$26,$25,$25
-nop
-ori		$25,$26,143
-bltz	$25,TAG_30
-addiu	$25,$25,1
-addiu	$25,$25,1
-TAG_30:
-addi	$26,$0,219
-subu	$0,$0,$17
-nop
-slti	$17,$0,-2
-blez	$0,TAG_31
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_31:
-addi	$17,$0,249
-xor		$23,$23,$23
-nop
-sll		$23,$23,2
-add		$23,$23,$23
-addi	$23,$0,83
-addu	$1,$26,$26
-nop
-srl		$1,$26,2
-and		$26,$1,$1
-nor		$2,$26,$26
-nop
-sra		$2,$2,1
-or		$26,$26,$2
-sllv	$0,$12,$12
-nop
-sll		$12,$12,1
-srlv	$0,$0,$12
-srav	$24,$24,$24
-nop
-srl		$24,$24,2
-sltiu	$24,$24,5
-addi	$24,$0,29
-slt		$3,$26,$26
-nop
-sra		$26,$26,2
-xori	$3,$3,37
-sltu	$4,$4,$26
-nop
-sll		$4,$4,2
-addi	$4,$26,-89
-sub		$30,$0,$0
-nop
-srl		$30,$30,1
-addiu	$30,$0,150
-subu	$25,$25,$25
-nop
-sra		$25,$25,1
-sll		$25,$25,2
-addi	$25,$0,189
-xor		$26,$26,$26
-nop
-srl		$26,$26,2
-sra		$5,$26,2
-addi	$5,$0,157
-addi	$26,$0,253
-add		$6,$6,$6
-nop
-sll		$26,$6,1
-srl		$6,$6,2
-addi	$6,$0,96
-addu	$0,$9,$0
-nop
-sra		$9,$0,1
-sll		$0,$9,2
-addi	$9,$0,226
-and		$28,$28,$28
-nop
-srl		$28,$28,2
-divu	$28,$28
-mflo	$1
-mfhi	$2
-addi	$2,$0,240
-nor		$11,$11,$11
-nop
-sra		$11,$26,1
-mult	$11,$11
-mflo	$1
-mfhi	$2
-addi	$2,$0,118
-or		$12,$12,$26
-nop
-sll		$26,$12,2
-multu	$12,$26
-mflo	$1
-mfhi	$2
-sllv	$7,$0,$7
-nop
-srl		$0,$0,2
-mthi	$0
-mflo	$1
-mfhi	$2
-addi	$2,$0,193
-addi	$7,$0,117
-srlv	$29,$29,$29
-nop
-sra		$29,$29,2
-beq		$29,$29,TAG_32
-addiu	$29,$29,1
-addiu	$29,$29,1
-TAG_32:
-srav	$13,$13,$26
-nop
-sll		$26,$13,2
-bne		$13,$1,TAG_33
-addiu	$13,$1,1
-addiu	$1,$13,1
-TAG_33:
-addi	$26,$0,229
-slt		$26,$26,$26
-nop
-srl		$26,$26,2
-beq		$14,$14,TAG_34
-addiu	$14,$14,1
-addiu	$14,$14,1
-TAG_34:
-addi	$26,$0,48
-sltu	$0,$0,$0
-nop
-sra		$0,$16,2
-bne		$0,$1,TAG_35
-addiu	$0,$1,1
-addiu	$1,$0,1
-TAG_35:
-sub		$30,$30,$30
-nop
-sll		$30,$30,2
-beq		$30,$1,TAG_36
-addiu	$30,$1,1
-addiu	$1,$30,1
-TAG_36:
-subu	$26,$26,$15
-nop
-srl		$15,$26,2
-bne		$26,$26,TAG_37
-addiu	$26,$26,1
-addiu	$26,$26,1
-TAG_37:
-xor		$16,$26,$26
-nop
-sra		$26,$26,2
-beq		$16,$26,TAG_38
-addiu	$16,$26,1
-addiu	$26,$16,1
-TAG_38:
-add		$16,$0,$16
-nop
-sll		$16,$0,1
-bne		$0,$0,TAG_39
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_39:
-addi	$16,$0,123
-addu	$1,$1,$1
-nop
-srl		$1,$1,1
-bgtz	$1,TAG_40
-addiu	$1,$1,1
-addiu	$1,$1,1
-TAG_40:
-and		$17,$26,$26
-nop
-sra		$17,$26,2
-bgez	$26,TAG_41
-addiu	$26,$26,1
-addiu	$26,$26,1
-TAG_41:
-nor		$26,$26,$18
-nop
-sll		$18,$26,1
-bltz	$26,TAG_42
-addiu	$26,$26,1
-addiu	$26,$26,1
-TAG_42:
-or		$16,$16,$16
-nop
-srl		$0,$16,1
-blez	$16,TAG_43
-addiu	$16,$16,1
-addiu	$16,$16,1
-TAG_43:
-sllv	$2,$2,$2
-nop
-sra		$2,$2,1
-bgtz	$2,TAG_44
-addiu	$2,$2,1
-addiu	$2,$2,1
-TAG_44:
-srlv	$19,$19,$19
-nop
-sll		$19,$19,2
-bgez	$26,TAG_45
-addiu	$26,$26,1
-addiu	$26,$26,1
-TAG_45:
-addi	$19,$0,221
-srav	$26,$20,$26
-nop
-srl		$26,$20,2
-bltz	$26,TAG_46
-addiu	$26,$26,1
-addiu	$26,$26,1
-TAG_46:
-slt		$0,$0,$15
-nop
-sra		$15,$15,2
-blez	$15,TAG_47
-addiu	$15,$15,1
-addiu	$15,$15,1
-TAG_47:
-sltu	$17,$17,$17
-nop
-mtlo	$17
-sub		$17,$17,$17
-mflo	$1
-mfhi	$2
-addi	$1,$0,145
-addi	$2,$0,254
-addi	$17,$0,205
-subu	$27,$27,$19
-nop
-mtc0	$19,$13
-xor		$27,$19,$27
-mflo	$1
-mfhi	$2
-addi	$1,$0,161
-addi	$2,$0,20
-add		$20,$27,$27
-nop
-div		$20,$20
-addu	$27,$27,$20
-mflo	$1
-mfhi	$2
-addi	$2,$0,157
-and		$19,$19,$19
-nop
-divu	$19,$19
-nor		$0,$19,$19
-mflo	$1
-mfhi	$2
-addi	$2,$0,29
-or		$18,$18,$18
-nop
-mult	$18,$18
-andi	$18,$18,154
-mflo	$1
-mfhi	$2
-addi	$2,$0,98
-sllv	$27,$27,$21
-nop
-multu	$21,$27
-ori		$21,$21,179
-mflo	$1
-mfhi	$2
-srlv	$27,$22,$22
-nop
-mthi	$27
-slti	$22,$22,-1
-mflo	$1
-mfhi	$2
-addi	$2,$0,64
-addi	$22,$0,231
-addi	$27,$0,89
-srav	$11,$11,$0
-nop
-mtlo	$0
-sltiu	$11,$11,-3
-mflo	$1
-mfhi	$2
-addi	$1,$0,30
-addi	$2,$0,63
-slt		$19,$19,$19
-nop
-mtc0	$19,$13
-sll		$19,$19,1
-mflo	$1
-mfhi	$2
-addi	$1,$0,139
-addi	$2,$0,51
-addi	$19,$0,35
-sltu	$27,$27,$23
-nop
-div		$23,$23
-srl		$23,$27,1
-mflo	$1
-mfhi	$2
-addi	$2,$0,135
-addi	$23,$0,119
-addi	$27,$0,116
-sub		$27,$27,$27
-nop
-divu	$27,$24
-sra		$27,$27,1
-mflo	$1
-mfhi	$2
-addi	$1,$0,93
-addi	$2,$0,4
-addi	$27,$0,94
-subu	$12,$12,$0
-nop
-mult	$0,$12
-sll		$12,$0,1
-mflo	$1
-mfhi	$2
-addi	$1,$0,254
-addi	$2,$0,119
-addi	$12,$0,186
-xor		$22,$22,$22
-nop
-multu	$22,$22
-mthi	$22
-mflo	$1
-mfhi	$2
-addi	$1,$0,180
-addi	$2,$0,7
-addi	$22,$0,175
-add		$27,$29,$29
-nop
-mtlo	$27
-mtc0	$27,$13
-mflo	$1
-mfhi	$2
-addi	$2,$0,183
-addu	$27,$27,$30
-nop
-div		$27,$30
-divu	$27,$30
-mflo	$1
-mfhi	$2
-and		$0,$22,$22
-nop
-mult	$0,$22
-multu	$0,$22
-mflo	$1
-mfhi	$2
-addi	$1,$0,91
-addi	$2,$0,130
-nor		$23,$23,$23
-nop
-mthi	$23
-beq		$23,$23,TAG_48
-addiu	$23,$23,1
-addiu	$23,$23,1
-TAG_48:
-mflo	$1
-mfhi	$2
-addi	$1,$0,176
-or		$1,$1,$1
-nop
-mtlo	$1
-bne		$1,$28,TAG_49
-addiu	$1,$28,1
-addiu	$28,$1,1
-TAG_49:
-mflo	$1
-mfhi	$2
-sllv	$28,$2,$2
-nop
-mtc0	$28,$13
-beq		$2,$2,TAG_50
-addiu	$2,$2,1
-addiu	$2,$2,1
-TAG_50:
-mflo	$1
-mfhi	$2
-srlv	$0,$0,$0
-nop
-div		$0,$19
-bne		$19,$0,TAG_51
-addiu	$19,$0,1
-addiu	$0,$19,1
-TAG_51:
-mflo	$1
-mfhi	$2
-addi	$1,$0,114
-addi	$2,$0,226
-srav	$24,$24,$24
-nop
-divu	$24,$28
-beq		$24,$1,TAG_52
-addiu	$24,$1,1
-addiu	$1,$24,1
-TAG_52:
-mflo	$1
-mfhi	$2
-addi	$1,$0,91
-addi	$2,$0,204
-slt		$3,$3,$3
-nop
-mult	$3,$28
-bne		$3,$3,TAG_53
-addiu	$3,$3,1
-addiu	$3,$3,1
-TAG_53:
-mflo	$1
-mfhi	$2
-addi	$1,$0,45
-addi	$2,$0,57
-sltu	$28,$4,$4
-nop
-multu	$4,$28
-beq		$4,$0,TAG_54
-addiu	$4,$0,1
-addiu	$0,$4,1
-TAG_54:
-mflo	$1
-mfhi	$2
-addi	$1,$0,96
-addi	$2,$0,196
-addi	$28,$0,1
-sub		$3,$3,$0
-nop
-mthi	$0
-bne		$0,$0,TAG_55
-addiu	$0,$0,1
-addiu	$0,$0,1
-TAG_55:
-mflo	$1
-mfhi	$2
-addi	$1,$0,30
-addi	$2,$0,90
-subu	$25,$25,$25
-nop
-mtlo	$25
-bgtz	$25,TAG_56
-addiu	$25,$25,1
-addiu	$25,$25,1
-TAG_56:
-mflo	$1
-mfhi	$2
-addi	$1,$0,122
-addi	$2,$0,48
-xor		$5,$5,$5
-nop
-mtc0	$28,$13
-bgez	$28,TAG_57
-addiu	$28,$28,1
-addiu	$28,$28,1
-TAG_57:
-mflo	$1
-mfhi	$2
-addi	$1,$0,121
-addi	$2,$0,197
-addi	$5,$0,119
-add		$6,$28,$28
-nop
-div		$28,$28
-bltz	$28,TAG_58
-addiu	$28,$28,1
-addiu	$28,$28,1
-TAG_58:
-mflo	$1
-mfhi	$2
-addi	$2,$0,50
-addu	$30,$0,$30
-nop
-divu	$0,$14
-blez	$30,TAG_59
-addiu	$30,$30,1
-addiu	$30,$30,1
-TAG_59:
-mflo	$1
-mfhi	$2
-addi	$1,$0,68
-addi	$2,$0,77
-and		$26,$26,$26
-nop
-mult	$26,$26
-bgtz	$26,TAG_60
-addiu	$26,$26,1
-addiu	$26,$26,1
-TAG_60:
-mflo	$1
-mfhi	$2
-nor		$28,$28,$7
-nop
-multu	$7,$7
-bgez	$28,TAG_61
-addiu	$28,$28,1
-addiu	$28,$28,1
-TAG_61:
-mflo	$1
-mfhi	$2
-addi	$2,$0,104
-or		$28,$8,$28
-nop
-mthi	$28
-bltz	$28,TAG_62
-addiu	$28,$28,1
-addiu	$28,$28,1
-TAG_62:
-mflo	$1
-mfhi	$2
-sllv	$27,$27,$0
-nop
-mtlo	$0
-blez	$27,TAG_63
-addiu	$27,$27,1
-addiu	$27,$27,1
-TAG_63:
-mflo	$1
-mfhi	$2
-addi	$1,$0,102
-srlv	$29,$29,$29
-nop
-mfc0	$29,$13
-srav	$29,$29,$29
-mflo	$1
-mfhi	$2
-addi	$1,$0,179
-addi	$29,$0,209
-slt		$13,$13,$13
-nop
-mfhi	$28
-sltu	$13,$13,$28
-mflo	$1
-mfhi	$2
-addi	$1,$0,248
-sub		$28,$28,$14
-nop
-mflo	$28
-subu	$14,$14,$28
-mflo	$1
-mfhi	$2
-addi	$1,$0,248
-addi	$28,$0,52
-xor		$1,$1,$0
-nop
-mfc0	$1,$12
-add		$0,$0,$1
-mflo	$1
-mfhi	$2
-addi	$1,$0,117
-addu	$30,$30,$30
-nop
-mfhi	$30
-xori	$30,$30,163
-mflo	$1
-mfhi	$2
-addi	$1,$0,143
-and		$28,$15,$15
-nop
-mflo	$28
-addi	$28,$28,-222
-mflo	$1
-mfhi	$2
-addi	$1,$0,238
-nor		$16,$28,$16
-nop
-mfc0	$28,$13
-addiu	$16,$16,75
-mflo	$1
-mfhi	$2
-addi	$1,$0,109
-or		$7,$0,$0
-nop
-mfhi	$0
-andi	$0,$0,160
-mflo	$1
-mfhi	$2
-addi	$1,$0,207
-addi	$7,$0,158
-sllv	$1,$1,$1
-nop
-mflo	$1
-srl		$1,$1,2
-mflo	$1
-mfhi	$2
-addi	$1,$0,157
-srlv	$28,$28,$17
-nop
-mfc0	$28,$13
-sra		$28,$28,2
-mflo	$1
-mfhi	$2
-addi	$1,$0,6
-addi	$28,$0,35
-srav	$28,$28,$18
-nop
-mfhi	$28
-sll		$28,$18,2
-mflo	$1
-mfhi	$2
-addi	$1,$0,86
-slt		$0,$1,$1
-nop
-mflo	$1
-srl		$1,$1,1
-mflo	$1
-mfhi	$2
 .ktext 0x4180
-
-_entry2:
-	sw		$k0,0x2ffc($0)
-	mfc0	$k0,$12
-	mfc0	$k0,$13
-	mfc0	$k0,$14
-	addiu	$k0,$k0,4
-	mtc0	$k0,$14
-	lw		$k0,0x2ffc($0)
-	addiu	$k0,$k0,0
-	eret
-	lw		$k0,0x2ffc($k0)
-	lw		$k0,0x2ffc($k0)
-	lw		$k0,0x2ffc($k0)
-#end
+li $0, 0xe3a1ab4
+mfc0 $1,$12
+mfc0 $1,$13
+mfc0 $1,$14
+li $1, 0x3d3b26
+li $2, 0x61595194
+li $3, 0x7866ab9
+li $4, 0x38466ad6
+li $5, 0x2eb48688
+slti $0, $0, 0x138f
+slt $5, $0, $4
+and $3, $3, $3
+nor $2, $0, $2
+nor $0, $4, $4
+lhu $3, 4($0)
+mflo $1
+nor $5, $5, $0
+nor $0, $5, $1
+andi $1, $3, 0x588b
+multu $1, $3
+mfhi $2
+sb $4, 24($0)
+mflo $1
+addu $1, $0, $2
+xori $4, $3, 0x74cd
+sb $3, 16($0)
+sltu $3, $4, $2
+lui $4, 0x1fe1
+subu $5, $4, $4
+sltiu $4, $3, 0x7b22
+mult $2, $4
+lw $0, 8($0)
+slti $2, $3, 0x4c65
+sllv $5, $5, $5
+mfc0 $t9, $14
+addiu $t9, $t9, 4
+mtc0 $t9, $14
+eret
+xor $3, $4, $2

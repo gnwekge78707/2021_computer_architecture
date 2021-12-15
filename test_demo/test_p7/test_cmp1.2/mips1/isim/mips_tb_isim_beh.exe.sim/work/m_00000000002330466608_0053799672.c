@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.1/mips1/src/timer.v";
+static const char *ng0 = "C:/Users/86135/Desktop/test_demo/test_p7/test_cmp1.2/mips1/src/timer.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {3, 0};
 static unsigned int ng3[] = {0U, 0U};
@@ -251,10 +251,10 @@ LAB2:    xsi_set_current_line(28, ng0);
     t13 = (t12 + 4);
     t15 = (t14 + 4);
     t16 = *((unsigned int *)t14);
-    t17 = (t16 >> 0);
+    t17 = (t16 >> 2);
     *((unsigned int *)t12) = t17;
     t18 = *((unsigned int *)t15);
-    t19 = (t18 >> 0);
+    t19 = (t18 >> 2);
     *((unsigned int *)t13) = t19;
     t20 = *((unsigned int *)t12);
     *((unsigned int *)t12) = (t20 & 3U);
@@ -355,10 +355,10 @@ LAB2:    xsi_set_current_line(30, ng0);
     t2 = (t5 + 4);
     t7 = (t6 + 4);
     t8 = *((unsigned int *)t6);
-    t9 = (t8 >> 0);
+    t9 = (t8 >> 2);
     *((unsigned int *)t5) = t9;
     t10 = *((unsigned int *)t7);
-    t11 = (t10 >> 0);
+    t11 = (t10 >> 2);
     *((unsigned int *)t2) = t11;
     t12 = *((unsigned int *)t5);
     *((unsigned int *)t5) = (t12 & 3U);
@@ -808,10 +808,10 @@ LAB18:    xsi_set_current_line(41, ng0);
     t20 = (t16 + 4);
     t22 = (t21 + 4);
     t27 = *((unsigned int *)t21);
-    t30 = (t27 >> 0);
+    t30 = (t27 >> 2);
     *((unsigned int *)t16) = t30;
     t33 = *((unsigned int *)t22);
-    t34 = (t33 >> 0);
+    t34 = (t33 >> 2);
     *((unsigned int *)t20) = t34;
     t37 = *((unsigned int *)t16);
     *((unsigned int *)t16) = (t37 & 3U);
